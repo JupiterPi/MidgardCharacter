@@ -1,12 +1,12 @@
-package jupiterpapi.midgardcharacter.model.dto;
+package jupiterpapi.midgardcharacter.model;
 
-import jupiterpapi.midgardcharacter.model.*;
 import lombok.Data;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Data
-public class CharacterDTO {
+public class Character {
     String id;
     String name;
     String userId;
@@ -17,8 +17,8 @@ public class CharacterDTO {
     int gold;
     int ap;
 
-    List<AttributeDTO> attributes;
-    List<Skill> skills;
+    HashMap<String, Attribute> attributes;
+    HashMap<String,Skill> skills;
     List<LevelUp> levelUps;
     List<Reward> rewards;
     List<RewardPP> rewardsPP;
