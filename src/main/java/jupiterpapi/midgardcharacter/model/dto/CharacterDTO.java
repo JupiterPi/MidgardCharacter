@@ -1,6 +1,6 @@
-package jupiterpa.model.dto;
+package jupiterpapi.midgardcharacter.model.dto;
 
-import jupiterpa.model.*;
+import jupiterpapi.midgardcharacter.model.*;
 import lombok.Data;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package jupiterpa.model.dto;
+package jupiterpapi.midgardcharacter.model.dto;
 
 import lombok.Data;
 
