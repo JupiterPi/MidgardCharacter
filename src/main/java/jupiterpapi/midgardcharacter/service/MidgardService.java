@@ -1,6 +1,6 @@
-package jupiterpa.service;
+package jupiterpapi.midgardcharacter.service;
 
-import jupiterpa.model.dto.*;
+import jupiterpapi.midgardcharacter.model.dto.*;
 
 import java.util.List;
 
