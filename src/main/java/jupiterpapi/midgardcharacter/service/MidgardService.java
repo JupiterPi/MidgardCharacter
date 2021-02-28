@@ -7,13 +7,13 @@ import java.util.List;
 public interface MidgardService {
     List<UserDTO> getUsers();
     List<CharacterInfoDTO> getCharacters(String userId);
-    CharacterDTO getCharacter(String characterId) throws MidgardException;
+    CharacterDTO getCharacter(String characterId) throws UserException;
 
     UserDTO postUser(UserDTO user);
 
-    CharacterDTO postCharacter(CharacterDTO character) throws MidgardException;
-    CharacterDTO postReward(RewardDTO reward) throws MidgardException;
-    CharacterDTO postRewardPP(RewardPPDTO rewardPP) throws MidgardException;
-    CharacterDTO postLearn(LearnDTO learnDTO) throws MidgardException;
-    CharacterDTO postLevelUp(LevelUpDTO levelUp) throws MidgardException;
+    CharacterDTO postCharacter(CharacterDTO character) throws UserException;
+    CharacterDTO postReward(RewardDTO reward) throws UserException;
+    CharacterDTO postRewardPP(RewardPPDTO rewardPP) throws UserException;
+    CharacterDTO postLearn(LearnDTO learn) throws UserException;
+    CharacterDTO postLevelUp(LevelUpDTO levelUp) throws UserException;
 }

@@ -2,10 +2,13 @@ package jupiterpapi.midgardcharacter.model.dto;
 
 import jupiterpapi.midgardcharacter.model.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-@Data
+@Data @NoArgsConstructor
 public class CharacterDTO {
     String id;
     String name;
@@ -17,10 +20,17 @@ public class CharacterDTO {
     int gold;
     int ap;
 
-    List<AttributeDTO> attributes;
-    List<Skill> skills;
-    List<LevelUp> levelUps;
-    List<Reward> rewards;
-    List<RewardPP> rewardsPP;
-    List<Learn> learnings;
+    Collection<AttributeDTO> attributes = new ArrayList<>();
+    List<Skill> skills = new ArrayList<>();
+    List<LevelUp> levelUps = new ArrayList<>();
+    List<Reward> rewards = new ArrayList<>();
+    List<RewardPP> rewardsPP = new ArrayList<>();
+    List<Learn> learnings = new ArrayList<>();
+
+    public CharacterDTO(String id,String name, String userId, String className) {
+        this.id = id;
+        this.name = name;
+        this.userId = userId;
+        this.className = className;
+    }
 }

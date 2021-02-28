@@ -1,8 +1,10 @@
 package jupiterpapi.midgardcharacter.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
+@Data @NoArgsConstructor @AllArgsConstructor
 public class Skill {
     String name;
     String characterId;
@@ -12,4 +14,12 @@ public class Skill {
     int TECost;
     int EPCost;
     int PP;
+
+
+    public Skill(String name, String characterId, int bonus) {
+        this.name = name;
+        this.characterId = characterId;
+        this.bonus = bonus;
+    }
+
 }

@@ -1,0 +1,5 @@
+Line;Bonus;Cost
+A;13;1
+A;14;2
+E;9;2
+F;9;2

@@ -1,0 +1,14 @@
+Tests:
+- EnrichTest: Multiple Rewards, ...
+- Build up Initial Skill
+- Scenarios
+
+Basics:
+- Security
+- Logging and Tracing
+
+Advanced:
+- Meaningful Error Messages
+- Actuator
+- Applicationconfiguration: Port, ...
+- Swagger

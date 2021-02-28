@@ -1,8 +1,10 @@
 package jupiterpapi.midgardcharacter.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
+@Data @NoArgsConstructor @AllArgsConstructor
 public class UserDTO {
     String id;
     String name;

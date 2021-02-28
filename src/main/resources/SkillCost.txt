@@ -1,0 +1,3 @@
+Skill;StartBonus;Attribute;Groups;LE;Line
+Akrobatik;8;Gw;Halbwelt,Körper;2;E
+Alchemie;8;In;Wissen;2;F
