@@ -1,7 +1,6 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
 import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
-import jupiterpa.model.*;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 import org.junit.Before;

@@ -10,5 +10,5 @@ Basics:
 Advanced:
 - Meaningful Error Messages
 - Actuator
-- Applicationconfiguration: Port, ...
+- ApplicationConfiguration: Port, ...
 - Swagger

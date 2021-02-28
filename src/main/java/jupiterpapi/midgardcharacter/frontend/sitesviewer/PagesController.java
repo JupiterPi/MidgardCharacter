@@ -1,5 +1,5 @@
 package jupiterpapi.midgardcharacter.frontend.sitesviewer;
-
+/*
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ public class PagesController {
         return loader.loadPage("home");
     }
 
-    /* res */
+    // res
 
     @GetMapping("/res/{fileName}")
     public String getTextResource(@PathVariable String fileName) {
@@ -28,3 +28,5 @@ public class PagesController {
         return loader.getPictureResource(fileName);
     }
 }
+
+ */

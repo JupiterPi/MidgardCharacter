@@ -1,6 +1,5 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpa.model.*;
 import jupiterpapi.midgardcharacter.backend.model.Skill;
 import lombok.var;
 import org.junit.Test;
@@ -88,7 +87,7 @@ public class EnrichTest extends TestBase {
     }
 
     @Test
-    public void withLevelUpbutWithoutAttribute() throws UserException {
+    public void withLevelUpButWithoutAttribute() throws UserException {
         addCharacterWithAttributes();
         addLevelUp(2,"",0,10);
 

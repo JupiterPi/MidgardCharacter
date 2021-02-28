@@ -1,11 +1,11 @@
-package jupiterpapi.midgardcharacter.backend.model.dto;
+package jupiterpapi.midgardcharacter.backend.model.create;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data @NoArgsConstructor @AllArgsConstructor
-public class LearnDTO {
+public class LearningCreate {
     String id;
     String characterId;
     String skillName;

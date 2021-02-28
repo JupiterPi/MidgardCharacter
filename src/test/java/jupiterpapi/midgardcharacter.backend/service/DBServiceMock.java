@@ -1,6 +1,5 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpa.model.*;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 

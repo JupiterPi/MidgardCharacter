@@ -1,6 +1,9 @@
 package jupiterpapi.midgardcharacter.backend.controller;
 
-import jupiterpapi.midgardcharacter.backend.model.dto.*;
+import jupiterpapi.midgardcharacter.backend.model.create.*;
+import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
+import jupiterpapi.midgardcharacter.backend.model.dto.CharacterMetaDTO;
+import jupiterpapi.midgardcharacter.backend.model.dto.UserDTO;
 import jupiterpapi.midgardcharacter.backend.service.MidgardService;
 import jupiterpapi.midgardcharacter.backend.service.UserException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Collection;
 
 @RequestMapping(path = MidgardController.PATH)
 @RestController
@@ -19,12 +22,12 @@ public class MidgardController implements MidgardService {
     MidgardService service;
 
     @GetMapping("/users")
-    public List<UserDTO> getUsers() {
+    public Collection<UserDTO> getUsers() {
         return service.getUsers();
     }
 
     @GetMapping("/characters/{userId}")
-    public List<CharacterInfoDTO> getCharacters(@PathVariable("userId") String userId) {
+    public Collection<CharacterMetaDTO> getCharacters(@PathVariable("userId") String userId) {
         return service.getCharacters(userId);
     }
 
@@ -34,32 +37,32 @@ public class MidgardController implements MidgardService {
     }
 
     @PostMapping("/user")
-    public UserDTO postUser(@RequestBody UserDTO user) {
+    public UserDTO postUser(@RequestBody UserCreate user) {
         return service.postUser(user);
     }
 
     @PostMapping("/character")
-    public CharacterDTO postCharacter(@RequestBody CharacterDTO character) throws UserException {
+    public CharacterDTO postCharacter(@RequestBody CharacterCreate character) throws UserException {
         return service.postCharacter(character);
     }
 
     @PostMapping("/reward")
-    public CharacterDTO postReward(@RequestBody RewardDTO reward) throws UserException {
+    public CharacterDTO postReward(@RequestBody RewardCreate reward) throws UserException {
         return service.postReward(reward);
     }
 
     @PostMapping("/rewardPP")
-    public CharacterDTO postRewardPP(@RequestBody RewardPPDTO rewardPP) throws UserException {
+    public CharacterDTO postRewardPP(@RequestBody PPRewardCreate rewardPP) throws UserException {
         return service.postRewardPP(rewardPP);
     }
 
     @PostMapping("/learn")
-    public CharacterDTO postLearn(@RequestBody LearnDTO learn) throws UserException {
+    public CharacterDTO postLearn(@RequestBody LearningCreate learn) throws UserException {
         return service.postLearn(learn);
     }
 
     @PostMapping("/levelUp")
-    public CharacterDTO postLevelUp(@RequestBody LevelUpDTO levelUp) throws UserException {
+    public CharacterDTO postLevelUp(@RequestBody LevelUpCreate levelUp) throws UserException {
         return service.postLevelUp(levelUp);
     }
 

@@ -2,6 +2,7 @@ package jupiterpapi.midgardcharacter.backend.service;
 
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
+import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,7 +30,7 @@ public class MidgardServiceImpl implements MidgardService {
         return users.stream().map( user -> mapper.map(user) ).collect(Collectors.toList());
     }
 
-    public List<CharacterInfoDTO> getCharacters(String userId) {
+    public List<CharacterMetaDTO> getCharacters(String userId) {
         List<Character> users = db.getCharacters(userId);
         return users.stream().map( character -> mapper.mapInfo(character) ).collect(Collectors.toList());
     }
@@ -37,54 +38,63 @@ public class MidgardServiceImpl implements MidgardService {
     public CharacterDTO getCharacter(String characterId) throws UserException {
         Character newCharacter = enrichService.getCharacter(characterId);
         CharacterDTO newCharacterDTO = mapper.map( newCharacter );
-        List<AttributeDTO> attributes =
-                newCharacter.getAttributes().values().stream()
-                        .map(a->mapper.map(a))
-                        .sorted(Comparator.comparing(AttributeDTO::getId))
-                        .collect(Collectors.toList());
-        newCharacterDTO.setAttributes( attributes );
-        newCharacterDTO.setRewards(newCharacter.getRewards());
-        newCharacterDTO.setRewardsPP(newCharacter.getRewardsPP());
-        newCharacterDTO.setLearnings(newCharacter.getLearnings());
-        newCharacterDTO.setLevelUps(newCharacter.getLevelUps());
+
+        newCharacterDTO.setAttributes( mapper.mapAttributes( newCharacter.getAttributes().values() )
+                       .stream().sorted(Comparator.comparing(AttributeDTO::getId)).collect(Collectors.toList()) ) ;
+
+        newCharacterDTO.setRewards( mapper.mapRewards( newCharacter.getRewards() )
+                .stream().sorted(Comparator.comparing(RewardDTO::getId)).collect(Collectors.toList()) ) ;
+        newCharacterDTO.setRewardsPP( mapper.mapPPRewards( newCharacter.getRewardsPP() )
+                       .stream().sorted(Comparator.comparing(PPRewardDTO::getId)).collect(Collectors.toList()) ) ;
+        newCharacterDTO.setLearnings( mapper.mapLearnings( newCharacter.getLearnings())
+                       .stream().sorted(Comparator.comparing(LearningDTO::getId)).collect(Collectors.toList()) ) ;
+        newCharacterDTO.setLevelUps( mapper.mapLevelUps( newCharacter.getLevelUps())
+                       .stream().sorted(Comparator.comparing(LevelUpDTO::getId)).collect(Collectors.toList()) ) ;
         return newCharacterDTO;
     }
 
-    public UserDTO postUser(UserDTO user) {
+    public UserDTO postUser(UserCreate user) {
         return mapper.map( db.postUser( mapper.map(user) ) );
     }
 
-    public CharacterDTO postCharacter(CharacterDTO character) throws UserException {
+    public CharacterDTO postCharacter(CharacterCreate character) throws UserException {
         Character c = mapper.map(character);
-        List<Attribute> list = character.getAttributes().stream().map( a -> mapper.map(a)).collect(Collectors.toList());
+        List<Attribute> list = mapper.mapAttributesCreate( character.getAttributes() );
+
         checkService.checkNewCharacter(c,list);
+
         db.postCharacter( c );
         db.postAttributes( list );
+
+        for (LearningCreate l : character.getLearnings() ) {
+            postLearn(l);
+        }
+
         return getCharacter(character.getId());
     }
 
-    public CharacterDTO postReward(RewardDTO reward) throws UserException {
+    public CharacterDTO postReward(RewardCreate reward) throws UserException {
         Reward r = mapper.map(reward);
         checkService.checkReward(r);
         db.postReward(r);
         return getCharacter(reward.getCharacterId());
     }
 
-    public CharacterDTO postRewardPP(RewardPPDTO rewardPP) throws UserException {
+    public CharacterDTO postRewardPP(PPRewardCreate rewardPP) throws UserException {
         RewardPP r = mapper.map(rewardPP);
         checkService.checkRewardPP(r);
         db.postRewardPP( r );
         return getCharacter(rewardPP.getCharacterId());
     }
 
-    public CharacterDTO postLearn(LearnDTO learn) throws UserException {
+    public CharacterDTO postLearn(LearningCreate learn) throws UserException {
         Learn l = mapper.map(learn);
         checkService.checkLearn(l);
         db.postLearn(l);
         return getCharacter(learn.getCharacterId());
     }
 
-    public CharacterDTO postLevelUp(LevelUpDTO levelUp) throws UserException {
+    public CharacterDTO postLevelUp(LevelUpCreate levelUp) throws UserException {
         LevelUp l = mapper.map(levelUp);
         checkService.checkLevelUp(l);
         db.postLevelUp( l );

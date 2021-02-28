@@ -1,5 +1,6 @@
 package jupiterpapi.midgardcharacter.frontend.sitesviewer;
 
+/*
 import jupiterpi.tools.files.Path;
 import jupiterpi.tools.files.TextFile;
 import jupiterpi.tools.util.AppendingList;
@@ -18,7 +19,7 @@ public class Loader {
         return Path.getRunningDirectory().subdir("sv").subdir(name);
     }
 
-    /* pages */
+    // pages
 
     public String loadPage(String pageName) {
         String frameTop = loadPageContent("frameTop.html");
@@ -31,7 +32,7 @@ public class Loader {
         return readFile(subdir("pages").file(fileName));
     }
 
-    /* res */
+    // res
 
     public String getTextResource(String fileName) {
         return readFile(subdir("text").file(fileName));
@@ -64,9 +65,11 @@ public class Loader {
         return null;
     }
 
-    /* util */
+    // util
 
     private String readFile(Path file) {
         return new TextFile(file).getFileForOutput();
     }
 }
+
+ */
