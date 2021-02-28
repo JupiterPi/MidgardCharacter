@@ -1,5 +1,6 @@
 Tests:
 - EnrichTest: Multiple Rewards, ...
+- MidgardServiceTest
 - Build up Initial Skill
 - Scenarios
 
