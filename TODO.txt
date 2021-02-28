@@ -3,6 +3,7 @@ Tests:
 - MidgardServiceTest
 - Build up Initial Skill
 - Scenarios
+- Test factory that wires up all the Autowiring
 
 Basics:
 - Security
