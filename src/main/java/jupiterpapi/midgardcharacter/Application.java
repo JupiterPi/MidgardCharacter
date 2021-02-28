@@ -1,7 +1,7 @@
 package jupiterpapi.midgardcharacter;
 
-import jupiterpapi.midgardcharacter.configuration.ConfigurationService;
-import jupiterpapi.midgardcharacter.configuration.InternalException;
+import jupiterpapi.midgardcharacter.backend.configuration.ConfigurationService;
+import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
