@@ -39,11 +39,16 @@ public class CheckService {
 
         getCharacter(rewardPP.getCharacterId());
     }
-    void checkLearn(Learn learn) throws UserException {
+    void checkAndEnrichLearning(Learn learn) throws UserException {
         Character c = getCharacter(learn.getCharacterId());
-        Skill s = c.getSkills().get(learn.getSkillName());
 
-        checkLearning(s,learn,c);
+        Skill skill = c.getSkills().get(learn.getSkillName());
+        if (skill == null) {
+            skill = new Skill(learn.getSkillName(), learn.getCharacterId(), 0);
+            skill = skillService.calculateCost(skill, c.getClassName());
+        }
+        enrichLearning(learn, skill);
+        checkLearning(skill,learn,c);
     }
     void checkLevelUp(LevelUp levelUp) throws UserException {
         Character c = getCharacter(levelUp.getCharacterId());
@@ -65,6 +70,25 @@ public class CheckService {
             throw new UserException();
         }
     }
+    private void enrichLearning(Learn learn, Skill skill) {
+        if (learn.isStarting()) {
+            learn.setPPSpent(0);
+            learn.setEpSpent(0);
+            learn.setGoldSpent(0);
+            learn.setLearned(true);
+        } else {
+            int pp = Math.min(skill.getPP(), skill.getTECost());
+            int te = skill.getTECost() - pp;
+            int ep = te * skill.getEPCost() / skill.getTECost();
+            int gold = ep * 2 * learn.getPercentageGold() / 100;
+            ep = ep * (100 - learn.getPercentageGold()) / 100;
+
+            learn.setPPSpent(pp);
+            learn.setEpSpent(ep);
+            learn.setGoldSpent(gold);
+        }
+    }
+
     private void checkLearning(Skill skill, Learn learn, Character c) throws UserException {
         if (learn.isStarting()) {
           if (learn.getEpSpent() != 0)
@@ -74,11 +98,8 @@ public class CheckService {
             if (learn.getPPSpent() != 0)
                 throw new UserException();
         } else {
-            if (skill == null)
-                skill = new Skill(learn.getSkillName(), learn.getCharacterId(), 0);
-            Skill enr = skillService.calculateCost(skill, c.getClassName());
-            int remainingTE = enr.getTECost() - learn.getPPSpent();
-            int remainingEP = enr.getEPCost() * remainingTE / enr.getTECost();
+            int remainingTE = skill.getTECost() - learn.getPPSpent();
+            int remainingEP = skill.getEPCost() * remainingTE / skill.getTECost();
             int withoutGold = remainingEP - learn.getGoldSpent() / 2;
             if (learn.getEpSpent() != withoutGold)
                 throw new UserException();

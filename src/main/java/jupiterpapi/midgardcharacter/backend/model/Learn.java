@@ -12,6 +12,7 @@ public class Learn {
     boolean starting;
     boolean learned;
     int newBonus;
+    int percentageGold;
     int epSpent;
     int goldSpent;
     int PPSpent;

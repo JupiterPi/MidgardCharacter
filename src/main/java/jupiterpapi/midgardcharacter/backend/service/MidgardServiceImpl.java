@@ -89,7 +89,7 @@ public class MidgardServiceImpl implements MidgardService {
 
     public CharacterDTO postLearn(LearningCreate learn) throws UserException {
         Learn l = mapper.map(learn);
-        checkService.checkLearn(l);
+        checkService.checkAndEnrichLearning(l);
         db.postLearn(l);
         return getCharacter(learn.getCharacterId());
     }

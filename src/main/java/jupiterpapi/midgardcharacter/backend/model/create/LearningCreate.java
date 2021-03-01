@@ -10,9 +10,6 @@ public class LearningCreate {
     String characterId;
     String skillName;
     boolean starting;
-    boolean learned;
     int newBonus;
-    int epSpent;
-    int goldSpent;
-    int PPSpent;
+    int percentageGold;
 }

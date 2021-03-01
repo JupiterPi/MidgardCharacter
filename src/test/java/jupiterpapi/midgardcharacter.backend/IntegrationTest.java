@@ -196,8 +196,9 @@ public class IntegrationTest {
         postStandard();
         RewardCreate reward = new RewardCreate("1","SC1",100,200);
         postAndExpect("/api/reward",reward,reward);
-        LearningCreate learn = new LearningCreate("1","SC1","Akrobatik",true,true,8,0,0,0);
-        postAndExpect("/api/learn",learn,learn);
+        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
+        LearningDTO learnDTO = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
+        postAndExpect("/api/learn",learnCreate,learnDTO);
     }
 
     @Test
@@ -205,9 +206,9 @@ public class IntegrationTest {
         postStandard();
         RewardCreate reward = new RewardCreate("1","SC1",100,200);
         postAndExpect("/api/reward",reward,reward);
-        LearningCreate learn = new LearningCreate("1","SC1","Akrobatik",true,true,8,0,0,0);
-        Learn learnResult = new Learn("1","SC1","Akrobatik",true,true,8,0,0,0);
-        postAndExpect("/api/learn",learn,learn);
+        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
+        LearningDTO learnResult = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
+        postAndExpect("/api/learn",learnCreate,learnResult);
         PPRewardCreate rewardPP = new PPRewardCreate("1","SC1","Akrobatik",1);
         postAndExpect("/api/rewardPP",rewardPP,rewardPP);
     }

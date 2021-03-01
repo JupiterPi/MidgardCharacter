@@ -24,6 +24,10 @@ public interface UIMapper {
     List<Learn> mapLearningsCreate(Collection<LearningCreate> learnings);
 
     RewardPP map(PPRewardCreate rewardPP);
+    @Mapping(target = "PPSpent", ignore = true)
+    @Mapping(target = "epSpent", ignore = true)
+    @Mapping(target = "goldSpent", ignore = true)
+    @Mapping(target = "learned", ignore = true)
     Learn map(LearningCreate lean);
     Reward map(RewardCreate reward);
     LevelUp map(LevelUpCreate levelUp);

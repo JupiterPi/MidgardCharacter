@@ -140,48 +140,25 @@ public class CheckTest extends TestBase {
     }
 
     @Test
+    public void checkLearningInitialSkill() throws UserException {
+        addCharacterWithAttributes();
+        addReward(100,100);
+        Learn l = new Learn("1","ID",
+                "Akrobatik",true,true,8,0,0,0,0);
+
+        check.checkAndEnrichLearning(l);
+    }
+
+    @Test
     public void checkLearningNewSkill() throws UserException {
         addCharacterWithAttributes();
         addReward(100,100);
         Learn l = new Learn("1","ID",
-                       "Akrobatik",false,true,
-                       8,10,100,0);
+                       "Akrobatik",false,true,8,0,0,0,0);
 
-        check.checkLearn(l);
+        check.checkAndEnrichLearning(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningNewSkillWithWrongEP() throws UserException {
-        addCharacterWithAttributes();
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,20,100,0);
-
-        check.checkLearn(l);
-    }
-
-    @Test
-    public void checkLearningNewSkillWithPP() throws UserException {
-        addCharacterWithAttributes();
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,10,80,1);
-
-        check.checkLearn(l);
-    }
-
-    @Test(expected = UserException.class)
-    public void checkLearningNewSkillWithWrongPP() throws UserException {
-        addCharacterWithAttributes();
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,10,80,2);
-
-        check.checkLearn(l);
-    }
 
     @Test(expected = UserException.class)
     public void checkLearningWithTooLittleEP() throws UserException {
@@ -189,9 +166,9 @@ public class CheckTest extends TestBase {
         addReward(20,100);
         Learn l = new Learn("1","ID",
                 "Akrobatik",false,true,
-                8,30,40,2);
+                8,0,0,0,0);
 
-        check.checkLearn(l);
+        check.checkAndEnrichLearning(l);
     }
     @Test(expected = UserException.class)
     public void checkLearningWithTooLittleGold() throws UserException {
@@ -199,9 +176,9 @@ public class CheckTest extends TestBase {
         addReward(2000,20);
         Learn l = new Learn("1","ID",
                 "Akrobatik",false,true,
-                8,30,40,2);
+                8,50,0,0,0);
 
-        check.checkLearn(l);
+        check.checkAndEnrichLearning(l);
     }
 
 
@@ -212,45 +189,9 @@ public class CheckTest extends TestBase {
         addReward(100,100);
         Learn l = new Learn("1","ID",
                 "Akrobatik",false,true,
-                9,10,20,0);
+                9,0,0,0,0);
 
-        check.checkLearn(l);
-    }
-
-    @Test(expected = UserException.class)
-    public void checkLearningIncrSkillWithWrongEP() throws UserException {
-        addCharacterWithAttributes();
-        addLearning("Akrobatik",true,true,8,0,0,0);
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,20,20,0);
-
-        check.checkLearn(l);
-    }
-
-    @Test
-    public void checkLearningIncrSkillWithPP() throws UserException {
-        addCharacterWithAttributes();
-        addLearning("Akrobatik",true,true,8,0,0,0);
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,10,0,1);
-
-        check.checkLearn(l);
-    }
-
-    @Test(expected = UserException.class)
-    public void checkLearningIncrSkillWithWrongPP() throws UserException {
-        addCharacterWithAttributes();
-        addLearning("Akrobatik",true,true,8,0,0,0);
-        addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,10,20,1);
-
-        check.checkLearn(l);
+        check.checkAndEnrichLearning(l);
     }
 
 }

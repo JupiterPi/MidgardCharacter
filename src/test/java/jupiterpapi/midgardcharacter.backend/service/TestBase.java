@@ -62,8 +62,8 @@ public class TestBase {
     }
 
     protected void addLearning(String skill, boolean starting, boolean learned, int newBonus, int ep, int gold, int pp) {
-        Learn learn = new Learn("1","ID",skill,starting,learned,newBonus,ep,gold,pp);
-        Learn learnDB = new Learn("1","ID",skill,starting,learned,newBonus,ep,gold,pp);
+        Learn learn = new Learn("1","ID",skill,starting,learned,newBonus,0,ep,gold,pp);
+        Learn learnDB = new Learn("1","ID",skill,starting,learned,newBonus,0,ep,gold,pp);
         dbService.learnings.add(learnDB);
         initial.getLearnings().add(learn);
     }
