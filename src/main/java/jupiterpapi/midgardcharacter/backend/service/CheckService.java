@@ -101,6 +101,10 @@ public class CheckService {
             int remainingTE = skill.getTECost() - learn.getPPSpent();
             int remainingEP = skill.getEPCost() * remainingTE / skill.getTECost();
             int withoutGold = remainingEP - learn.getGoldSpent() / 2;
+            if (learn.getPercentageGold() < 0)
+                throw new UserException();
+            if (learn.getPercentageGold() > 50)
+                throw new UserException();
             if (learn.getEpSpent() != withoutGold)
                 throw new UserException();
             if (learn.getGoldSpent() > c.getGold())
