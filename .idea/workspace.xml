@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/MidgardCharacter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MidgardCharacter.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Factory" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ow163oQVDl4pbHfGGPvreZLtYI" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jupiterpapi.midgardcharacter.backend.model.dto" />
+      <recent name="jupiterpapi.midgardcharacter" />
+      <recent name="jupiterpapi.midgardcharacter.controller" />
+      <recent name="jupiterpapi.midgardcharacter.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter" />
+      <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main" />
+      <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src" />
+      <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter" />
+      <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter (3)">
+    <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in MidgardCharacter (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in MidgardCharacter (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.postLearning" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postLearning" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.postRewardPP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postRewardPP" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in MidgardCharacter (3)" />
+        <item itemvalue="JUnit.All in MidgardCharacter (2)" />
+        <item itemvalue="JUnit.IntegrationTest.postRewardPP" />
+        <item itemvalue="JUnit.All in MidgardCharacter (1)" />
+        <item itemvalue="JUnit.IntegrationTest.postLearning" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="" />
+      <created>1614182660226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614182660226</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added missing objects for basis version">
+      <created>1614182904304</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614182904304</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added missing objects for basis version">
+      <created>1614183025064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614183025064</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Copy other branch">
+      <created>1614506090847</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614506090847</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Copy other branch">
+      <created>1614506440295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614506440295</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Separated into Create and DTO classes">
+      <created>1614528959314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614528959314</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Clean">
+      <created>1614624721178</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614624721178</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Todo added">
+      <created>1614624760623</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614624760623</updated>
+    </task>
+    <task id="LOCAL-00008" summary="try and revert">
+      <created>1614625248451</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614625248451</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Learning corrected: percentageGold">
+      <created>1614628987414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614628987414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Check Percentage Gold">
+      <created>1614629062200</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614629062200</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Activated SitesViewer (with local release 1.3)">
+      <created>1614682452256</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1614682452256</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Delete idea/libraries">
+      <created>1614682514701</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1614682514701</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added missing objects for basis version" />
+    <MESSAGE value="Copy other branch" />
+    <MESSAGE value="Separated into Create and DTO classes" />
+    <MESSAGE value="Clean" />
+    <MESSAGE value="Todo added" />
+    <MESSAGE value="try and revert" />
+    <MESSAGE value="Learning corrected: percentageGold" />
+    <MESSAGE value="Check Percentage Gold" />
+    <MESSAGE value="Activated SitesViewer (with local release 1.3)" />
+    <MESSAGE value="Delete idea/libraries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete idea/libraries" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="899" y="344" key="#Inspections" timestamp="1614528741154">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="899" y="344" key="#Inspections/0.0.2560.1400@0.0.2560.1400" timestamp="1614528741154" />
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614628812716">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614628812716" />
+    <state x="736" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1614583646550">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="736" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1614583646550" />
+    <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614625195272">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
+    <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614627135465">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614528840740" />
+    <state x="573" y="0" key="CommitChangelistDialog2" timestamp="1614682512836">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506435670" />
+    <state x="573" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614682512836" />
+    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614528955938" />
+    <state width="1981" height="326" key="GridCell.Tab.0.bottom" timestamp="1614629139410">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
+    <state width="2493" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614528841654" />
+    <state width="1981" height="326" key="GridCell.Tab.0.center" timestamp="1614629139410">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
+    <state width="2493" height="413" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614528841654" />
+    <state width="1981" height="326" key="GridCell.Tab.0.left" timestamp="1614629139410">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
+    <state width="2493" height="413" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614528841653" />
+    <state width="1981" height="326" key="GridCell.Tab.0.right" timestamp="1614629139410">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
+    <state width="2493" height="413" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614528841654" />
+    <state width="1981" height="326" key="GridCell.Tab.1.bottom" timestamp="1614629139411">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
+    <state width="2493" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
+    <state width="1981" height="326" key="GridCell.Tab.1.center" timestamp="1614629139411">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
+    <state width="2493" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
+    <state width="1981" height="326" key="GridCell.Tab.1.left" timestamp="1614629139410">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
+    <state width="2493" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
+    <state width="1981" height="326" key="GridCell.Tab.1.right" timestamp="1614629139411">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
+    <state width="2493" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
+    <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="543" y="110" key="RollbackChangesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625364603" />
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2" timestamp="1614682535376">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506441453" />
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614682535376" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614528966063" />
+    <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506358156" />
+    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614682590222">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614682590222" />
+    <state x="699" y="402" key="git4idea.ui.GitResetDialog" timestamp="1614625414196">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="699" y="402" key="git4idea.ui.GitResetDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625414196" />
+  </component>
+</project>
