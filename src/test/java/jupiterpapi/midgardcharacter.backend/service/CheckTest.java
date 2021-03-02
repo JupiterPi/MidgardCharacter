@@ -1,36 +1,23 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
-import org.junit.Before;
 import org.junit.Test;
 
 public class CheckTest extends TestBase {
 
-    CheckService check;
-
-    @Before
-    public void setup() throws InternalException {
-        super.setup();
-
-        check = new CheckService();
-        check.db = enrichService.db;
-        check.enrich = enrichService;
-        check.skillService = enrichService.skillService;
-    }
 
     @Test
     public void checkNewCharacterSuccess() throws UserException {
         addCharacterWithAttributes();
         Character c = new Character("ID2", "Name", "User", "As");
-        check.checkNewCharacter(c,initial.getAttributes().values());
+        checkService.checkNewCharacter(c,initial.getAttributes().values());
     }
 
     @Test(expected = UserException.class)
     public void checkNewCharacterFailExists() throws UserException {
         addCharacterWithAttributes();
-        check.checkNewCharacter(initial,initial.getAttributes().values());
+        checkService.checkNewCharacter(initial,initial.getAttributes().values());
     }
 
     @Test(expected = UserException.class)
@@ -38,7 +25,7 @@ public class CheckTest extends TestBase {
         addCharacter();
         initial.setId("XYZ");
         initial.getAttributes().put("Zt", new Attribute("Zt","ID",200));
-        check.checkNewCharacter(initial,initial.getAttributes().values());
+        checkService.checkNewCharacter(initial,initial.getAttributes().values());
     }
 
     @Test(expected = UserException.class)
@@ -46,7 +33,7 @@ public class CheckTest extends TestBase {
         addCharacter();
         initial.setId("XYZ");
         initial.getAttributes().put("Zt", new Attribute("Zt","ID",0));
-        check.checkNewCharacter(initial,initial.getAttributes().values());
+        checkService.checkNewCharacter(initial,initial.getAttributes().values());
     }
 
 
@@ -54,21 +41,21 @@ public class CheckTest extends TestBase {
     public void checkRewardSuccess() throws UserException {
         addCharacterWithAttributes();
         Reward r = new Reward("1","ID",10,10);
-        check.checkReward(r);
+        checkService.checkReward(r);
     }
 
     @Test(expected = UserException.class)
     public void checkRewardFailEP() throws UserException {
         addCharacterWithAttributes();
         Reward r = new Reward("1","ID",-1,10);
-        check.checkReward(r);
+        checkService.checkReward(r);
     }
 
     @Test(expected = UserException.class)
     public void checkRewardFailGold() throws UserException {
         addCharacterWithAttributes();
         Reward r = new Reward("1","ID",0,-1);
-        check.checkReward(r);
+        checkService.checkReward(r);
     }
 
 
@@ -78,7 +65,7 @@ public class CheckTest extends TestBase {
         addLearning( "Akrobatik",true,true, 8,0,0,0);
         addRewardPP( "Akrobatik",2 );
 
-        check.checkRewardPP(initial.getRewardsPP().get(0));
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
     }
 
     @Test(expected = UserException.class)
@@ -86,7 +73,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         addLearning( "Akrobatik",true,true, 8,0,0,0);
         addRewardPP( "Akrobatik",-1 );
-        check.checkRewardPP(initial.getRewardsPP().get(0));
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
     }
 
     @Test(expected = UserException.class)
@@ -94,7 +81,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         addLearning( "Akrobatik",true,true, 8,0,0,0);
         addRewardPP( "XYZ",2 );
-        check.checkRewardPP(initial.getRewardsPP().get(0));
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
     }
 
     @Test
@@ -102,7 +89,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         LevelUp l = new LevelUp("1","ID",2,"",0,10);
 
-        check.checkLevelUp(l);
+        checkService.checkLevelUp(l);
     }
 
     @Test(expected = UserException.class)
@@ -110,7 +97,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         LevelUp l = new LevelUp("1","ID",2,"ZZ",1,10);
 
-        check.checkLevelUp(l);
+        checkService.checkLevelUp(l);
     }
 
     @Test(expected = UserException.class)
@@ -118,7 +105,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         LevelUp l = new LevelUp("1","ID",2,"Gw",0,10);
 
-        check.checkLevelUp(l);
+        checkService.checkLevelUp(l);
     }
 
     @Test(expected = UserException.class)
@@ -126,7 +113,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         LevelUp l = new LevelUp("1","ID",2,"Gw",1,0);
 
-        check.checkLevelUp(l);
+        checkService.checkLevelUp(l);
     }
 
     @Test(expected = UserException.class)
@@ -136,7 +123,7 @@ public class CheckTest extends TestBase {
 
         LevelUp l = new LevelUp("1","ID",1,"",0,10);
 
-        check.checkLevelUp(l);
+        checkService.checkLevelUp(l);
     }
 
     @Test
@@ -146,7 +133,7 @@ public class CheckTest extends TestBase {
         Learn l = new Learn("1","ID",
                 "Akrobatik",true,true,8,0,0,0,0);
 
-        check.checkAndEnrichLearning(l);
+        checkService.checkAndEnrichLearning(l);
     }
 
     @Test
@@ -156,7 +143,7 @@ public class CheckTest extends TestBase {
         Learn l = new Learn("1","ID",
                        "Akrobatik",false,true,8,0,0,0,0);
 
-        check.checkAndEnrichLearning(l);
+        checkService.checkAndEnrichLearning(l);
     }
 
 
@@ -168,7 +155,7 @@ public class CheckTest extends TestBase {
                 "Akrobatik",false,true,
                 8,0,0,0,0);
 
-        check.checkAndEnrichLearning(l);
+        checkService.checkAndEnrichLearning(l);
     }
     @Test(expected = UserException.class)
     public void checkLearningWithTooLittleGold() throws UserException {
@@ -178,7 +165,7 @@ public class CheckTest extends TestBase {
                 "Akrobatik",false,true,
                 8,50,0,0,0);
 
-        check.checkAndEnrichLearning(l);
+        checkService.checkAndEnrichLearning(l);
     }
 
 
@@ -191,7 +178,7 @@ public class CheckTest extends TestBase {
                 "Akrobatik",false,true,
                 9,0,0,0,0);
 
-        check.checkAndEnrichLearning(l);
+        checkService.checkAndEnrichLearning(l);
     }
 
 }
