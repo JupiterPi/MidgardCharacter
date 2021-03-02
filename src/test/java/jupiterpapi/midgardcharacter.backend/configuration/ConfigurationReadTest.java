@@ -57,6 +57,6 @@ public class ConfigurationReadTest {
         service.read();
         assertEquals(service.skillCost.size(),2);
         assertEquals(service.classEPCost.size(),9);
-        assertEquals(service.bonusCost.size(),4);
+        assertEquals(service.bonusCost.size(),5);
     }
 }
