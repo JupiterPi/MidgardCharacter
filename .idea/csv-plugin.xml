@@ -24,6 +24,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\CheckTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\SkillTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\TestFactory.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

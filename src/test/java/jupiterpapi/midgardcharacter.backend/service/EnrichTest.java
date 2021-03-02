@@ -11,14 +11,14 @@ public class EnrichTest extends TestBase {
 
     @Test(expected = UserException.class)
     public void getCharacterFail() throws UserException {
-        var c = service.getCharacter("XYZ");
+        var c = enrichService.getCharacter("XYZ");
     }
 
     @Test
     public void InitialCharacter() throws UserException {
         addCharacter();
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(c,initial);
     }
@@ -27,7 +27,7 @@ public class EnrichTest extends TestBase {
     public void InitialWithAttributes() throws UserException {
         addCharacterWithAttributes();
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(c,initial);
     }
@@ -40,7 +40,7 @@ public class EnrichTest extends TestBase {
         initial.setEs(100);
         initial.setGold(500);
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(c,initial);
     }
@@ -55,7 +55,7 @@ public class EnrichTest extends TestBase {
         initial.setGold(500);
         initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",8,2,10,2,20,0));
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(initial,c);
     }
@@ -71,7 +71,7 @@ public class EnrichTest extends TestBase {
         initial.setGold(400);
         initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",8,2,10,2,20,2));
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(initial,c);
     }
@@ -81,7 +81,7 @@ public class EnrichTest extends TestBase {
         addCharacterWithAttributes();
         addLevelUp(2,"In",2,10);
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(initial,c);
     }
@@ -91,7 +91,7 @@ public class EnrichTest extends TestBase {
         addCharacterWithAttributes();
         addLevelUp(2,"",0,10);
 
-        var c = service.getCharacter("ID");
+        var c = enrichService.getCharacter("ID");
 
         assertEquals(initial,c);
     }

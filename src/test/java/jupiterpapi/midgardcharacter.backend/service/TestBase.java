@@ -1,7 +1,5 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpapi.midgardcharacter.backend.configuration.ConfigurationService;
-import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 import org.junit.Before;
@@ -9,10 +7,7 @@ import org.junit.Before;
 import java.util.HashMap;
 
 @SuppressWarnings("SameParameterValue")
-public class TestBase {
-    SkillService skillService;
-    EnrichService service;
-    DBServiceMock dbService;
+public class TestBase extends TestFactory {
 
     final Character initial_db = new Character("ID", "Name", "User", "As");
     final Attribute gw_db = new Attribute("Gw","ID",96);
@@ -27,17 +22,6 @@ public class TestBase {
     public void testData() {
         attributes.put("Gw",gw);
         attributes.put("In",in);
-    }
-
-    @Before
-    public void setup() throws InternalException {
-        skillService = new SkillService();
-        service = new EnrichService();
-        service.skillService = skillService;
-        skillService.configurationService = new ConfigurationService();
-        skillService.configurationService.read();
-        dbService = new DBServiceMock();
-        service.db = dbService;
     }
 
     protected void addCharacter() {

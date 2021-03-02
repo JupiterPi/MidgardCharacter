@@ -15,9 +15,9 @@ public class CheckTest extends TestBase {
         super.setup();
 
         check = new CheckService();
-        check.db = service.db;
-        check.enrich = service;
-        check.skillService = service.skillService;
+        check.db = enrichService.db;
+        check.enrich = enrichService;
+        check.skillService = enrichService.skillService;
     }
 
     @Test
