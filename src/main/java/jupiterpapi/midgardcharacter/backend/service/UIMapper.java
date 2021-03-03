@@ -49,14 +49,16 @@ public interface UIMapper {
     @Mapping(target = "skills", ignore = true)
     CharacterDTO map(Character character);
 
-    Collection<AttributeDTO> mapAttributes(Collection<Attribute> attribute);
+    Collection<AttributeDTO> mapAttributes(Collection<Attribute> attributes);
 
-    Collection<RewardDTO> mapRewards(Collection<Reward> reward);
+    Collection<RewardDTO> mapRewards(Collection<Reward> rewards);
 
-    Collection<PPRewardDTO> mapPPRewards(Collection<PPReward> PPReward);
+    Collection<PPRewardDTO> mapPPRewards(Collection<PPReward> PPRewards);
 
-    Collection<LearningDTO> mapLearnings(Collection<Learning> reward);
+    Collection<LearningDTO> mapLearnings(Collection<Learning> learnings);
 
-    Collection<LevelUpDTO> mapLevelUps(Collection<LevelUp> reward);
+    Collection<LevelUpDTO> mapLevelUps(Collection<LevelUp> levelUps);
+
+    Collection<SkillDTO> mapSkills(Collection<Skill> skills);
 }
 

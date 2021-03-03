@@ -37,19 +37,23 @@ public class MidgardServiceImpl implements MidgardService {
 
     public CharacterDTO getCharacter(String characterId) throws UserException {
         Character newCharacter = enrichService.getCharacter(characterId);
-        CharacterDTO newCharacterDTO = mapper.map( newCharacter );
+        CharacterDTO newCharacterDTO = mapper.map(newCharacter);
 
-        newCharacterDTO.setAttributes( mapper.mapAttributes( newCharacter.getAttributes().values() )
-                       .stream().sorted(Comparator.comparing(AttributeDTO::getId)).collect(Collectors.toList()) ) ;
+        newCharacterDTO.setAttributes(mapper.mapAttributes(newCharacter.getAttributes().values()).stream()
+                .sorted(Comparator.comparing(AttributeDTO::getId)).collect(Collectors.toList()));
+        newCharacterDTO.setSkills(mapper.mapSkills(newCharacter.getSkills().values()).stream()
+                .sorted(Comparator.comparing(SkillDTO::getName)).collect(Collectors.toList()));
 
-        newCharacterDTO.setRewards( mapper.mapRewards( newCharacter.getRewards() )
-                .stream().sorted(Comparator.comparing(RewardDTO::getId)).collect(Collectors.toList()) ) ;
-        newCharacterDTO.setRewardsPP( mapper.mapPPRewards( newCharacter.getRewardsPP() )
-                       .stream().sorted(Comparator.comparing(PPRewardDTO::getId)).collect(Collectors.toList()) ) ;
-        newCharacterDTO.setLearnings( mapper.mapLearnings( newCharacter.getLearnings())
-                       .stream().sorted(Comparator.comparing(LearningDTO::getId)).collect(Collectors.toList()) ) ;
-        newCharacterDTO.setLevelUps( mapper.mapLevelUps( newCharacter.getLevelUps())
-                       .stream().sorted(Comparator.comparing(LevelUpDTO::getId)).collect(Collectors.toList()) ) ;
+        newCharacterDTO.setRewards(
+                mapper.mapRewards(newCharacter.getRewards()).stream().sorted(Comparator.comparing(RewardDTO::getId))
+                        .collect(Collectors.toList()));
+        newCharacterDTO.setRewardsPP(mapper.mapPPRewards(newCharacter.getRewardsPP()).stream()
+                .sorted(Comparator.comparing(PPRewardDTO::getId)).collect(Collectors.toList()));
+        newCharacterDTO.setLearnings(mapper.mapLearnings(newCharacter.getLearnings()).stream()
+                .sorted(Comparator.comparing(LearningDTO::getId)).collect(Collectors.toList()));
+        newCharacterDTO.setLevelUps(
+                mapper.mapLevelUps(newCharacter.getLevelUps()).stream().sorted(Comparator.comparing(LevelUpDTO::getId))
+                        .collect(Collectors.toList()));
         return newCharacterDTO;
     }
 
