@@ -71,7 +71,7 @@ public class MidgardServiceImpl implements MidgardService {
         db.postAttributes( list );
 
         for (LearningCreate l : character.getLearnings() ) {
-            postLearn(l);
+            postLearning(l);
         }
 
         return getCharacter(character.getId());
@@ -87,21 +87,21 @@ public class MidgardServiceImpl implements MidgardService {
     public CharacterDTO postRewardPP(PPRewardCreate rewardPP) throws UserException {
         PPReward r = mapper.map(rewardPP);
         checkService.checkRewardPP(r);
-        db.postRewardPP( r );
+        db.postRewardPP(r);
         return getCharacter(rewardPP.getCharacterId());
     }
 
-    public CharacterDTO postLearn(LearningCreate learn) throws UserException {
-        Learning l = mapper.map(learn);
+    public CharacterDTO postLearning(LearningCreate learning) throws UserException {
+        Learning l = mapper.map(learning);
         checkService.checkAndEnrichLearning(l);
         db.postLearn(l);
-        return getCharacter(learn.getCharacterId());
+        return getCharacter(learning.getCharacterId());
     }
 
     public CharacterDTO postLevelUp(LevelUpCreate levelUp) throws UserException {
         LevelUp l = mapper.map(levelUp);
         checkService.checkLevelUp(l);
-        db.postLevelUp( l );
+        db.postLevelUp(l);
         return getCharacter(levelUp.getCharacterId());
     }
 }

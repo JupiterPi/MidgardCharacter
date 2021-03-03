@@ -57,8 +57,8 @@ public class MidgardController implements MidgardService {
     }
 
     @PostMapping("/learn")
-    public CharacterDTO postLearn(@RequestBody LearningCreate learn) throws UserException {
-        return service.postLearn(learn);
+    public CharacterDTO postLearning(@RequestBody LearningCreate learn) throws UserException {
+        return service.postLearning(learn);
     }
 
     @PostMapping("/levelUp")

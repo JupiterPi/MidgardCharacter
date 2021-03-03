@@ -48,7 +48,6 @@ public class ScenarioTest extends TestFactory {
         assertTrue(opt.isPresent());
         return opt.get();
     }
-
     AttributeDTO getAttribute(CharacterDTO character, String name) {
         var opt = character.getAttributes().stream().filter(a -> a.getName().equals(name)).findFirst();
         assertTrue(opt.isPresent());
@@ -67,6 +66,20 @@ public class ScenarioTest extends TestFactory {
         currentId++;
         var l = new LevelUpCreate(String.valueOf(currentId), character.getId(), level, attr, incr, ap);
         return midgardService.postLevelUp(l);
+    }
+
+    CharacterDTO postLearning(CharacterDTO character, String skillName, boolean starting, int newBonus,
+            int percentageGold) throws UserException {
+        currentId++;
+        var l = new LearningCreate(String.valueOf(currentId), character.getId(), skillName, starting, newBonus,
+                percentageGold);
+        return midgardService.postLearning(l);
+    }
+
+    CharacterDTO postPPReward(CharacterDTO character, String skillName, int pp) throws UserException {
+        currentId++;
+        var r = new PPRewardCreate(String.valueOf(currentId), character.getId(), skillName, pp);
+        return midgardService.postRewardPP(r);
     }
 
     @Test
@@ -91,9 +104,9 @@ public class ScenarioTest extends TestFactory {
 
     @Test
     public void RewardAndLevelUp() throws UserException {
-        var initial = postCharacter("Name", "As", "Akrobatik.Alchemie");
+        var c0 = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
-        var c1 = postReward(initial, 100, 200);
+        var c1 = postReward(c0, 100, 200);
         assertEquals(1, c1.getRewards().size());
         assertEquals(100, c1.getEp());
         assertEquals(100, c1.getEs());
@@ -113,6 +126,31 @@ public class ScenarioTest extends TestFactory {
         assertEquals(3, c4.getLevel());
         assertEquals(15, c4.getAp());
         assertEquals(52, getAttribute(c4, "St").getValue());
+    }
+
+    @Test
+    public void Learnings() throws UserException {
+        final String C_Alchemie = "Alchemie";
+        final String C_Akrobatik = "Akrobatik";
+
+        var c0 = postCharacter("Name", "As", C_Akrobatik);
+        var c1 = postReward(c0, 500, 200);
+
+        var c2 = postLearning(c1, C_Akrobatik, false, 9, 0);
+        assertEquals(2, c2.getLearnings().size());
+        assertEquals(9, getSkill(c2, C_Akrobatik).getBonus());
+
+        var c3 = postLearning(c2, C_Alchemie, false, 8, 0);
+        assertEquals(3, c3.getLearnings().size());
+        assertEquals(8, getSkill(c3, C_Alchemie).getBonus());
+
+        var c4 = postPPReward(c3, C_Alchemie, 1);
+        assertEquals(1, getSkill(c4, C_Alchemie).getPP());
+
+        var c5 = postLearning(c4, C_Alchemie, false, 9, 0);
+        assertEquals(4, c5.getLearnings().size());
+        assertEquals(9, getSkill(c5, C_Alchemie).getBonus());
+        assertEquals(0, getSkill(c5, C_Alchemie).getPP());
     }
 
 }

@@ -2,6 +2,7 @@ Tests:
 - Scenarios
 - remove bonus from AttributeCreate
 - remove Bonus from Initial LearningCreate
+- check enough EP for LevelUp
 
 Basics:
 - Security
