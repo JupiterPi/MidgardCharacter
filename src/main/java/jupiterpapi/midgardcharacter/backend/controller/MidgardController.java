@@ -51,7 +51,7 @@ public class MidgardController implements MidgardService {
         return service.postReward(reward);
     }
 
-    @PostMapping("/rewardPP")
+    @PostMapping("/PPReward")
     public CharacterDTO postRewardPP(@RequestBody PPRewardCreate rewardPP) throws UserException {
         return service.postRewardPP(rewardPP);
     }

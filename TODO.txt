@@ -4,6 +4,8 @@ Tests:
 - remove Bonus from Initial LearningCreate
 - check enough EP for LevelUp
 
+- Complete ConfigurationFiles
+
 Basics:
 - Security
 - Logging and Tracing

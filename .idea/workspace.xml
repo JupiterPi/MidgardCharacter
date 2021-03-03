@@ -29,13 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/BonusCost.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/BonusCost.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/configuration/ConfigurationReadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/configuration/ConfigurationReadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +97,7 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in MidgardCharacter (1)">
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter">
     <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
@@ -112,18 +106,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckTest.checkLevelUpFailLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.service" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.CheckTest" />
-      <option name="METHOD_NAME" value="checkLevelUpFailLevel" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in MidgardCharacter" />
         <item itemvalue="JUnit.All in MidgardCharacter (1)" />
         <item itemvalue="JUnit.ScenarioTest" />
         <item itemvalue="JUnit.ScenarioTest.newCharacterNoSkills" />
         <item itemvalue="JUnit.ScenarioTest.newCharacterWithInitialSkills" />
-        <item itemvalue="JUnit.CheckTest.checkLevelUpFailLevel" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614760635111</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Scenario: Learning and PPReward">
+      <created>1614762118810</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1614762118810</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +405,8 @@
     <MESSAGE value="Scenario: New Character with initial skill" />
     <MESSAGE value="Scenario: New Character with initial skill cleanup" />
     <MESSAGE value="Scenario: Rewards and LevelUps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scenario: Rewards and LevelUps" />
+    <MESSAGE value="Scenario: Learning and PPReward" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scenario: Learning and PPReward" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -443,34 +437,34 @@
     </state>
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1614760632241">
+    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1614762116639">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614760632241" />
+    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762116639" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614758998636" />
-    <state width="2493" height="299" key="GridCell.Tab.0.bottom" timestamp="1614761765363">
+    <state width="2493" height="299" key="GridCell.Tab.0.bottom" timestamp="1614762084843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="299" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614761765363" />
+    <state width="2493" height="299" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762084843" />
     <state width="1981" height="211" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
-    <state width="2493" height="299" key="GridCell.Tab.0.center" timestamp="1614761765363">
+    <state width="2493" height="299" key="GridCell.Tab.0.center" timestamp="1614762084843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="299" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614761765363" />
+    <state width="2493" height="299" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762084843" />
     <state width="1981" height="211" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
-    <state width="2493" height="299" key="GridCell.Tab.0.left" timestamp="1614761765363">
+    <state width="2493" height="299" key="GridCell.Tab.0.left" timestamp="1614762084843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="299" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614761765363" />
+    <state width="2493" height="299" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762084843" />
     <state width="1981" height="211" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986587" />
     <state width="2493" height="441" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
-    <state width="2493" height="299" key="GridCell.Tab.0.right" timestamp="1614761765363">
+    <state width="2493" height="299" key="GridCell.Tab.0.right" timestamp="1614762084843">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="299" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614761765363" />
+    <state width="2493" height="299" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762084843" />
     <state width="1981" height="211" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
     <state width="2493" height="441" key="GridCell.Tab.1.bottom" timestamp="1614760566221">

@@ -201,15 +201,15 @@ public class IntegrationTest {
     }
 
     @Test
-    public void postRewardPP() throws Exception {
+    public void postPPReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
-        postAndExpect("/api/reward",reward,reward);
-        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
-        LearningDTO learnResult = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
-        postAndExpect("/api/learn",learnCreate,learnResult);
-        PPRewardCreate rewardPP = new PPRewardCreate("1","SC1","Akrobatik",1);
-        postAndExpect("/api/rewardPP",rewardPP,rewardPP);
+        RewardCreate reward = new RewardCreate("1", "SC1", 100, 200);
+        postAndExpect("/api/reward", reward, reward);
+        LearningCreate learnCreate = new LearningCreate("1", "SC1", "Akrobatik", true, 8, 0);
+        LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 0, 0, 0);
+        postAndExpect("/api/learn", learnCreate, learnResult);
+        PPRewardCreate rewardPP = new PPRewardCreate("1", "SC1", "Akrobatik", 1);
+        postAndExpect("/api/PPReward", rewardPP, rewardPP);
     }
 
     @Test
