@@ -1,8 +1,7 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpapi.midgardcharacter.backend.model.create.AttributeCreate;
-import jupiterpapi.midgardcharacter.backend.model.create.CharacterCreate;
-import jupiterpapi.midgardcharacter.backend.model.create.LearningCreate;
+import jupiterpapi.midgardcharacter.backend.model.create.*;
+import jupiterpapi.midgardcharacter.backend.model.dto.AttributeDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.SkillDTO;
 import lombok.var;
@@ -43,10 +42,31 @@ public class ScenarioTest extends TestFactory {
 
         return midgardService.postCharacter(character);
     }
+
     SkillDTO getSkill(CharacterDTO character, String name) {
         var opt = character.getSkills().stream().filter(s -> s.getName().equals(name)).findFirst();
         assertTrue(opt.isPresent());
         return opt.get();
+    }
+
+    AttributeDTO getAttribute(CharacterDTO character, String name) {
+        var opt = character.getAttributes().stream().filter(a -> a.getName().equals(name)).findFirst();
+        assertTrue(opt.isPresent());
+        return opt.get();
+    }
+
+    int currentId = 0;
+
+    CharacterDTO postReward(CharacterDTO character, int ep, int gold) throws UserException {
+        currentId++;
+        var r = new RewardCreate(String.valueOf(currentId), character.getId(), ep, gold);
+        return midgardService.postReward(r);
+    }
+
+    CharacterDTO postLevelUp(CharacterDTO character, int level, String attr, int incr, int ap) throws UserException {
+        currentId++;
+        var l = new LevelUpCreate(String.valueOf(currentId), character.getId(), level, attr, incr, ap);
+        return midgardService.postLevelUp(l);
     }
 
     @Test
@@ -54,12 +74,13 @@ public class ScenarioTest extends TestFactory {
         var character = postCharacter("Name", "As", "");
         assertEquals("Name", character.getName());
         assertEquals(9, character.getAttributes().size());
+        assertEquals(50, getAttribute(character, "St").getValue());
     }
 
     @Test
     public void newCharacterWithInitialSkills() throws UserException {
-        final String NAME = "Name";
-        var character = postCharacter(NAME, "As", "Akrobatik.Alchemie");
+
+        var character = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
         assertEquals(2, character.getLearnings().size());
         assertEquals(2, character.getSkills().size());
@@ -69,8 +90,29 @@ public class ScenarioTest extends TestFactory {
     }
 
     @Test
-    public void RewardAndLevelUp() {
+    public void RewardAndLevelUp() throws UserException {
+        var initial = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
+        var c1 = postReward(initial, 100, 200);
+        assertEquals(1, c1.getRewards().size());
+        assertEquals(100, c1.getEp());
+        assertEquals(100, c1.getEs());
+        assertEquals(200, c1.getGold());
+
+        var c2 = postLevelUp(c1, 2, "", 0, 10);
+        assertEquals(2, c2.getLevel());
+        assertEquals(10, c2.getAp());
+
+        var c3 = postReward(c2, 300, 300);
+        assertEquals(2, c3.getRewards().size());
+        assertEquals(400, c3.getEp());
+        assertEquals(400, c3.getEs());
+        assertEquals(500, c3.getGold());
+
+        var c4 = postLevelUp(c3, 3, "St", 2, 15);
+        assertEquals(3, c4.getLevel());
+        assertEquals(15, c4.getAp());
+        assertEquals(52, getAttribute(c4, "St").getValue());
     }
 
 }
