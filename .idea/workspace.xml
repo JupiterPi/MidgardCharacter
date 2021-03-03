@@ -29,11 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614755782615</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Scenario: New Character with initial skill">
+      <created>1614757909384</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1614757909384</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,7 +389,8 @@
     <MESSAGE value="DBMock stored ...DB instances" />
     <MESSAGE value="Rename Learn" />
     <MESSAGE value="Rename RewardPP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename RewardPP" />
+    <MESSAGE value="Scenario: New Character with initial skill" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scenario: New Character with initial skill" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -417,62 +421,62 @@
     </state>
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1614755778724">
+    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1614757906176">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506435670" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
-    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614755778724" />
-    <state width="2493" height="299" key="GridCell.Tab.0.bottom" timestamp="1614757721729">
+    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614757906176" />
+    <state width="2493" height="441" key="GridCell.Tab.0.bottom" timestamp="1614758880875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="211" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2493" height="299" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614757721729" />
-    <state width="2493" height="299" key="GridCell.Tab.0.center" timestamp="1614757721729">
+    <state width="2493" height="441" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614758880875" />
+    <state width="2493" height="441" key="GridCell.Tab.0.center" timestamp="1614758880875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="211" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2493" height="299" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614757721729" />
-    <state width="2493" height="299" key="GridCell.Tab.0.left" timestamp="1614757721728">
+    <state width="2493" height="441" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614758880875" />
+    <state width="2493" height="441" key="GridCell.Tab.0.left" timestamp="1614758880875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="211" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986587" />
-    <state width="2493" height="299" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614757721728" />
-    <state width="2493" height="299" key="GridCell.Tab.0.right" timestamp="1614757721729">
+    <state width="2493" height="441" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614758880875" />
+    <state width="2493" height="441" key="GridCell.Tab.0.right" timestamp="1614758880875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="211" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2493" height="299" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614757721729" />
-    <state width="2493" height="441" key="GridCell.Tab.1.bottom" timestamp="1614757297502">
+    <state width="2493" height="441" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614758880875" />
+    <state width="2493" height="441" key="GridCell.Tab.1.bottom" timestamp="1614758863915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714440" />
-    <state width="2493" height="441" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614757297502" />
-    <state width="2493" height="441" key="GridCell.Tab.1.center" timestamp="1614757297502">
+    <state width="2493" height="441" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614758863915" />
+    <state width="2493" height="441" key="GridCell.Tab.1.center" timestamp="1614758863915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2493" height="441" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614757297502" />
-    <state width="2493" height="441" key="GridCell.Tab.1.left" timestamp="1614757297501">
+    <state width="2493" height="441" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614758863915" />
+    <state width="2493" height="441" key="GridCell.Tab.1.left" timestamp="1614758863915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2493" height="441" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614757297501" />
-    <state width="2493" height="441" key="GridCell.Tab.1.right" timestamp="1614757297502">
+    <state width="2493" height="441" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614758863915" />
+    <state width="2493" height="441" key="GridCell.Tab.1.right" timestamp="1614758863915">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2493" height="441" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614757297502" />
+    <state width="2493" height="441" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614758863915" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="543" y="110" key="RollbackChangesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625364603" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614755790841">
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614757921621">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506441453" />
     <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614684785809" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614755790841" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614757921621" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -493,6 +497,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java</url>
           <line>122</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

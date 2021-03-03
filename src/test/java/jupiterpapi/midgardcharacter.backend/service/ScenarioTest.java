@@ -8,10 +8,6 @@ import jupiterpapi.midgardcharacter.backend.model.dto.SkillDTO;
 import lombok.var;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -23,8 +19,12 @@ public class ScenarioTest extends TestFactory {
         character.getAttributes().add(a);
     }
 
-    CharacterDTO postCharacter(String name, String className, Collection<LearningCreate> initialLearnings)
-            throws UserException {
+    void addLearning(CharacterCreate character, String skillName) {
+        var l = new LearningCreate(character.getId() + skillName, character.getId(), skillName, true, 0, 0);
+        character.getLearnings().add(l);
+    }
+
+    CharacterDTO postCharacter(String name, String className, String initialLearnings) throws UserException {
         var character = new CharacterCreate(name, name, "User", className);
         addAttribute(character, "St", 50);
         addAttribute(character, "Gs", 50);
@@ -36,16 +36,13 @@ public class ScenarioTest extends TestFactory {
         addAttribute(character, "pA", 50);
         addAttribute(character, "Wk", 50);
 
-        if (initialLearnings != null)
-            character.getLearnings().addAll(initialLearnings);
+        if (initialLearnings.length() > 0)
+            for (String l : initialLearnings.split("\\.")) {
+                addLearning(character, l);
+            }
 
         return midgardService.postCharacter(character);
     }
-
-    void addLearning(List<LearningCreate> learnings, String characterId, String skillName) {
-        learnings.add(new LearningCreate(characterId + skillName, characterId, skillName, true, 0, 0));
-    }
-
     SkillDTO getSkill(CharacterDTO character, String name) {
         var opt = character.getSkills().stream().filter(s -> s.getName().equals(name)).findFirst();
         assertTrue(opt.isPresent());
@@ -54,7 +51,7 @@ public class ScenarioTest extends TestFactory {
 
     @Test
     public void newCharacterNoSkills() throws UserException {
-        var character = postCharacter("Name", "As", null);
+        var character = postCharacter("Name", "As", "");
         assertEquals("Name", character.getName());
         assertEquals(9, character.getAttributes().size());
     }
@@ -62,17 +59,18 @@ public class ScenarioTest extends TestFactory {
     @Test
     public void newCharacterWithInitialSkills() throws UserException {
         final String NAME = "Name";
-        List<LearningCreate> learnings = new ArrayList<>();
-
-        addLearning(learnings, NAME, "Akrobatik");
-        addLearning(learnings, NAME, "Alchemie");
-        var character = postCharacter(NAME, "As", learnings);
+        var character = postCharacter(NAME, "As", "Akrobatik.Alchemie");
 
         assertEquals(2, character.getLearnings().size());
         assertEquals(2, character.getSkills().size());
 
         // TODO bonus must be calculated correctly
         assertEquals(0, getSkill(character, "Akrobatik").getBonus());
+    }
+
+    @Test
+    public void RewardAndLevelUp() {
+
     }
 
 }
