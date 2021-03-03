@@ -105,8 +105,8 @@ public class IntegrationTest {
     }
 
 
-    final CharacterCreate characterCreate = new CharacterCreate("SC1","Name","1","As");
-    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1","Name","1");
+    final CharacterCreate characterCreate = new CharacterCreate("SC1", "Name", "1", "As", 0);
+    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1", "Name", "1");
     final List<CharacterMetaDTO> characterMetas = new ArrayList<>();
     final CharacterDTO characterDTO = new CharacterDTO("SC1","Name","1","As");
     @Before

@@ -28,15 +28,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="Tests finished">
+    <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/AttributeCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/AttributeCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Attribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/CharacterCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/CharacterCreate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" afterDir="false" />
@@ -365,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614762234043</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Tests finished">
+      <created>1614768787547</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1614768787547</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,73 +451,74 @@
     </state>
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
     <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
-    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614755495844">
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614778582259">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614778582259" />
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1614768733475">
+    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1614768785131">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768733475" />
+    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768785131" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614758998636" />
-    <state width="2493" height="369" key="GridCell.Tab.0.bottom" timestamp="1614768755603">
+    <state width="2493" height="369" key="GridCell.Tab.0.bottom" timestamp="1614778586078">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768755603" />
+    <state width="2493" height="369" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614778586078" />
     <state width="1981" height="211" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
-    <state width="2493" height="369" key="GridCell.Tab.0.center" timestamp="1614768755603">
+    <state width="2493" height="369" key="GridCell.Tab.0.center" timestamp="1614778586078">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768755603" />
+    <state width="2493" height="369" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614778586078" />
     <state width="1981" height="211" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
-    <state width="2493" height="369" key="GridCell.Tab.0.left" timestamp="1614768755602">
+    <state width="2493" height="369" key="GridCell.Tab.0.left" timestamp="1614778586078">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768755602" />
+    <state width="2493" height="369" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614778586078" />
     <state width="1981" height="211" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986587" />
     <state width="2493" height="441" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
-    <state width="2493" height="369" key="GridCell.Tab.0.right" timestamp="1614768755603">
+    <state width="2493" height="369" key="GridCell.Tab.0.right" timestamp="1614778586078">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768755603" />
+    <state width="2493" height="369" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614778586078" />
     <state width="1981" height="211" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
     <state width="2493" height="441" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934168" />
-    <state width="2493" height="441" key="GridCell.Tab.1.bottom" timestamp="1614768477323">
+    <state width="2493" height="441" key="GridCell.Tab.1.bottom" timestamp="1614768838435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768477323" />
+    <state width="2493" height="441" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768838435" />
     <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714440" />
     <state width="2493" height="441" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
-    <state width="2493" height="441" key="GridCell.Tab.1.center" timestamp="1614768477323">
+    <state width="2493" height="441" key="GridCell.Tab.1.center" timestamp="1614768838435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768477323" />
+    <state width="2493" height="441" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768838435" />
     <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
     <state width="2493" height="441" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
-    <state width="2493" height="441" key="GridCell.Tab.1.left" timestamp="1614768477323">
+    <state width="2493" height="441" key="GridCell.Tab.1.left" timestamp="1614768838435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768477323" />
+    <state width="2493" height="441" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768838435" />
     <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
     <state width="2493" height="441" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
-    <state width="2493" height="441" key="GridCell.Tab.1.right" timestamp="1614768477323">
+    <state width="2493" height="441" key="GridCell.Tab.1.right" timestamp="1614768838435">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768477323" />
+    <state width="2493" height="441" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768838435" />
     <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
     <state width="2493" height="441" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614758934169" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="543" y="110" key="RollbackChangesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625364603" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614762235953">
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614768789800">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614762235953" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614768789800" />
     <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614684785809" />
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614759010084" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
@@ -525,6 +533,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="699" y="402" key="git4idea.ui.GitResetDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625414196" />
+    <state x="980" y="357" key="refactoring.ChangeSignatureDialog" timestamp="1614775754767">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="980" y="357" key="refactoring.ChangeSignatureDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614775754767" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -533,11 +545,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java</url>
           <line>122</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java</url>

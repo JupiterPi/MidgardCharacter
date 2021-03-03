@@ -26,10 +26,15 @@ public class Character {
     List<PPReward> rewardsPP = new ArrayList<>();
     List<Learning> learnings = new ArrayList<>();
 
-    public Character(String id, String name, String userId, String className) {
+    public Character(String id, String name, String userId, String className, int ap) {
         this.id = id;
         this.name = name;
         this.userId = userId;
+        this.level = 1;
         this.className = className;
+        this.ep = 0;
+        this.es = 0;
+        this.gold = 0;
+        this.ap = ap;
     }
 }

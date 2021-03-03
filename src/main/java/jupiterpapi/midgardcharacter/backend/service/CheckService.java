@@ -81,7 +81,7 @@ public class CheckService {
 
     private void checkAttribute(String name) throws UserException {
         if (!name.equals("St") && !name.equals("Gs") && !name.equals("Gw") && !name.equals("Ko") && !name.equals("In")
-                && !name.equals("Zt") && !name.equals("pA") && !name.equals("Au")) {
+                && !name.equals("Zt") && !name.equals("pA") && !name.equals("Au") && !name.equals("Wk")) {
             throw new UserException();
         }
     }

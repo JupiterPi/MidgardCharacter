@@ -11,9 +11,9 @@ import java.util.List;
 @SuppressWarnings("SameParameterValue")
 public class TestBase extends TestFactory {
 
-    final Character initial = new Character("ID", "Name", "User", "As");
-    final Attribute gw = new Attribute("Gw", "ID", 96);
-    final Attribute in = new Attribute("In", "ID", 50);
+    final Character initial = new Character("ID", "Name", "User", "As", 0);
+    final Attribute gw = new Attribute("ID/Gw", "Gw", "ID", 96, 2);
+    final Attribute in = new Attribute("ID/In", "In", "ID", 50, 0);
     final HashMap<String, Attribute> attributesMap = new HashMap<>();
     final List<Attribute> attributeList = new ArrayList<>();
 

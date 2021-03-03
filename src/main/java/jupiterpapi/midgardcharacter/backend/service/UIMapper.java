@@ -23,6 +23,10 @@ public interface UIMapper {
     @Mapping(target = "levelUps", ignore = true)
     @Mapping(target = "rewards", ignore = true)
     @Mapping(target = "rewardsPP", ignore = true)
+    @Mapping(target = "es", ignore = true)
+    @Mapping(target = "ep", ignore = true)
+    @Mapping(target = "gold", ignore = true)
+    @Mapping(target = "level", ignore = true)
     Character map(CharacterCreate character);
 
     List<Attribute> mapAttributesCreate(Collection<AttributeCreate> attribute);

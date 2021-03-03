@@ -24,7 +24,7 @@ public class ScenarioTest extends TestFactory {
     }
 
     CharacterDTO postCharacter(String name, String className, String initialLearnings) throws UserException {
-        var character = new CharacterCreate(name, name, "User", className);
+        var character = new CharacterCreate(name, name, "User", className, 0);
         addAttribute(character, "St", 50);
         addAttribute(character, "Gs", 50);
         addAttribute(character, "Gw", 50);

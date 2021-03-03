@@ -10,7 +10,7 @@ public class CheckTest extends TestBase {
     @Test
     public void checkNewCharacterSuccess() throws UserException {
         addCharacterWithAttributes();
-        Character c = new Character("ID2", "Name", "User", "As");
+        Character c = new Character("ID2", "Name", "User", "As", 0);
         checkService.checkNewCharacter(c,initial.getAttributes().values());
     }
 
@@ -24,16 +24,16 @@ public class CheckTest extends TestBase {
     public void checkNewCharacterFailAttributesHigh() throws UserException {
         addCharacter();
         initial.setId("XYZ");
-        initial.getAttributes().put("Zt", new Attribute("Zt","ID",200));
-        checkService.checkNewCharacter(initial,initial.getAttributes().values());
+        initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 200, 0));
+        checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
     @Test(expected = UserException.class)
     public void checkNewCharacterFailAttributesLow() throws UserException {
         addCharacter();
         initial.setId("XYZ");
-        initial.getAttributes().put("Zt", new Attribute("Zt","ID",0));
-        checkService.checkNewCharacter(initial,initial.getAttributes().values());
+        initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 0, 0));
+        checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
 

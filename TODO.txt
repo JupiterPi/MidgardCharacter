@@ -1,14 +1,11 @@
-- Cleanup Learning
-- Cleanup Default Constructors
-
 - Complete ConfigurationFiles
 
 Basics:
+- Meaningful Error Messages
 - Security
 - Logging and Tracing
 
 Advanced:
-- Meaningful Error Messages
 - Actuator
 - ApplicationConfiguration: Port, ...
 - Swagger
