@@ -6,16 +6,23 @@ import org.junit.Before;
 
 public class TestFactory {
 
+    DBMapper dbMapper;
+    UIMapper uiMapper;
     DBServiceMock dbService;
     ConfigurationService configurationService;
     SkillService skillService;
     EnrichService enrichService;
     CheckService checkService;
+    MidgardServiceImpl midgardService;
 
     @Before
     public void setup() throws InternalException {
 
+        dbMapper = DBMapper.INSTANCE;
+        uiMapper = UIMapper.INSTANCE;
+
         dbService = new DBServiceMock();
+        dbService.mapper = dbMapper;
 
         configurationService = new ConfigurationService();
         configurationService.read();
@@ -32,6 +39,11 @@ public class TestFactory {
         checkService.enrich = enrichService;
         checkService.skillService = skillService;
 
+        midgardService = new MidgardServiceImpl();
+        midgardService.db = dbService;
+        midgardService.mapper = uiMapper;
+        midgardService.enrichService = enrichService;
+        midgardService.checkService = checkService;
     }
 
 }

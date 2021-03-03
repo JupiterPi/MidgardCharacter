@@ -1,10 +1,9 @@
 package jupiterpapi.midgardcharacter.backend;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jupiterpapi.midgardcharacter.backend.model.Learn;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
-import jupiterpapi.midgardcharacter.backend.service.DBService;
 import jupiterpapi.midgardcharacter.backend.model.dto.*;
+import jupiterpapi.midgardcharacter.backend.service.DBService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

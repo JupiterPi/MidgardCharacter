@@ -5,9 +5,13 @@ import jupiterpapi.midgardcharacter.backend.model.*;
 import jupiterpapi.midgardcharacter.backend.model.repo.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface DBMapper {
+    @SuppressWarnings("WrongUsageOfMappersFactory")
+    DBMapper INSTANCE = Mappers.getMapper(DBMapper.class);
+
     User map(UserDB user);
 
     @Mapping(target = "skills", ignore = true)

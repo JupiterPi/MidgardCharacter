@@ -119,9 +119,9 @@ public class CheckTest extends TestBase {
     @Test(expected = UserException.class)
     public void checkLevelUpFailLevel() throws UserException {
         addCharacterWithAttributes();
-        dbService.characters.get(0).setLevel(2);
+        addLevelUp(2, "", 0, 10);
 
-        LevelUp l = new LevelUp("1","ID",1,"",0,10);
+        LevelUp l = new LevelUp("1", "ID", 2, "", 0, 10);
 
         checkService.checkLevelUp(l);
     }

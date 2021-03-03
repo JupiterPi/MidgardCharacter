@@ -1,7 +1,8 @@
 Tests:
-- Start with: EnrichTest: Multiple Rewards, ...
 - Build up Initial Skill
+- Extend DBMOck with Mapping to/from ..DB
 - Scenarios
+
 
 Basics:
 - Security

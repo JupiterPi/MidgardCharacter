@@ -18,7 +18,7 @@ public class MidgardServiceImpl implements MidgardService {
     UIMapper mapper;
 
     @Autowired
-    DBServiceImpl db;
+    DBService db;
 
     @Autowired
     EnrichService enrichService;
