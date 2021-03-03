@@ -86,9 +86,9 @@ public class EnrichService {
         return c;
     }
     private Character applyRewardPP(Character c) {
-        for (RewardPP r : c.getRewardsPP()) {
+        for (PPReward r : c.getRewardsPP()) {
             Skill s = c.getSkills().get(r.getSkillName());
-            s.setPP( s.getPP() + r.getPP() );
+            s.setPP(s.getPP() + r.getPP());
         }
         return c;
     }

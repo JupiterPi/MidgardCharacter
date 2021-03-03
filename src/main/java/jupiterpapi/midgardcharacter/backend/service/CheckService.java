@@ -23,23 +23,27 @@ public class CheckService {
 
         for( Attribute a : attributes ) {
             if (a.getValue() < 1) throw new UserException();
-            if (a.getValue() > 100) throw new UserException();
+            if (a.getValue() > 100)
+                throw new UserException();
         }
     }
+
     void checkReward(Reward reward) throws UserException {
-        if (reward.getEp() < 0) throw new UserException();
-        if (reward.getGold() < 0) throw new UserException();
+        if (reward.getEp() < 0)
+            throw new UserException();
+        if (reward.getGold() < 0)
+            throw new UserException();
 
         getCharacter(reward.getCharacterId());
     }
 
-    void checkRewardPP(RewardPP rewardPP) throws UserException {
-        if (rewardPP.getPP() < 1)
+    void checkRewardPP(PPReward PPReward) throws UserException {
+        if (PPReward.getPP() < 1)
             throw new UserException();
 
-        skillService.checkSkillName(rewardPP.getSkillName());
+        skillService.checkSkillName(PPReward.getSkillName());
 
-        getCharacter(rewardPP.getCharacterId());
+        getCharacter(PPReward.getCharacterId());
     }
 
     void checkAndEnrichLearning(Learning learning) throws UserException {

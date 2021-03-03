@@ -81,7 +81,7 @@ public class MidgardServiceImpl implements MidgardService {
     }
 
     public CharacterDTO postRewardPP(PPRewardCreate rewardPP) throws UserException {
-        RewardPP r = mapper.map(rewardPP);
+        PPReward r = mapper.map(rewardPP);
         checkService.checkRewardPP(r);
         db.postRewardPP( r );
         return getCharacter(rewardPP.getCharacterId());

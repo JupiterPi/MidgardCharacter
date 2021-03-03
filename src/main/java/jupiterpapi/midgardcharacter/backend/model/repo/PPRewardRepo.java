@@ -4,6 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface RewardPPRepo extends MongoRepository<RewardPPDB,String> {
-    List<RewardPPDB> findByCharacterId(String characterId);
+public interface PPRewardRepo extends MongoRepository<PPRewardDB, String> {
+    List<PPRewardDB> findByCharacterId(String characterId);
 }

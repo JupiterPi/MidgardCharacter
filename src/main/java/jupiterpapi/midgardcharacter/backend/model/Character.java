@@ -23,7 +23,7 @@ public class Character {
     HashMap<String,Skill> skills = new HashMap<>();
     List<LevelUp> levelUps = new ArrayList<>();
     List<Reward> rewards = new ArrayList<>();
-    List<RewardPP> rewardsPP = new ArrayList<>();
+    List<PPReward> rewardsPP = new ArrayList<>();
     List<Learning> learnings = new ArrayList<>();
 
     public Character(String id, String name, String userId, String className) {

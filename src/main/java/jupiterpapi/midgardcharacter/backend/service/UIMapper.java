@@ -29,7 +29,7 @@ public interface UIMapper {
 
     List<Learning> mapLearningsCreate(Collection<LearningCreate> learnings);
 
-    RewardPP map(PPRewardCreate rewardPP);
+    PPReward map(PPRewardCreate rewardPP);
 
     @Mapping(target = "PPSpent", ignore = true)
     @Mapping(target = "epSpent", ignore = true)
@@ -53,7 +53,7 @@ public interface UIMapper {
 
     Collection<RewardDTO> mapRewards(Collection<Reward> reward);
 
-    Collection<PPRewardDTO> mapPPRewards(Collection<RewardPP> rewardPP);
+    Collection<PPRewardDTO> mapPPRewards(Collection<PPReward> PPReward);
 
     Collection<LearningDTO> mapLearnings(Collection<Learning> reward);
 

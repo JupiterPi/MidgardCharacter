@@ -19,7 +19,7 @@ public interface DBService {
 
     List<Reward> getRewards(String characterId);
 
-    List<RewardPP> getRewardPPs(String characterId);
+    List<PPReward> getRewardPPs(String characterId);
 
     List<Learning> getLearnings(String characterId);
 
@@ -33,7 +33,7 @@ public interface DBService {
 
     void postReward(Reward reward);
 
-    void postRewardPP(RewardPP rewardPP);
+    void postRewardPP(PPReward PPReward);
 
     void postLearn(Learning learning);
 

@@ -51,7 +51,7 @@ public class TestBase extends TestFactory {
     }
 
     protected void addRewardPP(String skill, int pp) {
-        RewardPP r = new RewardPP("1","ID",skill,pp);
+        PPReward r = new PPReward("1", "ID", skill, pp);
         dbService.postRewardPP(r);
         initial.getRewardsPP().add(r);
     }

@@ -28,7 +28,7 @@ public class DBServiceImpl implements DBService {
     RewardRepo rewardRepo;
 
     @Autowired
-    RewardPPRepo rewardPPRepo;
+    PPRewardRepo PPRewardRepo;
 
     @Autowired
     LearningRepo learningRepo;
@@ -42,7 +42,7 @@ public class DBServiceImpl implements DBService {
         attributeRepo.deleteAll();
         levelUpRepo.deleteAll();
         rewardRepo.deleteAll();
-        rewardPPRepo.deleteAll();
+        PPRewardRepo.deleteAll();
         learningRepo.deleteAll();
     }
 
@@ -63,18 +63,17 @@ public class DBServiceImpl implements DBService {
         return dbs.stream().map(db -> mapper.map(db)).collect(Collectors.toList());
     }
     public List<LevelUp> getLevelUps(String characterId) {
-        return levelUpRepo
-                    .findByCharacterId(characterId)
-                    .stream().map(db -> mapper.map(db))
-                    .collect(Collectors.toList());
+        return levelUpRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
+                .collect(Collectors.toList());
     }
+
     public List<Reward> getRewards(String characterId) {
         return rewardRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
     }
 
-    public List<RewardPP> getRewardPPs(String characterId) {
-        return rewardPPRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
+    public List<PPReward> getRewardPPs(String characterId) {
+        return PPRewardRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
     }
 
@@ -103,8 +102,8 @@ public class DBServiceImpl implements DBService {
         rewardRepo.insert(mapper.map(reward));
     }
 
-    public void postRewardPP(RewardPP rewardPP) {
-        rewardPPRepo.insert(mapper.map(rewardPP));
+    public void postRewardPP(PPReward PPReward) {
+        PPRewardRepo.insert(mapper.map(PPReward));
     }
 
     public void postLearn(Learning learning) {

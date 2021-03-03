@@ -15,7 +15,7 @@ public class DBServiceMock implements DBService {
     final List<AttributeDB> attributes = new ArrayList<>();
     final List<LevelUpDB> levelUps = new ArrayList<>();
     final List<RewardDB> rewards = new ArrayList<>();
-    final List<RewardPPDB> rewardsPP = new ArrayList<>();
+    final List<PPRewardDB> rewardsPP = new ArrayList<>();
     final List<LearningDB> learnings = new ArrayList<>();
 
     DBMapper mapper;
@@ -60,7 +60,7 @@ public class DBServiceMock implements DBService {
                 .collect(Collectors.toList());
     }
 
-    public List<RewardPP> getRewardPPs(String characterId) {
+    public List<PPReward> getRewardPPs(String characterId) {
         List<RewardDB> list = new ArrayList<>();
         return rewardsPP.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
@@ -93,8 +93,8 @@ public class DBServiceMock implements DBService {
         rewards.add(mapper.map(reward));
     }
 
-    public void postRewardPP(RewardPP rewardPP) {
-        rewardsPP.add(mapper.map(rewardPP));
+    public void postRewardPP(PPReward PPReward) {
+        rewardsPP.add(mapper.map(PPReward));
     }
 
     public void postLearn(Learning learning) {
