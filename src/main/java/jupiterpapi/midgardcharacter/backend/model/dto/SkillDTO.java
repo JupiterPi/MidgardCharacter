@@ -5,7 +5,6 @@ import lombok.Data;
 @Data
 public class SkillDTO {
     String name;
-    String characterId;
     int bonus;
     int attributeBonus;
     int totalBonus;

@@ -23,7 +23,6 @@ public interface DBMapper {
     @Mapping(target = "ap", ignore = true)
     @Mapping(target = "es", ignore = true)
     @Mapping(target = "ep", ignore = true)
-    @Mapping(target = "level", ignore = true)
     @Mapping(target = "gold", ignore = true)
     Character map(CharacterDB character);
 

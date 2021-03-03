@@ -40,7 +40,7 @@ public class MidgardServiceImpl implements MidgardService {
         CharacterDTO newCharacterDTO = mapper.map(newCharacter);
 
         newCharacterDTO.setAttributes(mapper.mapAttributes(newCharacter.getAttributes().values()).stream()
-                .sorted(Comparator.comparing(AttributeDTO::getId)).collect(Collectors.toList()));
+                .sorted(Comparator.comparing(AttributeDTO::getName)).collect(Collectors.toList()));
         newCharacterDTO.setSkills(mapper.mapSkills(newCharacter.getSkills().values()).stream()
                 .sorted(Comparator.comparing(SkillDTO::getName)).collect(Collectors.toList()));
 
@@ -63,14 +63,16 @@ public class MidgardServiceImpl implements MidgardService {
 
     public CharacterDTO postCharacter(CharacterCreate character) throws UserException {
         Character c = mapper.map(character);
-        List<Attribute> list = mapper.mapAttributesCreate( character.getAttributes() );
+        c.setLevel(1);
+        c.setCreatedAt(TimeProvider.getDate()); //
+        List<Attribute> list = mapper.mapAttributesCreate(character.getAttributes());
 
-        checkService.checkNewCharacter(c,list);
+        checkService.checkNewCharacter(c, list);
 
-        db.postCharacter( c );
-        db.postAttributes( list );
+        db.postCharacter(c);
+        db.postAttributes(list);
 
-        for (LearningCreate l : character.getLearnings() ) {
+        for (LearningCreate l : character.getLearnings()) {
             postLearning(l);
         }
 

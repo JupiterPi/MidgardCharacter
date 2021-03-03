@@ -18,6 +18,7 @@ public class Character {
     int es;
     int gold;
     int ap;
+    String createdAt;
 
     HashMap<String,Attribute> attributes = new HashMap<>();
     HashMap<String,Skill> skills = new HashMap<>();

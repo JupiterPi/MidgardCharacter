@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.*;
 import jupiterpapi.midgardcharacter.backend.service.DBService;
+import jupiterpapi.midgardcharacter.backend.service.TimeProvider;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,12 +31,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class IntegrationTest {
 
-
     @Autowired
     MockMvc mockMvc;
 
     @Autowired
     DBService db;
+
+    @Before
+    public void setDate() {
+        TimeProvider.date = TimeProvider.getDate();
+    }
 
     @Before
     public void reset() {
@@ -104,11 +109,10 @@ public class IntegrationTest {
         getUsers(users);
     }
 
-
     final CharacterCreate characterCreate = new CharacterCreate("SC1", "Name", "1", "As", 0);
-    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1", "Name", "1");
+    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1", "Name", "1", "As", 1, TimeProvider.getDate());
     final List<CharacterMetaDTO> characterMetas = new ArrayList<>();
-    final CharacterDTO characterDTO = new CharacterDTO("SC1","Name","1","As");
+    final CharacterDTO characterDTO = new CharacterDTO("SC1", "Name", "1", "As", TimeProvider.getDate());
     @Before
     public void resetCharacterMetas() {
         characterMetas.clear();
@@ -145,7 +149,7 @@ public class IntegrationTest {
     int attributeId = 0;
 
     AttributeDTO getAttributeDTO(String name, int value, int bonus) {
-        return new AttributeDTO(String.valueOf(attributeId), name, "SC1", value, bonus);
+        return new AttributeDTO(name, value, bonus);
     }
 
     AttributeCreate getAttributeCreate(String name, int value) {
@@ -161,23 +165,23 @@ public class IntegrationTest {
     @Test
     public void postWithAttribute() throws Exception {
         postUser(userCreate);
-        addAttribute("St", 50, 0);
+        addAttribute("Gs", 98, 2);
         addAttribute("Gw", 10, -1);
-        addAttribute("Gs",98,2);
+        addAttribute("St", 50, 0);
         postCharacter(characterCreate);
         getCharacter("SC1",characterDTO);
     }
 
     void postStandard() throws Exception {
         postUser(userCreate);
-        addAttribute("St",50,0);
-        addAttribute("Gw",50,0);
-        addAttribute("Gs",50,0);
-        addAttribute("Ko",50,0);
-        addAttribute("In",50,0);
-        addAttribute("Zt",50,0);
-        addAttribute("pA",50,0);
-        addAttribute("Au",50,0);
+        addAttribute("Au", 50, 0);
+        addAttribute("Gs", 50, 0);
+        addAttribute("Gw", 50, 0);
+        addAttribute("In", 50, 0);
+        addAttribute("Ko", 50, 0);
+        addAttribute("St", 50, 0);
+        addAttribute("Zt", 50, 0);
+        addAttribute("pA", 50, 0);
         postCharacter(characterCreate);
     }
     @Test
