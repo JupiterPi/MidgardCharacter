@@ -56,15 +56,19 @@ public class EnrichService {
     }
     private Character applyLevelUp(Character c) {
         for (LevelUp l : c.getLevelUps()) {
-            if (c.getLevel() < l.getLevel()) c.setLevel(l.getLevel());
-            if (c.getAp() < l.getAp()) c.setAp(l.getAp());
+            if (c.getLevel() < l.getLevel())
+                c.setLevel(l.getLevel());
+            if (c.getAp() < l.getAp())
+                c.setAp(l.getAp());
 
-            if (! l.getAttribute().equals("")) {
+            if (!l.getAttribute().equals("")) {
                 Attribute a = c.getAttributes().get(l.getAttribute());
                 a.setValue(a.getValue() + l.getIncrease());
             }
 
         }
+        if (c.getLevel() == 0)
+            c.setLevel(1);
         return c;
     }
     private Character applyLearning(Character c) {

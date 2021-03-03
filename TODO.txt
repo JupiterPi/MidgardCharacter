@@ -1,8 +1,5 @@
-Tests:
-- Scenarios
-- remove bonus from AttributeCreate
-- remove Bonus from Initial LearningCreate
-- check enough EP for LevelUp
+- Cleanup Learning
+- Cleanup Default Constructors
 
 - Complete ConfigurationFiles
 

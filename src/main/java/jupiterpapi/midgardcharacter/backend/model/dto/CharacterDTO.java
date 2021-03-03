@@ -30,5 +30,6 @@ public class CharacterDTO {
         this.name = name;
         this.userId = userId;
         this.className = className;
+        this.level = 1;
     }
 }

@@ -87,6 +87,7 @@ public class CheckTest extends TestBase {
     @Test
     public void checkLevelUpSuccess() throws UserException {
         addCharacterWithAttributes();
+        addReward(1000, 0);
         LevelUp l = new LevelUp("1","ID",2,"",0,10);
 
         checkService.checkLevelUp(l);
@@ -95,6 +96,7 @@ public class CheckTest extends TestBase {
     @Test(expected = UserException.class)
     public void checkLevelUpFailAttribute() throws UserException {
         addCharacterWithAttributes();
+        addReward(1000, 0);
         LevelUp l = new LevelUp("1","ID",2,"ZZ",1,10);
 
         checkService.checkLevelUp(l);
@@ -103,6 +105,7 @@ public class CheckTest extends TestBase {
     @Test(expected = UserException.class)
     public void checkLevelUpFailIncrease() throws UserException {
         addCharacterWithAttributes();
+        addReward(1000, 0);
         LevelUp l = new LevelUp("1","ID",2,"Gw",0,10);
 
         checkService.checkLevelUp(l);
@@ -111,6 +114,7 @@ public class CheckTest extends TestBase {
     @Test(expected = UserException.class)
     public void checkLevelUpFailAp() throws UserException {
         addCharacterWithAttributes();
+        addReward(1000, 0);
         LevelUp l = new LevelUp("1","ID",2,"Gw",1,0);
 
         checkService.checkLevelUp(l);
@@ -119,6 +123,7 @@ public class CheckTest extends TestBase {
     @Test(expected = UserException.class)
     public void checkLevelUpFailLevel() throws UserException {
         addCharacterWithAttributes();
+        addReward(1000, 0);
         addLevelUp(2, "", 0, 10);
 
         LevelUp l = new LevelUp("1", "ID", 2, "", 0, 10);
@@ -126,10 +131,19 @@ public class CheckTest extends TestBase {
         checkService.checkLevelUp(l);
     }
 
+    @Test(expected = UserException.class)
+    public void checkLevelUpFailEs() throws UserException {
+        addCharacterWithAttributes();
+        addReward(10, 0);
+        LevelUp l = new LevelUp("2", "ID", 2, "", 0, 10);
+
+        checkService.checkLevelUp(l);
+    }
+
     @Test
     public void checkLearningInitialSkill() throws UserException {
         addCharacterWithAttributes();
-        addReward(100,100);
+        addReward(100, 100);
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);

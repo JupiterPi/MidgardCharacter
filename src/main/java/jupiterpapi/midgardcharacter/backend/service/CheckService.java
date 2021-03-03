@@ -5,7 +5,9 @@ import jupiterpapi.midgardcharacter.backend.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class CheckService {
@@ -63,11 +65,14 @@ public class CheckService {
         if (levelUp.getLevel() <= c.getLevel())
             throw new UserException();
 
-        if (! levelUp.getAttribute().equals(""))
-          checkAttribute(levelUp.getAttribute());
+        if (!levelUp.getAttribute().equals(""))
+            checkAttribute(levelUp.getAttribute());
 
-        if (!levelUp.getAttribute().equals("") && levelUp.getIncrease() < 1 ) throw new UserException();
-        if (levelUp.getAp() < 1) throw new UserException();
+        if (!levelUp.getAttribute().equals("") && levelUp.getIncrease() < 1)
+            throw new UserException();
+        if (levelUp.getAp() < 1)
+            throw new UserException();
+        checkEsForLevelUp(levelUp.getLevel(), c.getEs());
     }
 
     private Character getCharacter(String characterId) throws UserException {
@@ -121,6 +126,25 @@ public class CheckService {
             if (learning.getGoldSpent() > c.getGold())
                 throw new UserException();
             if (withoutGold > c.getEp())
+                throw new UserException();
+        }
+    }
+
+    private void checkEsForLevelUp(int level, int es) throws UserException {
+        if (level <= 15) {
+            String table = "2:100,3:250,4:500,5:750,6:1000,7:1250,8:1500,9:1750,10:2000,11:2500,12:3000,13:3500,14:4000,15:4500,15:5000";
+            List<String> list = new ArrayList<>();
+            for (String entry : table.split(",")) {
+                String[] values = entry.split(":");
+                list.add(values[1]);
+            }
+            String value = list.get(level - 2);
+            int needed = Integer.parseInt(value);
+            if (es < needed)
+                throw new UserException();
+        } else {
+            int needed = (level - 11) * 1000;
+            if (es < needed)
                 throw new UserException();
         }
     }

@@ -138,27 +138,31 @@ public class IntegrationTest {
     public void postCharacterAndGetIt() throws Exception {
         postUser(userCreate);
         postCharacter(characterCreate);
-        getCharacter("SC1",characterDTO);
+        getCharacter("SC1", characterDTO);
 
     }
 
     int attributeId = 0;
+
     AttributeDTO getAttributeDTO(String name, int value, int bonus) {
-        return new AttributeDTO(String.valueOf(attributeId),name,"SC1",value,bonus);
+        return new AttributeDTO(String.valueOf(attributeId), name, "SC1", value, bonus);
     }
-    AttributeCreate getAttributeCreate(String name, int value, int bonus) {
-        return new AttributeCreate(String.valueOf(attributeId),name,"SC1",value,bonus);
+
+    AttributeCreate getAttributeCreate(String name, int value) {
+        return new AttributeCreate(String.valueOf(attributeId), name, "SC1", value);
     }
+
     void addAttribute(String name, int value, int bonus) {
         attributeId++;
-        characterCreate.getAttributes().add( getAttributeCreate(name,value,bonus) );
-        characterDTO.getAttributes().add( getAttributeDTO(name,value,bonus) );
+        characterCreate.getAttributes().add(getAttributeCreate(name, value));
+        characterDTO.getAttributes().add(getAttributeDTO(name, value, bonus));
     }
+
     @Test
     public void postWithAttribute() throws Exception {
         postUser(userCreate);
-        addAttribute("St",50,0);
-        addAttribute("Gw",10,-1);
+        addAttribute("St", 50, 0);
+        addAttribute("Gw", 10, -1);
         addAttribute("Gs",98,2);
         postCharacter(characterCreate);
         getCharacter("SC1",characterDTO);
@@ -217,7 +221,7 @@ public class IntegrationTest {
         postStandard();
         RewardCreate reward = new RewardCreate("1","SC1",100,200);
         postAndExpect("/api/reward",reward,reward);
-        LevelUpCreate levelUp = new LevelUpCreate("1","SC1",1,"",0,10);
+        LevelUpCreate levelUp = new LevelUpCreate("1", "SC1", 2, "", 0, 10);
         postAndExpect("/api/levelUp",levelUp,levelUp);
     }
 

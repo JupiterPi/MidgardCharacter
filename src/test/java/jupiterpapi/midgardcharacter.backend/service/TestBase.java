@@ -19,6 +19,7 @@ public class TestBase extends TestFactory {
 
     @Before
     public void testData() {
+        initial.setLevel(1);
         attributesMap.put("Gw", gw);
         attributesMap.put("In", in);
         attributeList.add(gw);

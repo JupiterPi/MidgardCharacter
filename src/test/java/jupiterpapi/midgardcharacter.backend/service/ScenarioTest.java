@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 public class ScenarioTest extends TestFactory {
 
     void addAttribute(CharacterCreate character, String name, int value) {
-        var a = new AttributeCreate(character.getId() + name, name, character.getId(), value, 0);
+        var a = new AttributeCreate(character.getId() + name, name, character.getId(), value);
         character.getAttributes().add(a);
     }
 
@@ -98,8 +98,7 @@ public class ScenarioTest extends TestFactory {
         assertEquals(2, character.getLearnings().size());
         assertEquals(2, character.getSkills().size());
 
-        // TODO bonus must be calculated correctly
-        assertEquals(0, getSkill(character, "Akrobatik").getBonus());
+        assertEquals(8, getSkill(character, "Akrobatik").getBonus());
     }
 
     @Test

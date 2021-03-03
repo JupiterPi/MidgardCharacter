@@ -33,6 +33,7 @@ public class SkillService {
             te = b.getCost();
         } else {
             te = s.getLe() * 3;
+            skill.setBonus(s.getStartingBonus());
         }
         skill.setTECost(te);
 

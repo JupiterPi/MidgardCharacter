@@ -10,5 +10,4 @@ public class AttributeCreate {
     String name;
     String characterId;
     int value;
-    int bonus;
 }

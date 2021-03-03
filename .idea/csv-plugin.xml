@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\model\create\LearningCreate.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\service\CheckService.java">
           <value>
             <Attribute>
@@ -25,6 +32,13 @@
           </value>
         </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\CheckTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\EnrichTest.java">
           <value>
             <Attribute>
               <option name="separator" value="," />
