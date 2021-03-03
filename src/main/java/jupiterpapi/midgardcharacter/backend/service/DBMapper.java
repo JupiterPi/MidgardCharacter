@@ -33,7 +33,8 @@ public interface DBMapper {
     LevelUp map(LevelUpDB levelUp);
     Reward map(RewardDB reward);
     RewardPP map(RewardPPDB rewardPP);
-    Learn map(LearnDB learn);
+
+    Learning map(LearningDB learn);
 
     UserDB map(User user);
     CharacterDB map(Character character);
@@ -41,6 +42,8 @@ public interface DBMapper {
     AttributeDB map(Attribute attribute);
     LevelUpDB map(LevelUp levelUp);
     RewardDB map(Reward reward);
+
     RewardPPDB map(RewardPP rewardPP);
-    LearnDB map(Learn learn);
+
+    LearningDB map(Learning learning);
 }

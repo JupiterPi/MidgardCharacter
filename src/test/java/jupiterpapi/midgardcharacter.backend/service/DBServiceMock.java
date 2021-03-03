@@ -16,7 +16,7 @@ public class DBServiceMock implements DBService {
     final List<LevelUpDB> levelUps = new ArrayList<>();
     final List<RewardDB> rewards = new ArrayList<>();
     final List<RewardPPDB> rewardsPP = new ArrayList<>();
-    final List<LearnDB> learnings = new ArrayList<>();
+    final List<LearningDB> learnings = new ArrayList<>();
 
     DBMapper mapper;
 
@@ -53,25 +53,30 @@ public class DBServiceMock implements DBService {
         return levelUps.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
     }
+
     public List<Reward> getRewards(String characterId) {
         List<RewardDB> list = new ArrayList<>();
         return rewards.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
     }
+
     public List<RewardPP> getRewardPPs(String characterId) {
         List<RewardDB> list = new ArrayList<>();
         return rewardsPP.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
     }
-    public List<Learn> getLearnings(String characterId) {
-        List<LearnDB> list = new ArrayList<>();
+
+    public List<Learning> getLearnings(String characterId) {
+        List<LearningDB> list = new ArrayList<>();
         return learnings.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
     }
+
     public User postUser(User user) {
         users.add(mapper.map(user));
         return user;
     }
+
     public void postCharacter(Character character) {
         characters.add(mapper.map(character));
     }
@@ -79,16 +84,20 @@ public class DBServiceMock implements DBService {
         var attr = attributes.stream().map(e -> mapper.map(e)).collect(Collectors.toList());
         this.attributes.addAll(attr);
     }
+
     public void postLevelUp(LevelUp levelUp) {
         levelUps.add(mapper.map(levelUp));
     }
+
     public void postReward(Reward reward) {
         rewards.add(mapper.map(reward));
     }
+
     public void postRewardPP(RewardPP rewardPP) {
         rewardsPP.add(mapper.map(rewardPP));
     }
-    public void postLearn(Learn learn) {
-        learnings.add(mapper.map(learn));
+
+    public void postLearn(Learning learning) {
+        learnings.add(mapper.map(learning));
     }
 }

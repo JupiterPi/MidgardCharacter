@@ -130,8 +130,7 @@ public class CheckTest extends TestBase {
     public void checkLearningInitialSkill() throws UserException {
         addCharacterWithAttributes();
         addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",true,true,8,0,0,0,0);
+        Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);
     }
@@ -140,8 +139,7 @@ public class CheckTest extends TestBase {
     public void checkLearningNewSkill() throws UserException {
         addCharacterWithAttributes();
         addReward(100,100);
-        Learn l = new Learn("1","ID",
-                       "Akrobatik",false,true,8,0,0,0,0);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);
     }
@@ -151,9 +149,7 @@ public class CheckTest extends TestBase {
     public void checkLearningWithTooLittleEP() throws UserException {
         addCharacterWithAttributes();
         addReward(20,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,0,0,0,0);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);
     }
@@ -161,9 +157,7 @@ public class CheckTest extends TestBase {
     public void checkLearningWithTooLittleGold() throws UserException {
         addCharacterWithAttributes();
         addReward(2000,20);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                8,50,0,0,0);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 50, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);
     }
@@ -174,9 +168,7 @@ public class CheckTest extends TestBase {
         addCharacterWithAttributes();
         addLearning("Akrobatik",true,true,8,0,0,0);
         addReward(100,100);
-        Learn l = new Learn("1","ID",
-                "Akrobatik",false,true,
-                9,0,0,0,0);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 9, 0, 0, 0, 0);
 
         checkService.checkAndEnrichLearning(l);
     }

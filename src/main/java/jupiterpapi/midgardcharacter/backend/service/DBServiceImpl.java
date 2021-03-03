@@ -31,7 +31,7 @@ public class DBServiceImpl implements DBService {
     RewardPPRepo rewardPPRepo;
 
     @Autowired
-    LearnRepo learnRepo;
+    LearningRepo learningRepo;
 
     @Autowired
     DBMapper mapper;
@@ -43,7 +43,7 @@ public class DBServiceImpl implements DBService {
         levelUpRepo.deleteAll();
         rewardRepo.deleteAll();
         rewardPPRepo.deleteAll();
-        learnRepo.deleteAll();
+        learningRepo.deleteAll();
     }
 
     public List<User> getUser() {
@@ -69,27 +69,24 @@ public class DBServiceImpl implements DBService {
                     .collect(Collectors.toList());
     }
     public List<Reward> getRewards(String characterId) {
-        return rewardRepo
-                .findByCharacterId(characterId)
-                .stream().map(db -> mapper.map(db))
+        return rewardRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
     }
+
     public List<RewardPP> getRewardPPs(String characterId) {
-        return rewardPPRepo
-                .findByCharacterId(characterId)
-                .stream().map(db -> mapper.map(db))
+        return rewardPPRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
     }
-    public List<Learn> getLearnings(String characterId) {
-        return learnRepo
-                .findByCharacterId(characterId)
-                .stream().map(db -> mapper.map(db))
+
+    public List<Learning> getLearnings(String characterId) {
+        return learningRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
     }
 
     public User postUser(User user) {
-        return mapper.map( userRepo.insert(mapper.map(user)) );
+        return mapper.map(userRepo.insert(mapper.map(user)));
     }
+
     public void postCharacter(Character character) {
         characterRepo.insert(mapper.map(character));
     }
@@ -97,16 +94,20 @@ public class DBServiceImpl implements DBService {
         List<AttributeDB> list = attributes.stream().map(a -> mapper.map(a)).collect(Collectors.toList());
         attributeRepo.insert(list);
     }
+
     public void postLevelUp(LevelUp levelUp) {
         levelUpRepo.insert(mapper.map(levelUp));
     }
+
     public void postReward(Reward reward) {
         rewardRepo.insert(mapper.map(reward));
     }
+
     public void postRewardPP(RewardPP rewardPP) {
         rewardPPRepo.insert(mapper.map(rewardPP));
     }
-    public void postLearn(Learn learn) {
-        learnRepo.insert(mapper.map(learn));
+
+    public void postLearn(Learning learning) {
+        learningRepo.insert(mapper.map(learning));
     }
 }

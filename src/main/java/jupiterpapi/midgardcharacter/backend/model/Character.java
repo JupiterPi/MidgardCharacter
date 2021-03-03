@@ -24,7 +24,7 @@ public class Character {
     List<LevelUp> levelUps = new ArrayList<>();
     List<Reward> rewards = new ArrayList<>();
     List<RewardPP> rewardsPP = new ArrayList<>();
-    List<Learn> learnings = new ArrayList<>();
+    List<Learning> learnings = new ArrayList<>();
 
     public Character(String id, String name, String userId, String className) {
         this.id = id;

@@ -68,17 +68,18 @@ public class EnrichService {
         return c;
     }
     private Character applyLearning(Character c) {
-        for (Learn l : c.getLearnings()) {
-           Skill s = c.getSkills().get(l.getSkillName());
-           if (s == null) {
-               s = new Skill();
-               s.setName(l.getSkillName());
-               s.setCharacterId(c.getId());
-               c.getSkills().put(s.getName(),s);
-           }
-           if (s.getBonus() < l.getNewBonus()) s.setBonus(l.getNewBonus());
-           c.setEp( c.getEp() - l.getEpSpent() );
-           c.setGold( c.getGold() - l.getGoldSpent() );
+        for (Learning l : c.getLearnings()) {
+            Skill s = c.getSkills().get(l.getSkillName());
+            if (s == null) {
+                s = new Skill();
+                s.setName(l.getSkillName());
+                s.setCharacterId(c.getId());
+                c.getSkills().put(s.getName(), s);
+            }
+            if (s.getBonus() < l.getNewBonus())
+                s.setBonus(l.getNewBonus());
+            c.setEp(c.getEp() - l.getEpSpent());
+            c.setGold(c.getGold() - l.getGoldSpent());
            s.setPP( s.getPP() - l.getPPSpent() );
         }
 

@@ -4,6 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface LearnRepo extends MongoRepository<LearnDB,String> {
-    List<LearnDB> findByCharacterId(String characterId);
+public interface LearningRepo extends MongoRepository<LearningDB, String> {
+    List<LearningDB> findByCharacterId(String characterId);
 }

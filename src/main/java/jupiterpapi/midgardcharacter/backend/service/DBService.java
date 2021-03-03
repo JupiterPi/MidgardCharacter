@@ -21,7 +21,7 @@ public interface DBService {
 
     List<RewardPP> getRewardPPs(String characterId);
 
-    List<Learn> getLearnings(String characterId);
+    List<Learning> getLearnings(String characterId);
 
     User postUser(User user);
 
@@ -35,7 +35,7 @@ public interface DBService {
 
     void postRewardPP(RewardPP rewardPP);
 
-    void postLearn(Learn learn);
+    void postLearn(Learning learning);
 
     void reset();
 }

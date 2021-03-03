@@ -27,7 +27,7 @@ public interface UIMapper {
 
     List<Attribute> mapAttributesCreate(Collection<AttributeCreate> attribute);
 
-    List<Learn> mapLearningsCreate(Collection<LearningCreate> learnings);
+    List<Learning> mapLearningsCreate(Collection<LearningCreate> learnings);
 
     RewardPP map(PPRewardCreate rewardPP);
 
@@ -35,7 +35,7 @@ public interface UIMapper {
     @Mapping(target = "epSpent", ignore = true)
     @Mapping(target = "goldSpent", ignore = true)
     @Mapping(target = "learned", ignore = true)
-    Learn map(LearningCreate lean);
+    Learning map(LearningCreate lean);
 
     Reward map(RewardCreate reward);
 
@@ -55,7 +55,7 @@ public interface UIMapper {
 
     Collection<PPRewardDTO> mapPPRewards(Collection<RewardPP> rewardPP);
 
-    Collection<LearningDTO> mapLearnings(Collection<Learn> reward);
+    Collection<LearningDTO> mapLearnings(Collection<Learning> reward);
 
     Collection<LevelUpDTO> mapLevelUps(Collection<LevelUp> reward);
 }
