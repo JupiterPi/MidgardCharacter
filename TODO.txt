@@ -1,5 +1,17 @@
 - Complete ConfigurationFiles
 
+Additional Features
+- display all skills
+- display unlearned skills
+- specialization
+
+Extended Features
+- Skills from Birth
+- B
+- Bonus: AusB, AnB, AbB, SchB, ResB (Gei+K)
+- Armor Modification
+- Weapons (incl. Damage)
+
 Basics:
 - Meaningful Error Messages
 - Security
