@@ -82,18 +82,20 @@ public class IntegrationTest {
         }
     }
 
-    final UserCreate userCreate = new UserCreate("1","Name","password");
-    final UserDTO userDTO = new UserDTO("1","Name","password");
+    final UserCreateDTO userCreateDTO = new UserCreateDTO("1", "Name", "password");
+    final UserDTO userDTO = new UserDTO("1", "Name", "password");
     final List<UserDTO> users = new ArrayList<>();
     @Before
     public void resetUsers() {
         users.clear();
     }
+
     void getUsers(List<UserDTO> users) throws Exception {
-        getAndExpect("/api/users",users);
+        getAndExpect("/api/users", users);
     }
-    void postUser(UserCreate user) throws Exception {
-        postAndExpect("/api/user",user,user);
+
+    void postUser(UserCreateDTO user) throws Exception {
+        postAndExpect("/api/user", user, user);
     }
 
     @Test
@@ -103,31 +105,33 @@ public class IntegrationTest {
 
     @Test
     public void postUser() throws Exception {
-        postUser(userCreate);
+        postUser(userCreateDTO);
         users.add(userDTO);
         getUsers(users);
     }
 
-    CharacterCreate characterCreate;
+    CharacterCreateDTO characterCreateDTO;
     CharacterMetaDTO characterMeta;
     final List<CharacterMetaDTO> characterMetas = new ArrayList<>();
     CharacterDTO characterDTO;
 
     @Before
     public void prepareCharacter() {
-        characterCreate = new CharacterCreate("SC1", "Name", "1", "As", 0);
+        characterCreateDTO = new CharacterCreateDTO("SC1", "Name", "1", "As", 0);
         characterMeta = new CharacterMetaDTO("SC1", "Name", "1", "As", 1, timeProvider.getDate());
         characterDTO = new CharacterDTO("SC1", "Name", "1", "As", timeProvider.getDate());
         characterMetas.clear();
     }
 
     void getCharacters(String userId, List<CharacterMetaDTO> characterMetas) throws Exception {
-        getAndExpect("/api/characters/"+userId,characterMetas);
+        getAndExpect("/api/characters/" + userId, characterMetas);
     }
-    void postCharacter(CharacterCreate character) throws Exception {
-        postAndExpect("/api/character",character,null);
+
+    void postCharacter(CharacterCreateDTO character) throws Exception {
+        postAndExpect("/api/character", character, null);
     }
-    void getCharacter(String characterId,CharacterDTO character) throws Exception {
+
+    void getCharacter(String characterId, CharacterDTO character) throws Exception {
         getAndExpect("/api/character/" + characterId, character.getId());
     }
 
@@ -137,18 +141,18 @@ public class IntegrationTest {
         return new AttributeDTO(name, value, bonus);
     }
 
-    AttributeCreate getAttributeCreate(String name, int value) {
-        return new AttributeCreate(String.valueOf(attributeId), name, "SC1", value);
+    AttributeCreateDTO getAttributeCreate(String name, int value) {
+        return new AttributeCreateDTO(String.valueOf(attributeId), name, "SC1", value);
     }
 
     void addAttribute(String name, int value, int bonus) {
         attributeId++;
-        characterCreate.getAttributes().add(getAttributeCreate(name, value));
+        characterCreateDTO.getAttributes().add(getAttributeCreate(name, value));
         characterDTO.getAttributes().add(getAttributeDTO(name, value, bonus));
     }
 
     void postStandard() throws Exception {
-        postUser(userCreate);
+        postUser(userCreateDTO);
         addAttribute("Au", 50, 0);
         addAttribute("Gs", 50, 0);
         addAttribute("Gw", 50, 0);
@@ -158,7 +162,7 @@ public class IntegrationTest {
         addAttribute("Wk", 50, 0);
         addAttribute("Zt", 50, 0);
         addAttribute("pA", 50, 0);
-        postCharacter(characterCreate);
+        postCharacter(characterCreateDTO);
     }
 
     @Test
@@ -177,38 +181,38 @@ public class IntegrationTest {
     @Test
     public void postReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1", "SC1", 100, 200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward", reward, reward);
     }
 
     @Test
     public void postLearning() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
-        LearningCreate learnCreate = new LearningCreate("1", "SC1", "Akrobatik", true, 8, 0);
+        LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
         LearningDTO learnDTO = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
-        postAndExpect("/api/learn",learnCreate,learnDTO);
+        postAndExpect("/api/learning", learnCreate, learnDTO);
     }
 
     @Test
     public void postPPReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1", "SC1", 100, 200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward", reward, reward);
-        LearningCreate learnCreate = new LearningCreate("1", "SC1", "Akrobatik", true, 8, 0);
+        LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
         LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
-        postAndExpect("/api/learn", learnCreate, learnResult);
-        PPRewardCreate rewardPP = new PPRewardCreate("1", "SC1", "Akrobatik", 1);
-        postAndExpect("/api/PPReward", rewardPP, rewardPP);
+        postAndExpect("/api/learning", learnCreate, learnResult);
+        PPRewardCreateDTO rewardPP = new PPRewardCreateDTO("1", "SC1", "Akrobatik", 1);
+        postAndExpect("/api/ppReward", rewardPP, rewardPP);
     }
 
     @Test
     public void postLevelUp() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
-        LevelUpCreate levelUp = new LevelUpCreate("1", "SC1", 2, "", 0, 10);
+        LevelUpCreateDTO levelUp = new LevelUpCreateDTO("1", "SC1", 2, "", 0, 10);
         postAndExpect("/api/levelUp",levelUp,levelUp);
     }
 

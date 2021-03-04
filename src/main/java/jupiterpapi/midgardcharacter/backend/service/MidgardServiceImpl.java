@@ -58,11 +58,11 @@ public class MidgardServiceImpl implements MidgardService {
         return newCharacterDTO;
     }
 
-    public UserDTO postUser(UserCreate user) {
-        return mapper.map( db.postUser( mapper.map(user) ) );
+    public UserDTO postUser(UserCreateDTO user) {
+        return mapper.map(db.postUser(mapper.map(user)));
     }
 
-    public CharacterDTO postCharacter(CharacterCreate character) throws UserException {
+    public CharacterDTO postCharacter(CharacterCreateDTO character) throws UserException {
         Character c = mapper.map(character);
         List<Attribute> list = mapper.mapAttributesCreate(character.getAttributes());
 
@@ -72,8 +72,8 @@ public class MidgardServiceImpl implements MidgardService {
         db.postCharacter(c);
         db.postAttributes(list);
 
-        for (LearningCreate learningCreate : character.getLearnings()) {
-            Learning learning = mapper.map(learningCreate);
+        for (LearningCreateDTO learningCreateDTO : character.getLearnings()) {
+            Learning learning = mapper.map(learningCreateDTO);
             enrichService.enrichLearningOnCreate(learning);
             checkService.checkLearningOnCreate(learning);
             db.postLearning(learning);
@@ -82,21 +82,21 @@ public class MidgardServiceImpl implements MidgardService {
         return getCharacter(character.getId());
     }
 
-    public CharacterDTO postReward(RewardCreate reward) throws UserException {
+    public CharacterDTO postReward(RewardCreateDTO reward) throws UserException {
         Reward r = mapper.map(reward);
         checkService.checkReward(r);
         db.postReward(r);
         return getCharacter(reward.getCharacterId());
     }
 
-    public CharacterDTO postRewardPP(PPRewardCreate rewardPP) throws UserException {
+    public CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws UserException {
         PPReward r = mapper.map(rewardPP);
         checkService.checkRewardPP(r);
         db.postRewardPP(r);
         return getCharacter(rewardPP.getCharacterId());
     }
 
-    public CharacterDTO postLearning(LearningCreate learning) throws UserException {
+    public CharacterDTO postLearning(LearningCreateDTO learning) throws UserException {
         Character character = enrichService.getCharacter(learning.getCharacterId());
         Skill skill = getSkill(character, learning.getSkillName());
 
@@ -114,7 +114,7 @@ public class MidgardServiceImpl implements MidgardService {
         return opt.get();
     }
 
-    public CharacterDTO postLevelUp(LevelUpCreate levelUp) throws UserException {
+    public CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws UserException {
         LevelUp l = mapper.map(levelUp);
         checkService.checkLevelUp(l);
         db.postLevelUp(l);

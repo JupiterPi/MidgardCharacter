@@ -16,7 +16,7 @@ import java.util.List;
 public interface UIMapper {
     UIMapper INSTANCE = Mappers.getMapper(UIMapper.class);
 
-    User map(UserCreate user);
+    User map(UserCreateDTO user);
 
     @Mapping(target = "attributes", ignore = true)
     @Mapping(target = "skills", ignore = true)
@@ -28,23 +28,24 @@ public interface UIMapper {
     @Mapping(target = "gold", ignore = true)
     @Mapping(target = "level", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
-    Character map(CharacterCreate character);
+    Character map(CharacterCreateDTO character);
 
-    List<Attribute> mapAttributesCreate(Collection<AttributeCreate> attribute);
+    List<Attribute> mapAttributesCreate(Collection<AttributeCreateDTO> attribute);
 
-    List<Learning> mapLearningsCreate(Collection<LearningCreate> learnings);
+    List<Learning> mapLearningsCreate(Collection<LearningCreateDTO> learnings);
 
-    PPReward map(PPRewardCreate rewardPP);
+    PPReward map(PPRewardCreateDTO rewardPP);
 
     @Mapping(target = "PPSpent", ignore = true)
     @Mapping(target = "epSpent", ignore = true)
     @Mapping(target = "goldSpent", ignore = true)
     @Mapping(target = "learned", ignore = true)
-    Learning map(LearningCreate lean);
+    @Mapping(target = "newBonus", ignore = true)
+    Learning map(LearningCreateDTO lean);
 
-    Reward map(RewardCreate reward);
+    Reward map(RewardCreateDTO reward);
 
-    LevelUp map(LevelUpCreate levelUp);
+    LevelUp map(LevelUpCreateDTO levelUp);
 
     UserDTO map(User user);
 

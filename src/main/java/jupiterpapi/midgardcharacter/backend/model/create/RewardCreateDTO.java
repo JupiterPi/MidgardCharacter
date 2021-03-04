@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data @AllArgsConstructor @NoArgsConstructor
-public class AttributeCreate {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class RewardCreateDTO {
     String id;
-    String name;
     String characterId;
-    int value;
+    int ep;
+    int gold;
 }

@@ -109,7 +109,7 @@ public class EnrichService {
     private Character applyRewardPP(Character c) {
         for (PPReward r : c.getRewardsPP()) {
             Skill s = c.getSkills().get(r.getSkillName());
-            s.setPP(s.getPP() + r.getPP());
+            s.setPP(s.getPP() + r.getPp());
         }
         return c;
     }
@@ -161,7 +161,7 @@ public class EnrichService {
         learning.setNewBonus(skillService.getStartingBonusOfSkill(learning.getSkillName()));
     }
 
-    public void enrichLearning(Learning learning, Skill skill) {
+    public void enrichLearning(Learning learning, Skill skill) throws UserException {
 
         int pp = Math.min(skill.getPP(), skill.getTECost());
         int te = skill.getTECost() - pp;
@@ -172,8 +172,12 @@ public class EnrichService {
         learning.setPPSpent(pp);
         learning.setEpSpent(ep);
         learning.setGoldSpent(gold);
-        if (!skill.isLearned())
+        if (!skill.isLearned()) {
             learning.setLearned(true);
+            learning.setNewBonus(skillService.getStartingBonusOfSkill(learning.getSkillName()));
+        } else {
+            learning.setNewBonus((skill.getBonus() + 1));
+        }
     }
 }
 

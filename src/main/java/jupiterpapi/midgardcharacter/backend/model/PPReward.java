@@ -11,5 +11,5 @@ public class PPReward {
     String id;
     String characterId;
     String skillName;
-    int PP;
+    int pp;
 }

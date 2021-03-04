@@ -9,17 +9,20 @@ import java.util.Collection;
 
 public interface MidgardService {
     Collection<UserDTO> getUsers();
+
     Collection<CharacterMetaDTO> getCharacters(String userId);
+
     CharacterDTO getCharacter(String characterId) throws UserException;
 
-    UserDTO postUser(UserCreate user);
+    UserDTO postUser(UserCreateDTO user);
 
-    CharacterDTO postCharacter(CharacterCreate character) throws UserException;
-    CharacterDTO postReward(RewardCreate reward) throws UserException;
+    CharacterDTO postCharacter(CharacterCreateDTO character) throws UserException;
 
-    CharacterDTO postRewardPP(PPRewardCreate rewardPP) throws UserException;
+    CharacterDTO postReward(RewardCreateDTO reward) throws UserException;
 
-    CharacterDTO postLearning(LearningCreate learning) throws UserException;
+    CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws UserException;
 
-    CharacterDTO postLevelUp(LevelUpCreate levelUp) throws UserException;
+    CharacterDTO postLearning(LearningCreateDTO learning) throws UserException;
+
+    CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws UserException;
 }

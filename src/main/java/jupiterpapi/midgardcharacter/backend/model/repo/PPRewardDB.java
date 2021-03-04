@@ -12,5 +12,5 @@ public class PPRewardDB {
 
     String characterId;
     String skillName;
-    int PP;
+    int pp;
 }

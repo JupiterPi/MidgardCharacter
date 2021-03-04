@@ -40,7 +40,7 @@ public class CheckService {
     }
 
     void checkRewardPP(PPReward PPReward) throws UserException {
-        if (PPReward.getPP() < 1)
+        if (PPReward.getPp() < 1)
             throw new UserException();
 
         skillService.checkSkillName(PPReward.getSkillName());

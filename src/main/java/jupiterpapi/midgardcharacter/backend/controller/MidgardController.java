@@ -21,6 +21,7 @@ public class MidgardController implements MidgardService {
     @Autowired
     MidgardService service;
 
+    @Deprecated
     @GetMapping("/users")
     public Collection<UserDTO> getUsers() {
         return service.getUsers();
@@ -36,37 +37,39 @@ public class MidgardController implements MidgardService {
         return service.getCharacter(characterId);
     }
 
+    @Deprecated
     @PostMapping("/user")
-    public UserDTO postUser(@RequestBody UserCreate user) {
+    public UserDTO postUser(@RequestBody UserCreateDTO user) {
         return service.postUser(user);
     }
 
+    @Deprecated
     @PostMapping("/character")
-    public CharacterDTO postCharacter(@RequestBody CharacterCreate character) throws UserException {
+    public CharacterDTO postCharacter(@RequestBody CharacterCreateDTO character) throws UserException {
         return service.postCharacter(character);
     }
 
     @PostMapping("/reward")
-    public CharacterDTO postReward(@RequestBody RewardCreate reward) throws UserException {
+    public CharacterDTO postReward(@RequestBody RewardCreateDTO reward) throws UserException {
         return service.postReward(reward);
     }
 
-    @PostMapping("/PPReward")
-    public CharacterDTO postRewardPP(@RequestBody PPRewardCreate rewardPP) throws UserException {
+    @PostMapping("/ppReward")
+    public CharacterDTO postRewardPP(@RequestBody PPRewardCreateDTO rewardPP) throws UserException {
         return service.postRewardPP(rewardPP);
     }
 
-    @PostMapping("/learn")
-    public CharacterDTO postLearning(@RequestBody LearningCreate learn) throws UserException {
+    @PostMapping("/learning")
+    public CharacterDTO postLearning(@RequestBody LearningCreateDTO learn) throws UserException {
         return service.postLearning(learn);
     }
 
     @PostMapping("/levelUp")
-    public CharacterDTO postLevelUp(@RequestBody LevelUpCreate levelUp) throws UserException {
+    public CharacterDTO postLevelUp(@RequestBody LevelUpCreateDTO levelUp) throws UserException {
         return service.postLevelUp(levelUp);
     }
 
-    @ExceptionHandler({ UserException.class })
+    @ExceptionHandler({UserException.class})
     public ResponseEntity<String> handleUserException(UserException exception) {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
