@@ -3,13 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\model\create\CharacterCreate.java">
-          <value>
-            <Attribute>
-              <option name="separator" value=";" />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\model\create\LearningCreate.java">
           <value>
             <Attribute>
@@ -45,6 +38,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\main\resources\BonusCost.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\main\resources\ClassEPCost.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\main\resources\SkillCost.txt.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\IntegrationTest.java">
           <value>
             <Attribute>
@@ -59,13 +73,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\EnrichTest.java">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\ScenarioTest.java">
           <value>
             <Attribute>
@@ -74,13 +81,6 @@
           </value>
         </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\SkillTest.java">
-          <value>
-            <Attribute>
-              <option name="separator" value=";" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\TestFactory.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

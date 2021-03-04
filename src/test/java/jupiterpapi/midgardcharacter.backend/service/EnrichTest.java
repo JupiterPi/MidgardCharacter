@@ -127,7 +127,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(500);
         initial.setEs(500);
         initial.setGold(1000);
-        initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",9,2,11,3,30,0));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 0));
 
         var c = enrichService.getCharacter("ID");
 
@@ -178,7 +178,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(10);
         initial.setEs(10);
         initial.setGold(400);
-        initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",9,2,11,3,30,1));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 1));
 
         var c = enrichService.getCharacter("ID");
 

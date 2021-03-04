@@ -9,6 +9,7 @@ import java.util.List;
 public class SkillCost {
     String skill;
     int startingBonus;
+    int unlearnedBonus;
     String attribute;
     String groups;
     int le;
@@ -18,12 +19,8 @@ public class SkillCost {
         if (args.size() < 6) {
             return null;
         }
-        return new SkillCost(args.get(0),
-                             Integer.parseInt(args.get(1)),
-                             args.get(2),
-                             args.get(3),
-                             Integer.parseInt(args.get(4)),
-                             args.get(5));
+        return new SkillCost(args.get(0), Integer.parseInt(args.get(1)), Integer.parseInt(args.get(2)), args.get(3),
+                args.get(4), Integer.parseInt(args.get(5)), args.get(6));
     }
     public String getKey() {
         return skill;

@@ -1,0 +1,73 @@
+﻿Fertigkeit             ;Grundbonus;ungelernt;Eigenschaft;Gruppen                  ;LE;Zeile
+Akrobatik              ;8         ;6        ;Gw         ;Halbwelt,Körper          ;2 ;E
+Alchemie               ;8         ;0        ;In         ;Wissen                   ;2 ;F
+Anführen               ;8         ;6        ;pA         ;Kampf,Sozial             ;2 ;E
+Athletik               ;8         ;0        ;St         ;Kampf,Körper             ;2 ;E
+Balancieren            ;8         ;6        ;Gw         ;Halbwelt,Körper          ;1 ;A
+Beidhändiger Kampf     ;5         ;0        ;Gs         ;Kampf                    ;10;K
+Beredsamkeit           ;8         ;3        ;pA         ;Sozial                   ;2 ;G
+Betäuben               ;8         ;6        ;Gs         ;Halbwelt,Kampf           ;10;I
+Bootfahren             ;12        ;3        ;Gs         ;Alltag                   ;1 ;A
+Erste Hilfe            ;8         ;0        ;In         ;Alltag,Wissen            ;2 ;E
+Etikette               ;8         ;0        ;Gs         ;Alltag,Sozial            ;2 ;E
+Fälschen               ;12        ;0        ;Gs         ;Halbwelt                 ;1 ;A
+Fallen entdecken       ;8         ;0        ;In         ;Unterwelt                ;4 ;H
+Fallenmechanik         ;8         ;0        ;Gs         ;Unterwelt                ;10;I
+Fechten                ;5         ;0        ;Gs         ;Kampf                    ;10;K
+Gassenwissen           ;8         ;0        ;In         ;Halbwelt,Sozial,Unterwelt;2 ;G
+Gaukeln                ;12        ;0        ;Gs         ;Halbwelt                 ;1 ;A
+Geländelauf            ;12        ;6        ;Gw         ;Kampf,Körper             ;1 ;A
+Gerätekunde            ;8         ;0        ;In         ;Alltag                   ;10;H
+Geschäftssinn          ;8         ;0        ;In         ;Alltag                   ;10;H
+Glücksspiel            ;12        ;0        ;Gs         ;Alltag,Halbwelt          ;1 ;A
+Heilkunde              ;8         ;0        ;In         ;Wissen                   ;2 ;F
+Kampf in Vollrüstung   ;5         ;0        ;St         ;Kampf                    ;10;K
+Klettern               ;12        ;6        ;St         ;Alltag,Halbwelt,Körper   ;1 ;A
+Landeskunde            ;8         ;6        ;In         ;Wissen                   ;2 ;F
+Laufen                 ;8         ;0        ;Ko         ;Körper                   ;2 ;E
+Lesen von Zauberschrift;8         ;0        ;In         ;Wissen                   ;1 ;C
+Meditieren             ;8         ;0        ;Wk         ;Körper,Wissen            ;2 ;E
+Menschenkenntnis       ;8         ;3        ;In         ;Sozial                   ;4 ;H
+Meucheln               ;8         ;0        ;Gs         ;Unterwelt                ;10;I
+Musizieren             ;12        ;0        ;Gs         ;Alltag                   ;1 ;A
+Naturkunde             ;8         ;0        ;In         ;Freiland,Wissen          ;2 ;F
+Pflanzenkunde          ;8         ;0        ;In         ;Freiland,Wissen          ;2 ;F
+Reiten                 ;12        ;6        ;Gw         ;Alltag,Kampf             ;1 ;A
+Reiterkampf            ;12        ;0        ;Gw         ;Kampf                    ;1 ;A
+Scharfschießen         ;5         ;0        ;Gs         ;Kampf                    ;10;K
+Schleichen             ;8         ;3        ;Gw         ;Freiland,Unterwelt       ;4 ;H
+Schlösser öffnen       ;8         ;0        ;Gs         ;Unterwelt                ;4 ;H
+Schreiben: Sprache     ;8         ;0        ;In         ;Alltag,Wissen            ;1 ;C
+Schwimmen              ;12        ;3        ;Gw         ;Alltag,Körper            ;1 ;A
+Seilkunst              ;12        ;3        ;Gs         ;Alltag                   ;1 ;A
+Sprechen: Sprache      ;8         ;0        ;In         ;Alltag,Wissen            ;1 ;C
+Spurensuche            ;8         ;0        ;In         ;Freiland,Unterwelt       ;4 ;H
+Stehlen                ;8         ;3        ;Gs         ;Halbwelt,Unterwelt       ;2 ;G
+Tarnen                 ;8         ;3        ;Gw         ;Freiland,Unterwelt       ;4 ;H
+Tauchen                ;8         ;6        ;Ko         ;Körper                   ;1 ;D
+Tierkunde              ;8         ;0        ;In         ;Freiland,Wissen          ;2 ;F
+Überleben              ;8         ;6        ;In         ;Freiland                 ;1 ;B
+Verführen              ;8         ;3        ;pA         ;Sozial                   ;2 ;E
+Verhören               ;8         ;3        ;pA         ;Sozial                   ;2 ;G
+Verstellen             ;8         ;3        ;pA         ;Sozial                   ;2 ;E
+Wagenlenken            ;12        ;3        ;Gs         ;Alltag                   ;1 ;A
+Zauberkunde            ;8         ;0        ;In         ;Wissen                   ;2 ;F
+Armbrüste              ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Blasrohre              ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Bögen                  ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Einhandschlagwaffen    ;5         ;0        ;0          ;Waffen                   ;4 ;W2
+Einhandschwerter       ;5         ;0        ;0          ;Waffen                   ;4 ;W2
+Fechtwaffen            ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Kettenwaffen           ;5         ;0        ;0          ;Waffen                   ;8 ;W4
+Schleudern             ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Spießwaffen            ;5         ;0        ;0          ;Waffen                   ;2 ;W1
+Stichwaffen            ;5         ;0        ;0          ;Waffen                   ;2 ;W1
+Stielwurfwaffen        ;5         ;0        ;0          ;Waffen                   ;4 ;W2
+Stockwaffen            ;5         ;0        ;0          ;Waffen                   ;8 ;W4
+Waffenloser Kampf      ;5         ;0        ;0          ;Waffen                   ;8 ;W4
+Wurfklingen            ;5         ;0        ;0          ;Waffen                   ;4 ;W2
+Wurfscheiben           ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Wurfspieße             ;5         ;0        ;0          ;Waffen                   ;4 ;W2
+Zauberstäbe            ;5         ;0        ;0          ;Waffen                   ;2 ;W1
+Zweihandschlagwaffen   ;5         ;0        ;0          ;Waffen                   ;6 ;W3
+Zweihandschwerter      ;5         ;0        ;0          ;Waffen                   ;6 ;W3
