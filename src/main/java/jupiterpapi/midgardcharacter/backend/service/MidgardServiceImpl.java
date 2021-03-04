@@ -24,15 +24,17 @@ public class MidgardServiceImpl implements MidgardService {
     EnrichService enrichService;
     @Autowired
     CheckService checkService;
+    @Autowired
+    TimeProvider timeProvider;
 
     public List<UserDTO> getUsers() {
         List<User> users = db.getUser();
-        return users.stream().map( user -> mapper.map(user) ).collect(Collectors.toList());
+        return users.stream().map(user -> mapper.map(user)).collect(Collectors.toList());
     }
 
     public List<CharacterMetaDTO> getCharacters(String userId) {
         List<Character> users = db.getCharacters(userId);
-        return users.stream().map( character -> mapper.mapInfo(character) ).collect(Collectors.toList());
+        return users.stream().map(character -> mapper.mapInfo(character)).collect(Collectors.toList());
     }
 
     public CharacterDTO getCharacter(String characterId) throws UserException {
@@ -64,7 +66,7 @@ public class MidgardServiceImpl implements MidgardService {
     public CharacterDTO postCharacter(CharacterCreate character) throws UserException {
         Character c = mapper.map(character);
         c.setLevel(1);
-        c.setCreatedAt(TimeProvider.getDate()); //
+        c.setCreatedAt(timeProvider.getDate()); //
         List<Attribute> list = mapper.mapAttributesCreate(character.getAttributes());
 
         checkService.checkNewCharacter(c, list);

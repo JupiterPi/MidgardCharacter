@@ -37,10 +37,8 @@ public class IntegrationTest {
     @Autowired
     DBService db;
 
-    @Before
-    public void setDate() {
-        TimeProvider.date = TimeProvider.getDate();
-    }
+    @Autowired
+    TimeProvider timeProvider;
 
     @Before
     public void reset() {
@@ -102,6 +100,7 @@ public class IntegrationTest {
     public void initiallyReturnsNoUser() throws Exception {
         getUsers(users);
     }
+
     @Test
     public void postUser() throws Exception {
         postUser(userCreate);
@@ -109,14 +108,19 @@ public class IntegrationTest {
         getUsers(users);
     }
 
-    final CharacterCreate characterCreate = new CharacterCreate("SC1", "Name", "1", "As", 0);
-    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1", "Name", "1", "As", 1, TimeProvider.getDate());
+    CharacterCreate characterCreate;
+    CharacterMetaDTO characterMeta;
     final List<CharacterMetaDTO> characterMetas = new ArrayList<>();
-    final CharacterDTO characterDTO = new CharacterDTO("SC1", "Name", "1", "As", TimeProvider.getDate());
+    CharacterDTO characterDTO;
+
     @Before
-    public void resetCharacterMetas() {
+    public void prepareCharacter() {
+        characterCreate = new CharacterCreate("SC1", "Name", "1", "As", 0);
+        characterMeta = new CharacterMetaDTO("SC1", "Name", "1", "As", 1, timeProvider.getDate());
+        characterDTO = new CharacterDTO("SC1", "Name", "1", "As", timeProvider.getDate());
         characterMetas.clear();
     }
+
     void getCharacters(String userId, List<CharacterMetaDTO> characterMetas) throws Exception {
         getAndExpect("/api/characters/"+userId,characterMetas);
     }
