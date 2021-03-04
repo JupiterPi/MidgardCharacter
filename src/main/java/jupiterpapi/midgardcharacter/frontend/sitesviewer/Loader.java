@@ -3,7 +3,6 @@ package jupiterpapi.midgardcharacter.frontend.sitesviewer;
 
 import jupiterpi.tools.files.Path;
 import jupiterpi.tools.files.TextFile;
-import jupiterpi.tools.util.AppendingList;
 import org.springframework.http.CacheControl;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

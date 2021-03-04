@@ -4,11 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data @AllArgsConstructor @NoArgsConstructor
-public class AttributeCreate {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class LevelUpCreateDTO {
     String id;
-    String name;
     String characterId;
-    int value;
-    int bonus;
+    int level;
+    String attribute;
+    int increase;
+    int ap;
 }

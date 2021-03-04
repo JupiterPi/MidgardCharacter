@@ -1,14 +1,26 @@
-Tests:
-- EnrichTest: Multiple Rewards, ...
-- Build up Initial Skill
-- Scenarios
+- Check: All Attributes supplied
+- Tests:
+    - CheckLearning (Percentage Gold, NotNextBonus)
+    - CheckEsForLevelUp (Level > 15)
+
+- Meaningful Error Messages
+
+
+Additional Features
+- specialization
+
+Extended Features
+- Skills from Birth
+- B
+- Bonus: AusB, AnB, AbB, SchB, ResB (Gei+K)
+- Armor Modification
+- Weapons (incl. Damage)
 
 Basics:
 - Security
 - Logging and Tracing
 
 Advanced:
-- Meaningful Error Messages
 - Actuator
 - ApplicationConfiguration: Port, ...
 - Swagger

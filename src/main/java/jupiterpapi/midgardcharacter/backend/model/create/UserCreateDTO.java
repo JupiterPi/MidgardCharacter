@@ -4,12 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data @NoArgsConstructor @AllArgsConstructor
-public class LevelUpCreate {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserCreateDTO {
     String id;
-    String characterId;
-    int level;
-    String attribute;
-    int increase;
-    int ap;
+    String name;
+    String password;
 }

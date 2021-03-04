@@ -4,12 +4,13 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data @Document
-public class RewardPPDB {
+@Data
+@Document
+public class PPRewardDB {
     @Id
     String id;
 
     String characterId;
     String skillName;
-    int PP;
+    int pp;
 }

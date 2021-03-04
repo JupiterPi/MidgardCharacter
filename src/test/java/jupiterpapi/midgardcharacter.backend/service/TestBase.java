@@ -1,84 +1,74 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpapi.midgardcharacter.backend.configuration.ConfigurationService;
-import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 import org.junit.Before;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @SuppressWarnings("SameParameterValue")
-public class TestBase {
-    SkillService skillService;
-    EnrichService service;
-    DBServiceMock dbService;
+public class TestBase extends TestFactory {
 
-    final Character initial_db = new Character("ID", "Name", "User", "As");
-    final Attribute gw_db = new Attribute("Gw","ID",96);
-    final Attribute in_db = new Attribute("In","ID",50);
-
-    final Character initial = new Character("ID", "Name", "User", "As");
-    final Attribute gw = new Attribute("Gw","ID",96);
-    final Attribute in = new Attribute("In","ID",50);
-    final HashMap<String,Attribute> attributes = new HashMap<>();
+    final Character initial = new Character("ID", "Name", "User", "As", 0);
+    final Attribute gw = new Attribute("ID/Gw", "Gw", "ID", 96, 2);
+    final Attribute in = new Attribute("ID/In", "In", "ID", 50, 0);
+    final Attribute st = new Attribute("ID/St", "St", "ID", 92, 1);
+    final Attribute ko = new Attribute("ID/Ko", "Ko", "ID", 15, -1);
+    final Attribute zt = new Attribute("ID/Zt", "Zt", "ID", 2, -2);
+    final HashMap<String, Attribute> attributesMap = new HashMap<>();
+    final List<Attribute> attributeList = new ArrayList<>();
 
     @Before
     public void testData() {
-        attributes.put("Gw",gw);
-        attributes.put("In",in);
-    }
-
-    @Before
-    public void setup() throws InternalException {
-        skillService = new SkillService();
-        service = new EnrichService();
-        service.skillService = skillService;
-        skillService.configurationService = new ConfigurationService();
-        skillService.configurationService.read();
-        dbService = new DBServiceMock();
-        service.db = dbService;
+        initial.setLevel(1);
+        attributesMap.put("Gw", gw);
+        attributesMap.put("In", in);
+        attributesMap.put("St", st);
+        attributesMap.put("Ko", ko);
+        attributesMap.put("Zt", zt);
+        attributeList.add(gw);
+        attributeList.add(in);
+        attributeList.add(st);
+        attributeList.add(ko);
+        attributeList.add(zt);
     }
 
     protected void addCharacter() {
-        dbService.characters.add( initial_db );
+        dbService.postCharacter(initial);
     }
 
     protected void addCharacterWithAttributes() {
         addCharacter();
 
-        dbService.attributes.add(gw_db);
-        dbService.attributes.add(in_db);
+        dbService.postAttributes(attributeList);
 
         gw.setBonus(2);
-        initial.setAttributes(attributes);
+        initial.setAttributes(attributesMap);
     }
 
     protected void addReward(int ep, int gold) {
         Reward reward = new Reward("1","ID",ep,gold);
-        Reward reward_db = new Reward("1","ID",ep,gold);
-        dbService.rewards.add(reward_db);
+        dbService.postReward(reward);
         initial.getRewards().add(reward);
     }
 
     protected void addLearning(String skill, boolean starting, boolean learned, int newBonus, int ep, int gold, int pp) {
-        Learn learn = new Learn("1","ID",skill,starting,learned,newBonus,0,ep,gold,pp);
-        Learn learnDB = new Learn("1","ID",skill,starting,learned,newBonus,0,ep,gold,pp);
-        dbService.learnings.add(learnDB);
-        initial.getLearnings().add(learn);
+        Learning learning = new Learning("1", "ID", skill, starting, learned, newBonus, 0, ep, gold, pp);
+        dbService.postLearning(learning);
+        initial.getLearnings().add(learning);
     }
 
     protected void addRewardPP(String skill, int pp) {
-        RewardPP r = new RewardPP("1","ID",skill,pp);
-        RewardPP db = new RewardPP("1","ID",skill,pp);
-        dbService.rewardsPP.add(db);
+        PPReward r = new PPReward("1", "ID", skill, pp);
+        dbService.postRewardPP(r);
         initial.getRewardsPP().add(r);
     }
 
     protected void addLevelUp(int level, String attribute, int increase, int ap) {
         LevelUp l1 = new LevelUp("1","ID",level,attribute,increase,ap);
-        LevelUp db = new LevelUp("1","ID",level,attribute,increase,ap);
-        dbService.levelUps.add(db);
+        dbService.postLevelUp(l1);
         initial.getLevelUps().add(l1);
         initial.setLevel(level);
         initial.setAp(ap);

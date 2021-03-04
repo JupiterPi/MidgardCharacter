@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("")
 public class PagesController {
-    Loader loader = new Loader();
+    final Loader loader = new Loader();
 
     @GetMapping(value = {"", "/home"})
     public String getHomePage() {

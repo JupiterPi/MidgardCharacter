@@ -14,9 +14,9 @@ public class Skill {
     int TECost;
     int EPCost;
     int PP;
+    boolean learned;
 
-
-    public Skill(String name, String characterId, int bonus) {
+    public Skill(String name, String characterId, int bonus, boolean learned) {
         this.name = name;
         this.characterId = characterId;
         this.bonus = bonus;

@@ -17,9 +17,10 @@ public class ConfigurationService {
 
     public void read() throws InternalException {
         try {
-            bonusCost = new ReadUtility<BonusCost>().readToMap("BonusCost.txt", BonusCost::read, BonusCost::getKey);
-            classEPCost = new ReadUtility<ClassEPCost>().readToMap("ClassEPCost.txt", ClassEPCost::read, ClassEPCost::getKey);
-            skillCost = new ReadUtility<SkillCost>().readToMap("SkillCost.txt", SkillCost::read, SkillCost::getKey);
+            bonusCost = new ReadUtility<BonusCost>().readToMap("BonusCost.csv", BonusCost::read, BonusCost::getKey);
+            classEPCost = new ReadUtility<ClassEPCost>()
+                    .readToMap("ClassEPCost.csv", ClassEPCost::read, ClassEPCost::getKey);
+            skillCost = new ReadUtility<SkillCost>().readToMap("SkillCost.csv", SkillCost::read, SkillCost::getKey);
         } catch (IOException  e) {
             e.printStackTrace();
             throw new InternalException();

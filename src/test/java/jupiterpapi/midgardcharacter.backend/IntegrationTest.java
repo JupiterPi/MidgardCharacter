@@ -1,10 +1,10 @@
 package jupiterpapi.midgardcharacter.backend;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jupiterpapi.midgardcharacter.backend.model.Learn;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
-import jupiterpapi.midgardcharacter.backend.service.DBService;
 import jupiterpapi.midgardcharacter.backend.model.dto.*;
+import jupiterpapi.midgardcharacter.backend.service.DBService;
+import jupiterpapi.midgardcharacter.backend.service.TimeProvider;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,12 +31,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class IntegrationTest {
 
-
     @Autowired
     MockMvc mockMvc;
 
     @Autowired
     DBService db;
+
+    @Autowired
+    TimeProvider timeProvider;
 
     @Before
     public void reset() {
@@ -80,145 +82,137 @@ public class IntegrationTest {
         }
     }
 
-    final UserCreate userCreate = new UserCreate("1","Name","password");
-    final UserDTO userDTO = new UserDTO("1","Name","password");
+    final UserCreateDTO userCreateDTO = new UserCreateDTO("1", "Name", "password");
+    final UserDTO userDTO = new UserDTO("1", "Name", "password");
     final List<UserDTO> users = new ArrayList<>();
     @Before
     public void resetUsers() {
         users.clear();
     }
+
     void getUsers(List<UserDTO> users) throws Exception {
-        getAndExpect("/api/users",users);
+        getAndExpect("/api/users", users);
     }
-    void postUser(UserCreate user) throws Exception {
-        postAndExpect("/api/user",user,user);
+
+    void postUser(UserCreateDTO user) throws Exception {
+        postAndExpect("/api/user", user, user);
     }
 
     @Test
     public void initiallyReturnsNoUser() throws Exception {
         getUsers(users);
     }
+
     @Test
     public void postUser() throws Exception {
-        postUser(userCreate);
+        postUser(userCreateDTO);
         users.add(userDTO);
         getUsers(users);
     }
 
-
-    final CharacterCreate characterCreate = new CharacterCreate("SC1","Name","1","As");
-    final CharacterMetaDTO characterMeta = new CharacterMetaDTO("SC1","Name","1");
+    CharacterCreateDTO characterCreateDTO;
+    CharacterMetaDTO characterMeta;
     final List<CharacterMetaDTO> characterMetas = new ArrayList<>();
-    final CharacterDTO characterDTO = new CharacterDTO("SC1","Name","1","As");
+    CharacterDTO characterDTO;
+
     @Before
-    public void resetCharacterMetas() {
+    public void prepareCharacter() {
+        characterCreateDTO = new CharacterCreateDTO("SC1", "Name", "1", "As", 0);
+        characterMeta = new CharacterMetaDTO("SC1", "Name", "1", "As", 1, timeProvider.getDate());
+        characterDTO = new CharacterDTO("SC1", "Name", "1", "As", timeProvider.getDate());
         characterMetas.clear();
     }
+
     void getCharacters(String userId, List<CharacterMetaDTO> characterMetas) throws Exception {
-        getAndExpect("/api/characters/"+userId,characterMetas);
-    }
-    void postCharacter(CharacterCreate character) throws Exception {
-        postAndExpect("/api/character",character,null);
-    }
-    void getCharacter(String characterId,CharacterDTO character) throws Exception {
-        getAndExpect("/api/character/"+characterId,character);
+        getAndExpect("/api/characters/" + userId, characterMetas);
     }
 
-    @Test
-    public void initialCharacters() throws Exception {
-        getCharacters("1",characterMetas);
+    void postCharacter(CharacterCreateDTO character) throws Exception {
+        postAndExpect("/api/character", character, null);
     }
-    @Test
-    public void postCharacterAndGetList() throws Exception {
-        postUser(userCreate);
-        postCharacter(characterCreate);
-        characterMetas.add(characterMeta);
-        getCharacters("1",characterMetas);
-    }
-    @Test
-    public void postCharacterAndGetIt() throws Exception {
-        postUser(userCreate);
-        postCharacter(characterCreate);
-        getCharacter("SC1",characterDTO);
 
+    void getCharacter(String characterId, CharacterDTO character) throws Exception {
+        getAndExpect("/api/character/" + characterId, character.getId());
     }
 
     int attributeId = 0;
+
     AttributeDTO getAttributeDTO(String name, int value, int bonus) {
-        return new AttributeDTO(String.valueOf(attributeId),name,"SC1",value,bonus);
+        return new AttributeDTO(name, value, bonus);
     }
-    AttributeCreate getAttributeCreate(String name, int value, int bonus) {
-        return new AttributeCreate(String.valueOf(attributeId),name,"SC1",value,bonus);
+
+    AttributeCreateDTO getAttributeCreate(String name, int value) {
+        return new AttributeCreateDTO(String.valueOf(attributeId), name, "SC1", value);
     }
+
     void addAttribute(String name, int value, int bonus) {
         attributeId++;
-        characterCreate.getAttributes().add( getAttributeCreate(name,value,bonus) );
-        characterDTO.getAttributes().add( getAttributeDTO(name,value,bonus) );
-    }
-    @Test
-    public void postWithAttribute() throws Exception {
-        postUser(userCreate);
-        addAttribute("St",50,0);
-        addAttribute("Gw",10,-1);
-        addAttribute("Gs",98,2);
-        postCharacter(characterCreate);
-        getCharacter("SC1",characterDTO);
+        characterCreateDTO.getAttributes().add(getAttributeCreate(name, value));
+        characterDTO.getAttributes().add(getAttributeDTO(name, value, bonus));
     }
 
     void postStandard() throws Exception {
-        postUser(userCreate);
-        addAttribute("St",50,0);
-        addAttribute("Gw",50,0);
-        addAttribute("Gs",50,0);
-        addAttribute("Ko",50,0);
-        addAttribute("In",50,0);
-        addAttribute("Zt",50,0);
-        addAttribute("pA",50,0);
-        addAttribute("Au",50,0);
-        postCharacter(characterCreate);
+        postUser(userCreateDTO);
+        addAttribute("Au", 50, 0);
+        addAttribute("Gs", 50, 0);
+        addAttribute("Gw", 50, 0);
+        addAttribute("In", 50, 0);
+        addAttribute("Ko", 50, 0);
+        addAttribute("St", 50, 0);
+        addAttribute("Wk", 50, 0);
+        addAttribute("Zt", 50, 0);
+        addAttribute("pA", 50, 0);
+        postCharacter(characterCreateDTO);
     }
+
     @Test
     public void postStandardCheck() throws Exception {
         postStandard();
-        getCharacter("SC1",characterDTO);
+        getCharacter("SC1", characterDTO);
     }
 
+    @Test
+    public void getCharacterList() throws Exception {
+        postStandard();
+        characterMetas.add(characterMeta);
+        getCharacters("1", characterMetas);
+    }
 
     @Test
     public void postReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
-        postAndExpect("/api/reward",reward,reward);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
+        postAndExpect("/api/reward", reward, reward);
     }
 
     @Test
     public void postLearning() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
-        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
-        LearningDTO learnDTO = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
-        postAndExpect("/api/learn",learnCreate,learnDTO);
+        LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
+        LearningDTO learnDTO = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
+        postAndExpect("/api/learning", learnCreate, learnDTO);
     }
 
     @Test
-    public void postRewardPP() throws Exception {
+    public void postPPReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
-        postAndExpect("/api/reward",reward,reward);
-        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
-        LearningDTO learnResult = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
-        postAndExpect("/api/learn",learnCreate,learnResult);
-        PPRewardCreate rewardPP = new PPRewardCreate("1","SC1","Akrobatik",1);
-        postAndExpect("/api/rewardPP",rewardPP,rewardPP);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
+        postAndExpect("/api/reward", reward, reward);
+        LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
+        LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
+        postAndExpect("/api/learning", learnCreate, learnResult);
+        PPRewardCreateDTO rewardPP = new PPRewardCreateDTO("1", "SC1", "Akrobatik", 1);
+        postAndExpect("/api/ppReward", rewardPP, rewardPP);
     }
 
     @Test
     public void postLevelUp() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
+        RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
-        LevelUpCreate levelUp = new LevelUpCreate("1","SC1",1,"",0,10);
+        LevelUpCreateDTO levelUp = new LevelUpCreateDTO("1", "SC1", 2, "", 0, 10);
         postAndExpect("/api/levelUp",levelUp,levelUp);
     }
 

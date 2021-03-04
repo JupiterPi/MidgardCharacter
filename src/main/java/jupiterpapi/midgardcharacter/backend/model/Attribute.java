@@ -11,10 +11,4 @@ public class Attribute {
     String characterId;
     int value;
     int bonus;
-
-    public Attribute(String name, String characterId, int value) {
-        this.name = name;
-        this.characterId = characterId;
-        this.value = value;
-    }
 }

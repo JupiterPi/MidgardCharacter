@@ -15,7 +15,8 @@ public class BonusCost {
         if (args.size() < 3) {
             return null;
         }
-        return new BonusCost(args.get(0), Integer.parseInt(args.get(1)), Integer.parseInt(args.get(2)));
+        return new BonusCost(args.get(0).replaceAll("\\s+", ""), Integer.parseInt(args.get(1).replaceAll("\\s+", "")),
+                Integer.parseInt(args.get(2).replaceAll("\\s+", "")));
     }
     public String getKey() {
         return line + "/" + bonus;
