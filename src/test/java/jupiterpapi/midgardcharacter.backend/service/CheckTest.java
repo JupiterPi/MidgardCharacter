@@ -2,16 +2,21 @@ package jupiterpapi.midgardcharacter.backend.service;
 
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CheckTest extends TestBase {
 
+    @Before
+    public void hideInitialSkills() {
+        enrichService.hideInitialSkills = true;
+    }
 
     @Test
     public void checkNewCharacterSuccess() throws UserException {
         addCharacterWithAttributes();
         Character c = new Character("ID2", "Name", "User", "As", 0);
-        checkService.checkNewCharacter(c,initial.getAttributes().values());
+        checkService.checkNewCharacter(c, initial.getAttributes().values());
     }
 
     @Test(expected = UserException.class)
@@ -143,48 +148,61 @@ public class CheckTest extends TestBase {
     @Test
     public void checkLearningInitialSkill() throws UserException {
         addCharacterWithAttributes();
-        addReward(100, 100);
+        initial.setEp(100);
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 20, 0, false);
 
-        checkService.checkAndEnrichLearning(l);
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
     }
 
     @Test
     public void checkLearningNewSkill() throws UserException {
         addCharacterWithAttributes();
-        addReward(100,100);
+        initial.setEp(100);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 20, 0, false);
 
-        checkService.checkAndEnrichLearning(l);
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
     }
 
 
     @Test(expected = UserException.class)
     public void checkLearningWithTooLittleEP() throws UserException {
         addCharacterWithAttributes();
-        addReward(20,100);
+        initial.setEp(20);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
 
-        checkService.checkAndEnrichLearning(l);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 10, 200, 0, false);
+
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
     }
     @Test(expected = UserException.class)
     public void checkLearningWithTooLittleGold() throws UserException {
         addCharacterWithAttributes();
-        addReward(2000,20);
+        initial.setEp(100);
+        initial.setGold(0);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 50, 0, 0, 0);
 
-        checkService.checkAndEnrichLearning(l);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 10, 100, 0, false);
+
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
     }
 
 
     @Test
     public void checkLearningIncrSkill() throws UserException {
         addCharacterWithAttributes();
-        addLearning("Akrobatik",true,true,8,0,0,0);
-        addReward(100,100);
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        initial.setEp(100);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 9, 0, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 10, 0, false);
 
-        checkService.checkAndEnrichLearning(l);
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
     }
 
 }

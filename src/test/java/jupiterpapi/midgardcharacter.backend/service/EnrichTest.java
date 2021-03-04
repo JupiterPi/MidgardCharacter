@@ -2,11 +2,17 @@ package jupiterpapi.midgardcharacter.backend.service;
 
 import jupiterpapi.midgardcharacter.backend.model.Skill;
 import lombok.var;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class EnrichTest extends TestBase {
+
+    @Before
+    public void hideSkills() {
+        enrichService.hideInitialSkills = true;
+    }
 
     @Test(expected = UserException.class)
     public void getCharacterFail() throws UserException {
@@ -111,7 +117,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(100);
         initial.setEs(100);
         initial.setGold(500);
-        initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",8,2,10,2,20,0));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 0, true));
 
         var c = enrichService.getCharacter("ID");
 
@@ -127,7 +133,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(500);
         initial.setEs(500);
         initial.setGold(1000);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 0));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 0, true));
 
         var c = enrichService.getCharacter("ID");
 
@@ -143,7 +149,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(10);
         initial.setEs(10);
         initial.setGold(400);
-        initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",8,2,10,2,20,2));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 2, true));
 
         var c = enrichService.getCharacter("ID");
 
@@ -160,7 +166,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(10);
         initial.setEs(10);
         initial.setGold(400);
-        initial.getSkills().put("Akrobatik",new Skill("Akrobatik","ID",8,2,10,2,20,3));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 3, true));
 
         var c = enrichService.getCharacter("ID");
 
@@ -178,7 +184,7 @@ public class EnrichTest extends TestBase {
         initial.setEp(10);
         initial.setEs(10);
         initial.setGold(400);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 1));
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 1, true));
 
         var c = enrichService.getCharacter("ID");
 

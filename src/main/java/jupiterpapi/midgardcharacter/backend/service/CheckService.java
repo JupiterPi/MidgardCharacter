@@ -48,18 +48,6 @@ public class CheckService {
         getCharacter(PPReward.getCharacterId());
     }
 
-    void checkAndEnrichLearning(Learning learning) throws UserException {
-        Character c = getCharacter(learning.getCharacterId());
-
-        Skill skill = c.getSkills().get(learning.getSkillName());
-        if (skill == null) {
-            skill = new Skill(learning.getSkillName(), learning.getCharacterId(), 0);
-            skill = skillService.calculateCost(skill, c.getClassName());
-        }
-        enrichLearning(learning, skill);
-        checkLearning(skill, learning, c);
-    }
-
     void checkLevelUp(LevelUp levelUp) throws UserException {
         Character c = getCharacter(levelUp.getCharacterId());
         if (levelUp.getLevel() <= c.getLevel())
@@ -86,48 +74,31 @@ public class CheckService {
         }
     }
 
-    private void enrichLearning(Learning learning, Skill skill) {
-        if (learning.isStarting()) {
-            learning.setPPSpent(0);
-            learning.setEpSpent(0);
-            learning.setGoldSpent(0);
-            learning.setLearned(true);
-        } else {
-            int pp = Math.min(skill.getPP(), skill.getTECost());
-            int te = skill.getTECost() - pp;
-            int ep = te * skill.getEPCost() / skill.getTECost();
-            int gold = ep * 2 * learning.getPercentageGold() / 100;
-            ep = ep * (100 - learning.getPercentageGold()) / 100;
-
-            learning.setPPSpent(pp);
-            learning.setEpSpent(ep);
-            learning.setGoldSpent(gold);
-        }
+    void checkLearningOnCreate(Learning learning) throws UserException {
+        if (learning.getEpSpent() != 0)
+            throw new UserException();
+        if (learning.getGoldSpent() != 0)
+            throw new UserException();
+        if (learning.getPPSpent() != 0)
+            throw new UserException();
+        if (!learning.isLearned())
+            throw new UserException();
+        if (!learning.isStarting())
+            throw new UserException();
     }
 
-    private void checkLearning(Skill skill, Learning learning, Character c) throws UserException {
-        if (learning.isStarting()) {
-            if (learning.getEpSpent() != 0)
+    void checkLearning(Learning learning, Skill skill, Character character) throws UserException {
+        if (learning.getPercentageGold() < 0)
+            throw new UserException();
+        if (learning.getPercentageGold() > 50)
+            throw new UserException();
+        if (learning.getEpSpent() > character.getEp())
+            throw new UserException();
+        if (learning.getGoldSpent() > character.getGold())
+            throw new UserException();
+        if (!learning.isLearned())
+            if (learning.getNewBonus() != skill.getBonus() + 1)
                 throw new UserException();
-            if (learning.getGoldSpent() != 0)
-                throw new UserException();
-            if (learning.getPPSpent() != 0)
-                throw new UserException();
-        } else {
-            int remainingTE = skill.getTECost() - learning.getPPSpent();
-            int remainingEP = skill.getEPCost() * remainingTE / skill.getTECost();
-            int withoutGold = remainingEP - learning.getGoldSpent() / 2;
-            if (learning.getPercentageGold() < 0)
-                throw new UserException();
-            if (learning.getPercentageGold() > 50)
-                throw new UserException();
-            if (learning.getEpSpent() != withoutGold)
-                throw new UserException();
-            if (learning.getGoldSpent() > c.getGold())
-                throw new UserException();
-            if (withoutGold > c.getEp())
-                throw new UserException();
-        }
     }
 
     private void checkEsForLevelUp(int level, int es) throws UserException {

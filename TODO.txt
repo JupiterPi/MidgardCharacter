@@ -1,8 +1,9 @@
-- Complete ConfigurationFiles
+- Check: All Attributes supplied
+
+- Meaningful Error Messages
+
 
 Additional Features
-- display all skills
-- display unlearned skills
 - specialization
 
 Extended Features
@@ -13,7 +14,6 @@ Extended Features
 - Weapons (incl. Damage)
 
 Basics:
-- Meaningful Error Messages
 - Security
 - Logging and Tracing
 

@@ -97,7 +97,7 @@ public class DBServiceMock implements DBService {
         rewardsPP.add(mapper.map(PPReward));
     }
 
-    public void postLearn(Learning learning) {
+    public void postLearning(Learning learning) {
         learnings.add(mapper.map(learning));
     }
 }

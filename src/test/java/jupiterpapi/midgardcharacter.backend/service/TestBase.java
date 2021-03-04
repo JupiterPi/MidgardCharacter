@@ -47,7 +47,7 @@ public class TestBase extends TestFactory {
 
     protected void addLearning(String skill, boolean starting, boolean learned, int newBonus, int ep, int gold, int pp) {
         Learning learning = new Learning("1", "ID", skill, starting, learned, newBonus, 0, ep, gold, pp);
-        dbService.postLearn(learning);
+        dbService.postLearning(learning);
         initial.getLearnings().add(learning);
     }
 

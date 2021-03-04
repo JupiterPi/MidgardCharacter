@@ -84,6 +84,7 @@ public class ScenarioTest extends TestFactory {
 
     @Test
     public void newCharacterNoSkills() throws UserException {
+
         var character = postCharacter("Name", "As", "");
         assertEquals("Name", character.getName());
         assertEquals(9, character.getAttributes().size());
@@ -96,13 +97,14 @@ public class ScenarioTest extends TestFactory {
         var character = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
         assertEquals(2, character.getLearnings().size());
-        assertEquals(2, character.getSkills().size());
+        assertEquals(72, character.getSkills().size());
 
         assertEquals(8, getSkill(character, "Akrobatik").getBonus());
     }
 
     @Test
     public void RewardAndLevelUp() throws UserException {
+
         var c0 = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
         var c1 = postReward(c0, 100, 200);
@@ -129,6 +131,7 @@ public class ScenarioTest extends TestFactory {
 
     @Test
     public void Learnings() throws UserException {
+
         final String C_Alchemie = "Alchemie";
         final String C_Akrobatik = "Akrobatik";
 

@@ -128,26 +128,7 @@ public class IntegrationTest {
         postAndExpect("/api/character",character,null);
     }
     void getCharacter(String characterId,CharacterDTO character) throws Exception {
-        getAndExpect("/api/character/"+characterId,character);
-    }
-
-    @Test
-    public void initialCharacters() throws Exception {
-        getCharacters("1",characterMetas);
-    }
-    @Test
-    public void postCharacterAndGetList() throws Exception {
-        postUser(userCreate);
-        postCharacter(characterCreate);
-        characterMetas.add(characterMeta);
-        getCharacters("1",characterMetas);
-    }
-    @Test
-    public void postCharacterAndGetIt() throws Exception {
-        postUser(userCreate);
-        postCharacter(characterCreate);
-        getCharacter("SC1", characterDTO);
-
+        getAndExpect("/api/character/" + characterId, character.getId());
     }
 
     int attributeId = 0;
@@ -166,16 +147,6 @@ public class IntegrationTest {
         characterDTO.getAttributes().add(getAttributeDTO(name, value, bonus));
     }
 
-    @Test
-    public void postWithAttribute() throws Exception {
-        postUser(userCreate);
-        addAttribute("Gs", 98, 2);
-        addAttribute("Gw", 10, -1);
-        addAttribute("St", 50, 0);
-        postCharacter(characterCreate);
-        getCharacter("SC1",characterDTO);
-    }
-
     void postStandard() throws Exception {
         postUser(userCreate);
         addAttribute("Au", 50, 0);
@@ -184,6 +155,7 @@ public class IntegrationTest {
         addAttribute("In", 50, 0);
         addAttribute("Ko", 50, 0);
         addAttribute("St", 50, 0);
+        addAttribute("Wk", 50, 0);
         addAttribute("Zt", 50, 0);
         addAttribute("pA", 50, 0);
         postCharacter(characterCreate);
@@ -207,8 +179,8 @@ public class IntegrationTest {
         postStandard();
         RewardCreate reward = new RewardCreate("1","SC1",100,200);
         postAndExpect("/api/reward",reward,reward);
-        LearningCreate learnCreate = new LearningCreate("1","SC1","Akrobatik",true,8,0);
-        LearningDTO learnDTO = new LearningDTO("1","SC1","Akrobatik",true,true,8,0,0,0);
+        LearningCreate learnCreate = new LearningCreate("1", "SC1", "Akrobatik", true, 8, 0);
+        LearningDTO learnDTO = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
         postAndExpect("/api/learn",learnCreate,learnDTO);
     }
 
@@ -218,7 +190,7 @@ public class IntegrationTest {
         RewardCreate reward = new RewardCreate("1", "SC1", 100, 200);
         postAndExpect("/api/reward", reward, reward);
         LearningCreate learnCreate = new LearningCreate("1", "SC1", "Akrobatik", true, 8, 0);
-        LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 0, 0, 0);
+        LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
         postAndExpect("/api/learn", learnCreate, learnResult);
         PPRewardCreate rewardPP = new PPRewardCreate("1", "SC1", "Akrobatik", 1);
         postAndExpect("/api/PPReward", rewardPP, rewardPP);

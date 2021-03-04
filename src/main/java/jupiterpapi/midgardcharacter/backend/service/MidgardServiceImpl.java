@@ -4,6 +4,7 @@ import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.*;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,8 +25,6 @@ public class MidgardServiceImpl implements MidgardService {
     EnrichService enrichService;
     @Autowired
     CheckService checkService;
-    @Autowired
-    TimeProvider timeProvider;
 
     public List<UserDTO> getUsers() {
         List<User> users = db.getUser();
@@ -65,17 +64,19 @@ public class MidgardServiceImpl implements MidgardService {
 
     public CharacterDTO postCharacter(CharacterCreate character) throws UserException {
         Character c = mapper.map(character);
-        c.setLevel(1);
-        c.setCreatedAt(timeProvider.getDate()); //
         List<Attribute> list = mapper.mapAttributesCreate(character.getAttributes());
 
+        enrichService.enrichCharacterOnCreate(c);
         checkService.checkNewCharacter(c, list);
 
         db.postCharacter(c);
         db.postAttributes(list);
 
-        for (LearningCreate l : character.getLearnings()) {
-            postLearning(l);
+        for (LearningCreate learningCreate : character.getLearnings()) {
+            Learning learning = mapper.map(learningCreate);
+            enrichService.enrichLearningOnCreate(learning);
+            checkService.checkLearningOnCreate(learning);
+            db.postLearning(learning);
         }
 
         return getCharacter(character.getId());
@@ -96,10 +97,21 @@ public class MidgardServiceImpl implements MidgardService {
     }
 
     public CharacterDTO postLearning(LearningCreate learning) throws UserException {
+        Character character = enrichService.getCharacter(learning.getCharacterId());
+        Skill skill = getSkill(character, learning.getSkillName());
+
         Learning l = mapper.map(learning);
-        checkService.checkAndEnrichLearning(l);
-        db.postLearn(l);
+        enrichService.enrichLearning(l, skill);
+        checkService.checkLearning(l, skill, character);
+        db.postLearning(l);
         return getCharacter(learning.getCharacterId());
+    }
+
+    private Skill getSkill(Character character, String skillName) throws UserException {
+        var opt = character.getSkills().values().stream().filter(s -> s.getName().equals(skillName)).findFirst();
+        if (!opt.isPresent())
+            throw new UserException();
+        return opt.get();
     }
 
     public CharacterDTO postLevelUp(LevelUpCreate levelUp) throws UserException {

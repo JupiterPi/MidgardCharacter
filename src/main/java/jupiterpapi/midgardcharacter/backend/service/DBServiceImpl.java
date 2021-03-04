@@ -106,7 +106,7 @@ public class DBServiceImpl implements DBService {
         PPRewardRepo.insert(mapper.map(PPReward));
     }
 
-    public void postLearn(Learning learning) {
+    public void postLearning(Learning learning) {
         learningRepo.insert(mapper.map(learning));
     }
 }

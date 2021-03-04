@@ -27,6 +27,7 @@ public interface UIMapper {
     @Mapping(target = "ep", ignore = true)
     @Mapping(target = "gold", ignore = true)
     @Mapping(target = "level", ignore = true)
+    @Mapping(target = "createdAt", ignore = true)
     Character map(CharacterCreate character);
 
     List<Attribute> mapAttributesCreate(Collection<AttributeCreate> attribute);

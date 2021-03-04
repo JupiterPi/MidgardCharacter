@@ -15,11 +15,8 @@ public class ClassEPCost {
         if (args.size() < 3) {
             return null;
         }
-        return new ClassEPCost(
-                args.get(0),
-                args.get(1),
-                Integer.parseInt(args.get(2))
-        );
+        return new ClassEPCost(args.get(0).replaceAll("\\s+", ""), args.get(1).replaceAll("\\s+", ""),
+                Integer.parseInt(args.get(2).replaceAll("\\s+", "")));
     }
     public String getKey() {
         return className + "/" + group;

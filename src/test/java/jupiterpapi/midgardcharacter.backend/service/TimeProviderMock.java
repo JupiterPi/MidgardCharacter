@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Profile("!prod")
 public class TimeProviderMock implements TimeProvider {
 
-    String date;
+    final String date;
 
     public TimeProviderMock() {
         date = new TimeProviderImpl().getDate();

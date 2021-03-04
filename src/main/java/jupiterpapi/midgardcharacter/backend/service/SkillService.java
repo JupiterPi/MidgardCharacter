@@ -8,6 +8,9 @@ import jupiterpapi.midgardcharacter.backend.model.Skill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class SkillService {
     @Autowired
@@ -15,7 +18,8 @@ public class SkillService {
 
     public String getAttribute(String skillName) throws UserException {
         SkillCost s = configurationService.skillCost.get(skillName);
-        if (s == null) throw new UserException();
+        if (s == null)
+            throw new UserException();
         return s.getAttribute();
     }
     public void checkSkillName(String name) throws UserException {
@@ -23,30 +27,53 @@ public class SkillService {
         if (s == null) throw new UserException();
     }
     public Skill calculateCost(Skill skill, String className) throws UserException {
+        if (skill.getBonus() > 17) {
+            skill.setTECost(1000);
+            skill.setEPCost(1000);
+            return skill;
+        }
+
+        // SkillCost for Skill
         SkillCost s = configurationService.skillCost.get(skill.getName());
-        if (s == null) throw new UserException();
+        if (s == null)
+            throw new UserException();
+
+        // BonusCost for Skill -> TE/LE
         int te;
-        if (skill.getBonus() > 0) {
-            String line = s.getLine();
-            BonusCost b = configurationService.bonusCost.get(line + "/" + ( skill.getBonus() + 1) );
-            if (b == null) throw new UserException();
+        String line = s.getLine();
+        BonusCost b = configurationService.bonusCost.get(line + "/" + (skill.getBonus() + 1));
+        if (b != null) {
             te = b.getCost();
         } else {
             te = s.getLe() * 3;
-            skill.setBonus(s.getStartingBonus());
         }
         skill.setTECost(te);
 
+        // ClassEPCost --> EP
         String groups = s.getGroups();
         String[] groups2 = groups.split(",");
         int epCost = 99;
-        for (String g : groups2 ) {
+        for (String g : groups2) {
             ClassEPCost c = configurationService.classEPCost.get(className + "/" + g);
-            if (c == null) throw new UserException();
-            if (c.getCost() < epCost) epCost = c.getCost();
+            if (c == null)
+                throw new UserException();
+            if (c.getCost() < epCost)
+                epCost = c.getCost();
         }
         skill.setEPCost(epCost * te);
 
         return skill;
+    }
+
+    public List<Skill> getInitialSkills(String characterId) {
+        List<Skill> skills = new ArrayList<>();
+        for (SkillCost cost : configurationService.skillCost.values()) {
+            skills.add(new Skill(cost.getSkill(), characterId, cost.getUnlearnedBonus(), false));
+        }
+        return skills;
+    }
+
+    public int getInitialBonus(String skillName) {
+        return configurationService.skillCost.get(skillName).getStartingBonus();
     }
 }

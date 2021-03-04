@@ -35,7 +35,7 @@ public interface DBService {
 
     void postRewardPP(PPReward PPReward);
 
-    void postLearn(Learning learning);
+    void postLearning(Learning learning);
 
     void reset();
 }

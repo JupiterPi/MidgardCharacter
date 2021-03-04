@@ -36,6 +36,7 @@ public class TestFactory {
         enrichService = new EnrichService();
         enrichService.skillService = skillService;
         enrichService.db = dbService;
+        enrichService.timeProvider = timeProvider;
 
         checkService = new CheckService();
         checkService.db = dbService;
@@ -47,7 +48,6 @@ public class TestFactory {
         midgardService.mapper = uiMapper;
         midgardService.enrichService = enrichService;
         midgardService.checkService = checkService;
-        midgardService.timeProvider = timeProvider;
     }
 
 }

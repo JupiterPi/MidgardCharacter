@@ -24,6 +24,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\service\DBService.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\service\EnrichService.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\service\SkillService.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\service\TimeProvider.java">
           <value>
             <Attribute>
@@ -46,6 +67,13 @@
           </value>
         </entry>
         <entry key="\src\main\resources\ClassEPCost.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\main\resources\SkillCost.csv">
           <value>
             <Attribute>
               <option name="separator" value=";" />

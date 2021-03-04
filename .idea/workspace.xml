@@ -29,20 +29,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Steigerung.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/BonusCost.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ClassEPCost.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/SkillCost.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/ConfigurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/ConfigurationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/BonusCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/BonusCost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/ClassEPCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/ClassEPCost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/SkillCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/configuration/model/SkillCost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/BonusCost.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ClassEPCost.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SkillCost.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/configuration/ConfigurationReadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/configuration/ConfigurationReadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/SkillDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/SkillDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/DBServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/DBServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/BonusCost.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/BonusCost.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ClassEPCost.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ClassEPCost.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SkillCost.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SkillCost.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/DBServiceMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/DBServiceMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TimeProviderMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TimeProviderMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in MidgardCharacter (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MidgardCharacter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
@@ -145,32 +150,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigurationReadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.configuration.*" />
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.configuration" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.configuration.ConfigurationReadTest" />
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigurationReadTest.readClassEP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.postLearning" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.configuration.*" />
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.configuration" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.configuration.ConfigurationReadTest" />
-      <option name="METHOD_NAME" value="readClassEP" />
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postLearning" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.postStandardCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postStandardCheck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in MidgardCharacter (1)" />
-        <item itemvalue="JUnit.ConfigurationReadTest" />
-        <item itemvalue="JUnit.ConfigurationReadTest.readClassEP" />
-        <item itemvalue="JUnit.All in MidgardCharacter (4)" />
         <item itemvalue="JUnit.All in MidgardCharacter" />
+        <item itemvalue="JUnit.IntegrationTest" />
+        <item itemvalue="JUnit.IntegrationTest.postLearning" />
+        <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614841255666</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Full Configuration">
+      <created>1614843699543</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1614843699543</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
-    <MESSAGE value="try and revert" />
     <MESSAGE value="Learning corrected: percentageGold" />
     <MESSAGE value="Check Percentage Gold" />
     <MESSAGE value="Activated SitesViewer (with local release 1.3)" />
@@ -489,20 +516,23 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="Implement proposed changes (without Timeprovider)" />
     <MESSAGE value="Mock TimeProvider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mock TimeProvider" />
+    <MESSAGE value="Full Configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full Configuration" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="899" y="344" key="#Inspections" timestamp="1614528741154">
+    <state x="899" y="344" width="1367" height="762" key="#Inspections" timestamp="1614862834790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="899" y="344" width="1367" height="762" key="#Inspections/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862834790" />
     <state x="899" y="344" key="#Inspections/0.0.2560.1400@0.0.2560.1400" timestamp="1614528741154" />
-    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614809759182">
+    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614862775676">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614809759182" />
+    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862775676" />
     <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614686625372" />
+    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614844266827" />
     <state x="920" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1614840704016">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -519,76 +549,76 @@
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
     <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614841966614" />
-    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614807725311">
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614862731114">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614807725311" />
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862731114" />
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1614841253039">
+    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1614843697154">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810503885" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
-    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614841253039" />
-    <state width="2490" height="442" key="GridCell.Tab.0.bottom" timestamp="1614843216936">
+    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843697154" />
+    <state width="2493" height="368" key="GridCell.Tab.0.bottom" timestamp="1614862732769">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810541021" />
+    <state width="2493" height="368" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862732769" />
     <state width="1981" height="211" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2490" height="442" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614843216936" />
-    <state width="2490" height="442" key="GridCell.Tab.0.center" timestamp="1614843216936">
+    <state width="1763" height="442" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="368" key="GridCell.Tab.0.center" timestamp="1614862732768">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810541021" />
+    <state width="2493" height="368" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862732768" />
     <state width="1981" height="211" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2490" height="442" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614843216936" />
-    <state width="2490" height="442" key="GridCell.Tab.0.left" timestamp="1614843216936">
+    <state width="1763" height="442" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
+    <state width="2493" height="368" key="GridCell.Tab.0.left" timestamp="1614862732768">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810541021" />
+    <state width="2493" height="368" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862732768" />
     <state width="1981" height="211" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986587" />
-    <state width="2490" height="442" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614843216936" />
-    <state width="2490" height="442" key="GridCell.Tab.0.right" timestamp="1614843216936">
+    <state width="1763" height="442" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
+    <state width="2493" height="368" key="GridCell.Tab.0.right" timestamp="1614862732769">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="369" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810541021" />
+    <state width="2493" height="368" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862732769" />
     <state width="1981" height="211" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
-    <state width="2490" height="442" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614843216936" />
-    <state width="2490" height="442" key="GridCell.Tab.1.bottom" timestamp="1614843217692">
+    <state width="1763" height="442" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="442" key="GridCell.Tab.1.bottom" timestamp="1614862017344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808965523" />
+    <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
     <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714440" />
-    <state width="2490" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614843217692" />
-    <state width="2490" height="442" key="GridCell.Tab.1.center" timestamp="1614843217692">
+    <state width="1763" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="442" key="GridCell.Tab.1.center" timestamp="1614862017344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808965523" />
+    <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
     <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2490" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614843217692" />
-    <state width="2490" height="442" key="GridCell.Tab.1.left" timestamp="1614843217692">
+    <state width="1763" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="442" key="GridCell.Tab.1.left" timestamp="1614862017344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808965523" />
+    <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
     <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2490" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614843217692" />
-    <state width="2490" height="442" key="GridCell.Tab.1.right" timestamp="1614843217692">
+    <state width="1763" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="442" key="GridCell.Tab.1.right" timestamp="1614862017344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="441" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808965523" />
+    <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
     <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
-    <state width="2490" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614843217692" />
+    <state width="1763" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="543" y="110" key="RollbackChangesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625364603" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614841259879">
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614843702041">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614810518885" />
     <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614684785809" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614841259879" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843702041" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -614,29 +644,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="21" />
+          <line>121</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="22" />
+          <line>99</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/configuration/ConfigurationReadTest.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/SkillService.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

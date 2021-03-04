@@ -2,7 +2,7 @@
 As   ;Alltag   ;20
 Bb   ;Alltag   ;20
 Gl   ;Alltag   ;20
-Hä   ;Alltag   ;10
+H„   ;Alltag   ;10
 Kr   ;Alltag   ;20
 Sp   ;Alltag   ;20
 Wa   ;Alltag   ;20
@@ -17,7 +17,7 @@ Sc   ;Alltag   ;20
 As   ;Freiland ;20
 Bb   ;Freiland ;10
 Gl   ;Freiland ;30
-Hä   ;Freiland ;20
+H„   ;Freiland ;20
 Kr   ;Freiland ;30
 Sp   ;Freiland ;30
 Wa   ;Freiland ;10
@@ -32,7 +32,7 @@ Sc   ;Freiland ;10
 As   ;Halbwelt ;20
 Bb   ;Halbwelt ;30
 Gl   ;Halbwelt ;10
-Hä   ;Halbwelt ;20
+H„   ;Halbwelt ;20
 Kr   ;Halbwelt ;30
 Sp   ;Halbwelt ;10
 Wa   ;Halbwelt ;20
@@ -47,7 +47,7 @@ Sc   ;Halbwelt ;40
 As   ;Kampf    ;30
 Bb   ;Kampf    ;10
 Gl   ;Kampf    ;20
-Hä   ;Kampf    ;20
+H„   ;Kampf    ;20
 Kr   ;Kampf    ;10
 Sp   ;Kampf    ;40
 Wa   ;Kampf    ;20
@@ -62,7 +62,7 @@ Sc   ;Kampf    ;40
 As   ;Körper   ;10
 Bb   ;Körper   ;10
 Gl   ;Körper   ;30
-Hä   ;Körper   ;20
+H„   ;Körper   ;20
 Kr   ;Körper   ;20
 Sp   ;Körper   ;10
 Wa   ;Körper   ;10
@@ -77,7 +77,7 @@ Sc   ;Körper   ;20
 As   ;Sozial   ;20
 Bb   ;Sozial   ;30
 Gl   ;Sozial   ;10
-Hä   ;Sozial   ;10
+H„   ;Sozial   ;10
 Kr   ;Sozial   ;20
 Sp   ;Sozial   ;10
 Wa   ;Sozial   ;30
@@ -92,7 +92,7 @@ Sc   ;Sozial   ;20
 As   ;Unterwelt;10
 Bb   ;Unterwelt;30
 Gl   ;Unterwelt;30
-Hä   ;Unterwelt;40
+H„   ;Unterwelt;40
 Kr   ;Unterwelt;30
 Sp   ;Unterwelt;10
 Wa   ;Unterwelt;30
@@ -107,7 +107,7 @@ Sc   ;Unterwelt;40
 As   ;Waffen   ;20
 Bb   ;Waffen   ;20
 Gl   ;Waffen   ;20
-Hä   ;Waffen   ;20
+H„   ;Waffen   ;20
 Kr   ;Waffen   ;10
 Sp   ;Waffen   ;20
 Wa   ;Waffen   ;20
@@ -122,7 +122,7 @@ Sc   ;Waffen   ;40
 As   ;Wissen   ;20
 Bb   ;Wissen   ;40
 Gl   ;Wissen   ;20
-Hä   ;Wissen   ;20
+H„   ;Wissen   ;20
 Kr   ;Wissen   ;40
 Sp   ;Wissen   ;30
 Wa   ;Wissen   ;20

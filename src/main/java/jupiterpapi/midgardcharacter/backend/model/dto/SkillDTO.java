@@ -11,4 +11,5 @@ public class SkillDTO {
     int TECost;
     int EPCost;
     int PP;
+    boolean learned;
 }
