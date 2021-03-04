@@ -27,7 +27,7 @@ public class SkillTest extends TestFactory {
         assertEquals(8, bonus);
     }
 
-    @Test
+    @Test(expected = UserException.class)
     public void getStartingBonusOfSkillFail() throws UserException {
         var bonus = skillService.getStartingBonusOfSkill("XYZ");
         assertEquals(8, bonus);

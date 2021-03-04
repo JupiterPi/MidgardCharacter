@@ -14,6 +14,9 @@ public class TestBase extends TestFactory {
     final Character initial = new Character("ID", "Name", "User", "As", 0);
     final Attribute gw = new Attribute("ID/Gw", "Gw", "ID", 96, 2);
     final Attribute in = new Attribute("ID/In", "In", "ID", 50, 0);
+    final Attribute st = new Attribute("ID/St", "St", "ID", 92, 1);
+    final Attribute ko = new Attribute("ID/Ko", "Ko", "ID", 15, -1);
+    final Attribute zt = new Attribute("ID/Zt", "Zt", "ID", 2, -2);
     final HashMap<String, Attribute> attributesMap = new HashMap<>();
     final List<Attribute> attributeList = new ArrayList<>();
 
@@ -22,8 +25,14 @@ public class TestBase extends TestFactory {
         initial.setLevel(1);
         attributesMap.put("Gw", gw);
         attributesMap.put("In", in);
+        attributesMap.put("St", st);
+        attributesMap.put("Ko", ko);
+        attributesMap.put("Zt", zt);
         attributeList.add(gw);
         attributeList.add(in);
+        attributeList.add(st);
+        attributeList.add(ko);
+        attributeList.add(zt);
     }
 
     protected void addCharacter() {

@@ -101,6 +101,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\EnrichTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\service\ScenarioTest.java">
           <value>
             <Attribute>

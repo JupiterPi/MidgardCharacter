@@ -205,4 +205,39 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
+    @Test
+    public void checkLearningOnCreate() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
+        checkService.checkLearningOnCreate(l);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningOnCreateFailEp() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 2, 0, 0);
+        checkService.checkLearningOnCreate(l);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningOnCreateFailGold() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 2, 0);
+        checkService.checkLearningOnCreate(l);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningOnCreateFailPP() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 2);
+        checkService.checkLearningOnCreate(l);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningOnCreateFailLearned() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", true, false, 8, 0, 0, 0, 0);
+        checkService.checkLearningOnCreate(l);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningOnCreateFailStarting() throws UserException {
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
+        checkService.checkLearningOnCreate(l);
+    }
 }

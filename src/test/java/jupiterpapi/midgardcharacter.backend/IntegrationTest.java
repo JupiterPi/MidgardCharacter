@@ -160,18 +160,25 @@ public class IntegrationTest {
         addAttribute("pA", 50, 0);
         postCharacter(characterCreate);
     }
+
     @Test
     public void postStandardCheck() throws Exception {
         postStandard();
-        getCharacter("SC1",characterDTO);
+        getCharacter("SC1", characterDTO);
     }
 
+    @Test
+    public void getCharacterList() throws Exception {
+        postStandard();
+        characterMetas.add(characterMeta);
+        getCharacters("1", characterMetas);
+    }
 
     @Test
     public void postReward() throws Exception {
         postStandard();
-        RewardCreate reward = new RewardCreate("1","SC1",100,200);
-        postAndExpect("/api/reward",reward,reward);
+        RewardCreate reward = new RewardCreate("1", "SC1", 100, 200);
+        postAndExpect("/api/reward", reward, reward);
     }
 
     @Test
