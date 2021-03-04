@@ -16,53 +16,16 @@ public class SkillService {
     @Autowired
     ConfigurationService configurationService;
 
-    public String getAttribute(String skillName) throws UserException {
-        SkillCost s = configurationService.skillCost.get(skillName);
-        if (s == null)
-            throw new UserException();
-        return s.getAttribute();
+    public String getBaseAttributeOfSkill(String skillName) throws UserException {
+        return getSkillCost(skillName).getAttribute();
     }
-    public void checkSkillName(String name) throws UserException {
-        SkillCost s = configurationService.skillCost.get(name);
-        if (s == null) throw new UserException();
+
+    public int getStartingBonusOfSkill(String skillName) throws UserException {
+        return getSkillCost(skillName).getStartingBonus();
     }
-    public Skill calculateCost(Skill skill, String className) throws UserException {
-        if (skill.getBonus() > 17) {
-            skill.setTECost(1000);
-            skill.setEPCost(1000);
-            return skill;
-        }
 
-        // SkillCost for Skill
-        SkillCost s = configurationService.skillCost.get(skill.getName());
-        if (s == null)
-            throw new UserException();
-
-        // BonusCost for Skill -> TE/LE
-        int te;
-        String line = s.getLine();
-        BonusCost b = configurationService.bonusCost.get(line + "/" + (skill.getBonus() + 1));
-        if (b != null) {
-            te = b.getCost();
-        } else {
-            te = s.getLe() * 3;
-        }
-        skill.setTECost(te);
-
-        // ClassEPCost --> EP
-        String groups = s.getGroups();
-        String[] groups2 = groups.split(",");
-        int epCost = 99;
-        for (String g : groups2) {
-            ClassEPCost c = configurationService.classEPCost.get(className + "/" + g);
-            if (c == null)
-                throw new UserException();
-            if (c.getCost() < epCost)
-                epCost = c.getCost();
-        }
-        skill.setEPCost(epCost * te);
-
-        return skill;
+    public void checkSkillName(String skillName) throws UserException {
+        getSkillCost(skillName);
     }
 
     public List<Skill> getInitialSkills(String characterId) {
@@ -73,7 +36,55 @@ public class SkillService {
         return skills;
     }
 
-    public int getInitialBonus(String skillName) {
-        return configurationService.skillCost.get(skillName).getStartingBonus();
+    public Skill calculateCost(Skill skill, String className) throws UserException {
+
+        // High Skill Levels
+        if (skill.getBonus() > 17) {
+            skill.setTECost(1000);
+            skill.setEPCost(1000);
+            return skill;
+        }
+
+        SkillCost skillCost = getSkillCost(skill.getName());
+
+        int te = getTE(skill.getBonus(), skillCost);
+        skill.setTECost(te);
+
+        int epCost = getEPCost(skill, skillCost, className);
+        skill.setEPCost(epCost * te);
+
+        return skill;
     }
+
+    private SkillCost getSkillCost(String skillName) throws UserException {
+        SkillCost s = configurationService.skillCost.get(skillName);
+        if (s == null)
+            throw new UserException();
+        return s;
+    }
+
+    private int getTE(int skillBonus, SkillCost skillCost) {
+        String line = skillCost.getLine();
+        BonusCost b = configurationService.bonusCost.get(line + "/" + (skillBonus + 1));
+        if (b != null) {
+            return b.getCost();
+        } else {
+            return skillCost.getLe() * 3;
+        }
+    }
+
+    private int getEPCost(Skill skill, SkillCost skillCost, String className) throws UserException {
+        String groups = skillCost.getGroups();
+        String[] groups2 = groups.split(",");
+        int epCost = 9999999;
+        for (String g : groups2) {
+            ClassEPCost c = configurationService.classEPCost.get(className + "/" + g);
+            if (c == null)
+                throw new UserException();
+            if (c.getCost() < epCost)
+                epCost = c.getCost();
+        }
+        return epCost;
+    }
+
 }

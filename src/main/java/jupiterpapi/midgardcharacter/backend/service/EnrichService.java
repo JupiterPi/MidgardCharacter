@@ -126,7 +126,7 @@ public class EnrichService {
         }
 
         for (Skill s : c.getSkills().values()) {
-            Attribute a = c.getAttributes().get(skillService.getAttribute(s.getName()));
+            Attribute a = c.getAttributes().get(skillService.getBaseAttributeOfSkill(s.getName()));
             if (a == null)
                 throw new UserException();
             s.setAttributeBonus(a.getBonus());
@@ -152,13 +152,13 @@ public class EnrichService {
         c.setCreatedAt(timeProvider.getDate());
     }
 
-    public void enrichLearningOnCreate(Learning learning) {
+    public void enrichLearningOnCreate(Learning learning) throws UserException {
         learning.setPPSpent(0);
         learning.setEpSpent(0);
         learning.setGoldSpent(0);
         learning.setStarting(true);
         learning.setLearned(true);
-        learning.setNewBonus(skillService.getInitialBonus(learning.getSkillName()));
+        learning.setNewBonus(skillService.getStartingBonusOfSkill(learning.getSkillName()));
     }
 
     public void enrichLearning(Learning learning, Skill skill) {
