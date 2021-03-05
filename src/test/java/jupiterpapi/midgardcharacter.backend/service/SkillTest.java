@@ -43,9 +43,13 @@ public class SkillTest extends TestFactory {
         skillService.checkSkillName("XYZ");
     }
 
+    Skill getSkill(String skillName, int bonus, boolean learned) {
+        return new Skill(skillName, "ID", bonus, 0, bonus, 0, 0, 0, learned);
+    }
+
     @Test
     public void getInitialSkills() {
-        Skill exp = new Skill("Akrobatik", "ID", 6, false);
+        Skill exp = getSkill("Akrobatik", 6, false);
         var skills = skillService.getInitialSkills("ID");
         var opt = skills.stream().filter(s -> s.getName().equals("Akrobatik")).findFirst();
         assertTrue(opt.isPresent());
@@ -54,7 +58,7 @@ public class SkillTest extends TestFactory {
 
     @Test
     public void calculateCostNew() throws UserException {
-        Skill s = new Skill("Akrobatik", "ID", 0, false);
+        Skill s = getSkill("Akrobatik", 0, false);
         var c = skillService.calculateCost(s, "As");
         Assert.assertEquals(c.getTECost(), 6);
         Assert.assertEquals(c.getEPCost(), 60);
@@ -62,7 +66,7 @@ public class SkillTest extends TestFactory {
 
     @Test
     public void calculateCostIncrease() throws UserException {
-        Skill s = new Skill("Akrobatik", "ID", 8, true);
+        Skill s = getSkill("Akrobatik", 8, true);
         var c = skillService.calculateCost(s, "As");
         Assert.assertEquals(c.getTECost(),2);
         Assert.assertEquals(c.getEPCost(),20);
@@ -70,19 +74,19 @@ public class SkillTest extends TestFactory {
 
     @Test(expected = UserException.class)
     public void calculateCostFailSkillName() throws UserException {
-        Skill s = new Skill("XYZ", "ID", 0, false);
+        Skill s = getSkill("XYZ", 0, false);
         var c = skillService.calculateCost(s, "As");
     }
 
     @Test(expected = UserException.class)
     public void calculateCostFailClassName() throws UserException {
-        Skill s = new Skill("Akrobatik", "ID", 0, false);
+        Skill s = getSkill("Akrobatik", 0, false);
         var c = skillService.calculateCost(s, "XYZ");
     }
 
     @Test
     public void calculateCostHighBonus() throws UserException {
-        Skill s = new Skill("Akrobatik", "ID", 99, true);
+        Skill s = getSkill("Akrobatik", 99, true);
         var cost = skillService.calculateCost(s, "As");
         assertEquals(1000, cost.getTECost());
         assertEquals(1000, cost.getEPCost());

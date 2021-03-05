@@ -49,9 +49,12 @@ public class TestBase extends TestFactory {
     }
 
     protected void addReward(int ep, int gold) {
-        Reward reward = new Reward("1","ID",ep,gold);
+        Reward reward = new Reward("1", "ID", ep, gold);
         dbService.postReward(reward);
         initial.getRewards().add(reward);
+        initial.setEp(initial.getEp() + ep);
+        initial.setEs(initial.getEs() + ep);
+        initial.setGold(initial.getGold() + gold);
     }
 
     protected void addLearning(String skill, boolean starting, boolean learned, int newBonus, int ep, int gold, int pp) {

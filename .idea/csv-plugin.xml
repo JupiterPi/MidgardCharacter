@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\API.yaml">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\main\java\jupiterpapi\midgardcharacter\backend\model\create\LearningCreate.java">
           <value>
             <Attribute>

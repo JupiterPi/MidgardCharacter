@@ -29,36 +29,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/API.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/PPReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/PPReward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/AttributeCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/AttributeCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/CharacterCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/CharacterCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/LearningCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/LearningCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/LevelUpCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/LevelUpCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/PPRewardCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/PPRewardCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/RewardCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/RewardCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/UserCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/create/UserCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/PPRewardDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/PPRewardDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/repo/PPRewardDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/repo/PPRewardDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UIMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Yaml OpenAPI version 3" />
       </list>
     </option>
   </component>
@@ -103,9 +103,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Json OpenAPI version 3" value="Yaml OpenAPI version 3" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -125,16 +127,8 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in MidgardCharacter">
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter (1)">
     <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MidgardCharacter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in MidgardCharacter (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -150,23 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest.postLearning" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
-      <option name="METHOD_NAME" value="postLearning" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScenarioTest.Learnings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <extension name="coverage">
         <pattern>
@@ -175,20 +153,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.service" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.ScenarioTest" />
-      <option name="METHOD_NAME" value="Learnings" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.CheckTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnrichTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.service" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.EnrichTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.service" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.SkillTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in MidgardCharacter" />
-        <item itemvalue="JUnit.ScenarioTest.Learnings" />
-        <item itemvalue="JUnit.All in MidgardCharacter (2)" />
-        <item itemvalue="JUnit.IntegrationTest.postLearning" />
         <item itemvalue="JUnit.All in MidgardCharacter (1)" />
+        <item itemvalue="JUnit.SkillTest" />
+        <item itemvalue="JUnit.EnrichTest" />
+        <item itemvalue="JUnit.CheckTest" />
+        <item itemvalue="JUnit.All in MidgardCharacter" />
       </list>
     </recent_temporary>
   </component>
@@ -504,7 +511,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <MESSAGE value="Delete idea/libraries" />
     <MESSAGE value="Added Idea Folder" />
     <MESSAGE value="First Cleanup finished" />
@@ -540,11 +546,11 @@
     </state>
     <state x="899" y="344" width="1367" height="762" key="#Inspections/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862834790" />
     <state x="899" y="344" key="#Inspections/0.0.2560.1400@0.0.2560.1400" timestamp="1614528741154" />
-    <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614872974477">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614930555794">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614872974477" />
-    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614686625372" />
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614930555794" />
     <state x="116" y="117" width="2328" height="1166" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614844266827" />
     <state x="920" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1614840704016">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -575,62 +581,66 @@
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614870549825" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843697154" />
-    <state width="1198" height="365" key="GridCell.Tab.0.bottom" timestamp="1614872862837">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="267" key="GridCell.Tab.0.bottom" timestamp="1614930664662">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1198" height="365" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614872862837" />
-    <state width="1981" height="211" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
+    <state width="2493" height="442" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="267" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
     <state width="1763" height="442" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="1198" height="365" key="GridCell.Tab.0.center" timestamp="1614872862837">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="267" key="GridCell.Tab.0.center" timestamp="1614930664662">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1198" height="365" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614872862837" />
-    <state width="1981" height="211" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
+    <state width="2493" height="442" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="267" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
     <state width="1763" height="442" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="1198" height="365" key="GridCell.Tab.0.left" timestamp="1614872862837">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="267" key="GridCell.Tab.0.left" timestamp="1614930664662">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1198" height="365" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614872862837" />
-    <state width="1981" height="211" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986587" />
+    <state width="2493" height="442" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="267" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
     <state width="1763" height="442" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="1198" height="365" key="GridCell.Tab.0.right" timestamp="1614872862837">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="267" key="GridCell.Tab.0.right" timestamp="1614930664662">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1198" height="365" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614872862837" />
-    <state width="1981" height="211" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691986588" />
+    <state width="2493" height="442" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="267" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
     <state width="1763" height="442" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="2493" height="442" key="GridCell.Tab.1.bottom" timestamp="1614862017344">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="325" key="GridCell.Tab.1.bottom" timestamp="1614928600872">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
-    <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714440" />
+    <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614928600872" />
     <state width="1763" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="2493" height="442" key="GridCell.Tab.1.center" timestamp="1614862017344">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="325" key="GridCell.Tab.1.center" timestamp="1614928600872">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
-    <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
+    <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614928600872" />
     <state width="1763" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="2493" height="442" key="GridCell.Tab.1.left" timestamp="1614862017344">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="325" key="GridCell.Tab.1.left" timestamp="1614928600871">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
-    <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
+    <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614928600871" />
     <state width="1763" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="2493" height="442" key="GridCell.Tab.1.right" timestamp="1614862017344">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="325" key="GridCell.Tab.1.right" timestamp="1614928600872">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862017344" />
-    <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614691714439" />
+    <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614928600872" />
     <state width="1763" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="543" y="110" key="RollbackChangesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625364603" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614870553648">
+    <state x="291" y="26" key="SettingsEditor" timestamp="1614878833425">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="291" y="26" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1614878833425" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1614873441511">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614870553648" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873441511" />
     <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614684785809" />
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843702041" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
@@ -649,26 +659,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="980" y="357" key="refactoring.ChangeSignatureDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614775754767" />
+    <state x="513" y="250" key="run.anything.popup" timestamp="1614879112812">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="513" y="250" key="run.anything.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1614879112812" />
     <state x="774" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1614808069176">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="774" y="0" width="1009" height="1470" key="search.everywhere.popup/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808069176" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/ScenarioTest.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java</url>
-          <line>166</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MidgardCharacter$SkillTest_getStartingBonusOfSkillFail.ic" NAME="SkillTest.getStartingBonusOfSkillFail Coverage Results" MODIFIED="1614868770560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -677,6 +675,9 @@
     <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter__1_.ic" NAME="All in MidgardCharacter (1) Coverage Results" MODIFIED="1614868703765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter__2_.ic" NAME="All in MidgardCharacter (2) Coverage Results" MODIFIED="1614868785796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/MidgardCharacter$IntegrationTest.ic" NAME="IntegrationTest Coverage Results" MODIFIED="1614869761526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter.ic" NAME="All in MidgardCharacter Coverage Results" MODIFIED="1614869618776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MidgardCharacter$CheckTest.ic" NAME="CheckTest Coverage Results" MODIFIED="1614928768976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>jupiterpapi.midgardcharacter.backend.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter.ic" NAME="All in MidgardCharacter Coverage Results" MODIFIED="1614929265871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

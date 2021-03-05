@@ -5,9 +5,7 @@ import jupiterpapi.midgardcharacter.backend.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class CheckService {
@@ -18,16 +16,23 @@ public class CheckService {
     @Autowired
     SkillService skillService;
 
+    int numberOfAttributes = 9;
+
     void checkNewCharacter(Character character, Collection<Attribute> attributes) throws UserException {
         if (db.getCharacter(character.getId()) != null) {
             throw new UserException();
         }
 
-        for( Attribute a : attributes ) {
-            if (a.getValue() < 1) throw new UserException();
+        Set<String> attributeSet = new HashSet<>();
+        for (Attribute a : attributes) {
+            attributeSet.add(a.getName());
+            if (a.getValue() < 1)
+                throw new UserException();
             if (a.getValue() > 100)
                 throw new UserException();
         }
+        if (attributeSet.size() < numberOfAttributes)
+            throw new UserException();
     }
 
     void checkReward(Reward reward) throws UserException {

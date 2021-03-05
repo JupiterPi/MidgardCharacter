@@ -1,10 +1,5 @@
-- Check: All Attributes supplied
-- Tests:
-    - CheckLearning (Percentage Gold, NotNextBonus)
-    - CheckEsForLevelUp (Level > 15)
 
 - Meaningful Error Messages
-
 
 Additional Features
 - specialization

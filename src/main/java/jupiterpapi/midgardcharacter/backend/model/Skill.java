@@ -16,10 +16,4 @@ public class Skill {
     int PP;
     boolean learned;
 
-    public Skill(String name, String characterId, int bonus, boolean learned) {
-        this.name = name;
-        this.characterId = characterId;
-        this.bonus = bonus;
-    }
-
 }

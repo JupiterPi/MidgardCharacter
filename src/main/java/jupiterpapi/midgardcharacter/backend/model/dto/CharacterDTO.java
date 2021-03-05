@@ -31,7 +31,11 @@ public class CharacterDTO {
         this.name = name;
         this.userId = userId;
         this.className = className;
-        this.level = 1;
         this.createdAt = createdAt;
+        this.level = 1;
+        this.ep = 0;
+        this.es = 0;
+        this.gold = 0;
+        this.ap = 0;
     }
 }

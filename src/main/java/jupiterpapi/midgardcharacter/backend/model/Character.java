@@ -31,8 +31,8 @@ public class Character {
         this.id = id;
         this.name = name;
         this.userId = userId;
-        this.level = 1;
         this.className = className;
+        this.level = 1;
         this.ep = 0;
         this.es = 0;
         this.gold = 0;

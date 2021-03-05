@@ -1,0 +1,18 @@
+openapi: "3.0.2"
+info:
+  title: Midgard Character
+  version: "1.0"
+servers:
+  - url: https://localhost:8080
+paths:
+  /api/user/{userId}:
+    get:
+      description:
+      responses:
+        '200':
+          description: OK
+  /api/users:
+    get:
+      responses:
+        '200':
+          description: OK
