@@ -4,6 +4,7 @@ import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterMetaDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.UserDTO;
+import jupiterpapi.midgardcharacter.backend.service.MessageProvider;
 import jupiterpapi.midgardcharacter.backend.service.MidgardService;
 import jupiterpapi.midgardcharacter.backend.service.UserException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,8 +72,16 @@ public class MidgardController implements MidgardService {
 
     @ExceptionHandler({UserException.class})
     public ResponseEntity<String> handleUserException(UserException exception) {
-        return ResponseEntity
-                .status(HttpStatus.BAD_REQUEST)
-                .body(exception.getMessage());
+        String key = exception.getMessage();
+        if (key == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+        }
+
+        String message = MessageProvider.get(key);
+        if (message.equals("")) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(message);
+        }
     }
 }

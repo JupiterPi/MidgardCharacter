@@ -29,7 +29,7 @@ public class EnrichService {
 
         Character character = db.getCharacter(characterId);
         if (character == null)
-            throw new UserException();
+            throw new UserException("CHARACTER_NOT_EXISTS");
 
         List<Attribute> attributes = db.getAttributes(characterId);
         for (Attribute a : attributes) {

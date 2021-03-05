@@ -52,23 +52,22 @@ public class IntegrationTest {
             throw new RuntimeException(e);
         }
     }
+
     void getAndExpect(String url, Object exp) throws Exception {
         String expect = asJsonString(exp);
-        this.mockMvc
-                .perform(get(url))
-                .andDo(print())
-                .andExpect(status().isOk())
+        this.mockMvc.perform(get(url)).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString(expect)));
     }
+
+    void getAndExpectFail(String url, String message) throws Exception {
+        this.mockMvc.perform(get(url)).andDo(print()).andExpect(status().isBadRequest())
+                .andExpect(content().string(containsString(message)));
+    }
+
     void postAndExpect(String url, Object body, Object exp) throws Exception {
         if (exp == null) {
-            this.mockMvc.perform(
-                    post(url)
-                            .contentType(MediaType.APPLICATION_JSON)
-                            .content(asJsonString(body))
-                    )
-                    .andDo(print())
-                    .andExpect(status().isOk());
+            this.mockMvc.perform(post(url).contentType(MediaType.APPLICATION_JSON).content(asJsonString(body)))
+                    .andDo(print()).andExpect(status().isOk());
         } else {
             String expect = asJsonString(exp);
             this.mockMvc.perform(
@@ -218,12 +217,15 @@ public class IntegrationTest {
         postStandard();
 
         RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
-        postAndExpect("/api/reward",reward,reward);
+        postAndExpect("/api/reward", reward, reward);
 
         LevelUpCreateDTO levelUp = new LevelUpCreateDTO("1", "SC1", 2, "", 0, 10);
-        postAndExpect("/api/levelUp",levelUp,levelUp);
+        postAndExpect("/api/levelUp", levelUp, levelUp);
     }
 
-
+    @Test
+    public void getCharacterFail() throws Exception {
+        getAndExpectFail("/api/character/XYZ", "Charakter existiert nicht");
+    }
 
 }
