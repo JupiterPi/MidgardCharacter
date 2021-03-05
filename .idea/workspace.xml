@@ -29,20 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/API.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/model/dto/CharacterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/CheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/CheckTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/EnrichTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/SkillTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/service/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -467,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614870552168</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="CleanCode finished">
+      <created>1614931402330</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1614931402330</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -511,7 +506,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Delete idea/libraries" />
     <MESSAGE value="Added Idea Folder" />
     <MESSAGE value="First Cleanup finished" />
     <MESSAGE value="Start" />
@@ -536,7 +530,8 @@
     <MESSAGE value="Initial Skills" />
     <MESSAGE value="CleanUp SkillService" />
     <MESSAGE value="CleanUp" />
-    <option name="LAST_COMMIT_MESSAGE" value="CleanUp" />
+    <MESSAGE value="CleanCode finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="CleanCode finished" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -569,41 +564,41 @@
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
     <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614841966614" />
-    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614862731114">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614931347724">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862731114" />
-    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614931347724" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1614870549825">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1614931398315">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614870549825" />
-    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614686678999" />
+    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614931398315" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843697154" />
-    <state width="1981" height="267" key="GridCell.Tab.0.bottom" timestamp="1614930664662">
+    <state width="1981" height="267" key="GridCell.Tab.0.bottom" timestamp="1614931353750">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="267" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
+    <state width="1981" height="267" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614931353750" />
     <state width="1763" height="442" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="1981" height="267" key="GridCell.Tab.0.center" timestamp="1614930664662">
+    <state width="1981" height="267" key="GridCell.Tab.0.center" timestamp="1614931353750">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="267" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
+    <state width="1981" height="267" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614931353750" />
     <state width="1763" height="442" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="1981" height="267" key="GridCell.Tab.0.left" timestamp="1614930664662">
+    <state width="1981" height="267" key="GridCell.Tab.0.left" timestamp="1614931353749">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="267" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
+    <state width="1981" height="267" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614931353749" />
     <state width="1763" height="442" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="1981" height="267" key="GridCell.Tab.0.right" timestamp="1614930664662">
+    <state width="1981" height="267" key="GridCell.Tab.0.right" timestamp="1614931353750">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="267" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614930664662" />
+    <state width="1981" height="267" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614931353750" />
     <state width="1763" height="442" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
     <state width="1981" height="325" key="GridCell.Tab.1.bottom" timestamp="1614928600872">
       <screen x="0" y="0" width="2048" height="1112" />
