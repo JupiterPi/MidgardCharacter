@@ -10,6 +10,7 @@ public class CheckTest extends TestBase {
     @Before
     public void hideInitialSkills() {
         enrichService.hideInitialSkills = true;
+        checkService.numberOfAttributes = 0;
     }
 
     @Test
@@ -41,11 +42,19 @@ public class CheckTest extends TestBase {
         checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
+    @Test(expected = UserException.class)
+    public void checkNewCharacterFailNumberAttributes() throws UserException {
+        addCharacter();
+        initial.setId("XYZ");
+        initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 0, 0));
+        checkService.numberOfAttributes = 9;
+        checkService.checkNewCharacter(initial, initial.getAttributes().values());
+    }
 
     @Test
     public void checkRewardSuccess() throws UserException {
         addCharacterWithAttributes();
-        Reward r = new Reward("1","ID",10,10);
+        Reward r = new Reward("1", "ID", 10, 10);
         checkService.checkReward(r);
     }
 
@@ -145,6 +154,15 @@ public class CheckTest extends TestBase {
         checkService.checkLevelUp(l);
     }
 
+    @Test(expected = UserException.class)
+    public void checkLevelUpFailEsHigh() throws UserException {
+        addCharacterWithAttributes();
+        addReward(10, 0);
+        LevelUp l = new LevelUp("2", "ID", 20, "", 0, 10);
+
+        checkService.checkLevelUp(l);
+    }
+
     @Test
     public void checkLearningInitialSkill() throws UserException {
         addCharacterWithAttributes();
@@ -192,7 +210,6 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
-
     @Test
     public void checkLearningIncrSkill() throws UserException {
         addCharacterWithAttributes();
@@ -202,6 +219,43 @@ public class CheckTest extends TestBase {
         Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 10, 0, false);
 
         enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningFailPercentageHigh() throws UserException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        initial.setEp(100);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 9, 51, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 10, 0, false);
+
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningFailPercentageLow() throws UserException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        initial.setEp(100);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, true, 9, -1, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 0, 0, 0, 1, 10, 0, false);
+
+        enrichService.enrichLearning(l, s);
+        checkService.checkLearning(l, s, initial);
+    }
+
+    @Test(expected = UserException.class)
+    public void checkLearningFailNotNextBonus() throws UserException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        initial.setEp(100);
+        Learning l = new Learning("1", "ID", "Akrobatik", false, false, 10, 0, 0, 0, 0);
+        Skill s = new Skill("Akrobatik", "ID", 8, 0, 0, 1, 10, 0, true);
+
+        enrichService.enrichLearning(l, s);
+        l.setNewBonus(10);
         checkService.checkLearning(l, s, initial);
     }
 

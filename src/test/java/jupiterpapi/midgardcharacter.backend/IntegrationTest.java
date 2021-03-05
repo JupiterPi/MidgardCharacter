@@ -181,6 +181,7 @@ public class IntegrationTest {
     @Test
     public void postReward() throws Exception {
         postStandard();
+
         RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward", reward, reward);
     }
@@ -188,8 +189,10 @@ public class IntegrationTest {
     @Test
     public void postLearning() throws Exception {
         postStandard();
+
         RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
+
         LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
         LearningDTO learnDTO = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
         postAndExpect("/api/learning", learnCreate, learnDTO);
@@ -198,11 +201,14 @@ public class IntegrationTest {
     @Test
     public void postPPReward() throws Exception {
         postStandard();
+
         RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward", reward, reward);
+
         LearningCreateDTO learnCreate = new LearningCreateDTO("1", "SC1", "Akrobatik", true, 0);
         LearningDTO learnResult = new LearningDTO("1", "SC1", "Akrobatik", true, true, 8, 60, 0, 0);
         postAndExpect("/api/learning", learnCreate, learnResult);
+
         PPRewardCreateDTO rewardPP = new PPRewardCreateDTO("1", "SC1", "Akrobatik", 1);
         postAndExpect("/api/ppReward", rewardPP, rewardPP);
     }
@@ -210,8 +216,10 @@ public class IntegrationTest {
     @Test
     public void postLevelUp() throws Exception {
         postStandard();
+
         RewardCreateDTO reward = new RewardCreateDTO("1", "SC1", 100, 200);
         postAndExpect("/api/reward",reward,reward);
+
         LevelUpCreateDTO levelUp = new LevelUpCreateDTO("1", "SC1", 2, "", 0, 10);
         postAndExpect("/api/levelUp",levelUp,levelUp);
     }

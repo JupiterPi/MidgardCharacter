@@ -41,9 +41,6 @@ public class EnrichTest extends TestBase {
     public void withReward() throws UserException {
         addCharacterWithAttributes();
         addReward( 100,500 );
-        initial.setEp(100);
-        initial.setEs(100);
-        initial.setGold(500);
 
         var c = enrichService.getCharacter("ID");
 
@@ -53,12 +50,6 @@ public class EnrichTest extends TestBase {
     @Test
     public void withMultipleReward() throws UserException {
         addCharacterWithAttributes();
-        addReward( 100,500 );
-        addReward( 100,500 );
-        addReward( 100,500 );
-        initial.setEp(300);
-        initial.setEs(300);
-        initial.setGold(1500);
 
         var c = enrichService.getCharacter("ID");
 
@@ -100,56 +91,59 @@ public class EnrichTest extends TestBase {
     @Test
     public void withLowerApInSecondLevel() throws UserException {
         addCharacterWithAttributes();
-        addLevelUp(2,"",0,10);
-        addLevelUp(3,"In",0,5);
+        addLevelUp(2, "", 0, 10);
+        addLevelUp(3, "In", 0, 5);
 
         initial.setAp(10);
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
+    }
+
+    void putAkrobatikSkill(int bonus, int pp) {
+        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", bonus, 2, bonus + 2, 2, 20, pp, true));
+    }
+
+    void addAkrobatikLearning(int bonus) {
+        if (bonus == 8) {
+            addLearning("Akrobatik", true, true, bonus, 0, 0, 0);
+        } else {
+            addLearning("Akrobatik", false, false, bonus, 0, 0, 0);
+        }
     }
 
     @Test
     public void withRewardAndLearning() throws UserException {
         addCharacterWithAttributes();
-        addReward( 100,500 );
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        initial.setEp(100);
-        initial.setEs(100);
-        initial.setGold(500);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 0, true));
+        addReward(100, 500);
+        addAkrobatikLearning(8);
+        putAkrobatikSkill(8, 0);
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
     public void withMultipleLearning() throws UserException {
         addCharacterWithAttributes();
-        addReward( 500,1000 );
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addLearning( "Akrobatik",false,false, 9,0,0,0);
-        initial.setEp(500);
-        initial.setEs(500);
-        initial.setGold(1000);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 0, true));
+        addReward(500, 1000);
+        addAkrobatikLearning(8);
+        addAkrobatikLearning(9);
+        putAkrobatikSkill(9, 0);
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
     public void withRewardAndLearningAndPP() throws UserException {
         addCharacterWithAttributes();
-        addReward( 10,400 );
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "Akrobatik",2 );
-        initial.setEp(10);
-        initial.setEs(10);
-        initial.setGold(400);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 2, true));
+        addReward(10, 400);
+        addAkrobatikLearning(8);
+        addRewardPP("Akrobatik", 2);
+        putAkrobatikSkill(8, 2);
 
         var c = enrichService.getCharacter("ID");
 
@@ -159,14 +153,11 @@ public class EnrichTest extends TestBase {
     @Test
     public void withMultiplePPRewards() throws UserException {
         addCharacterWithAttributes();
-        addReward( 10,400 );
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "Akrobatik",2 );
-        addRewardPP( "Akrobatik",1 );
-        initial.setEp(10);
-        initial.setEs(10);
-        initial.setGold(400);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 8, 2, 10, 2, 20, 3, true));
+        addReward(10, 400);
+        addAkrobatikLearning(8);
+        addRewardPP("Akrobatik", 2);
+        addRewardPP("Akrobatik", 1);
+        putAkrobatikSkill(8, 3);
 
         var c = enrichService.getCharacter("ID");
 
@@ -176,15 +167,12 @@ public class EnrichTest extends TestBase {
     @Test
     public void withMultipleLearningAndPPRewards() throws UserException {
         addCharacterWithAttributes();
-        addReward( 10,400 );
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "Akrobatik",2 );
+        addReward(10, 400);
+        addAkrobatikLearning(8);
+        addRewardPP("Akrobatik", 2);
         addRewardPP( "Akrobatik",1 );
-        addLearning( "Akrobatik",true,false, 9,0,0,2);
-        initial.setEp(10);
-        initial.setEs(10);
-        initial.setGold(400);
-        initial.getSkills().put("Akrobatik", new Skill("Akrobatik", "ID", 9, 2, 11, 2, 20, 1, true));
+        addLearning("Akrobatik", true, false, 9, 0, 0, 2);
+        putAkrobatikSkill(9, 1);
 
         var c = enrichService.getCharacter("ID");
 

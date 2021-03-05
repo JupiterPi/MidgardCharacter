@@ -31,7 +31,9 @@ public class SkillService {
     public List<Skill> getInitialSkills(String characterId) {
         List<Skill> skills = new ArrayList<>();
         for (SkillCost cost : configurationService.skillCost.values()) {
-            skills.add(new Skill(cost.getSkill(), characterId, cost.getUnlearnedBonus(), false));
+            skills.add(
+                    new Skill(cost.getSkill(), characterId, cost.getUnlearnedBonus(), 0, cost.getUnlearnedBonus(), 0, 0,
+                            0, false));
         }
         return skills;
     }
