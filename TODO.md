@@ -1,15 +1,16 @@
-#Basics
+# Basics
 ### Basic Features
 - [ ] Meaningful Error Messages
-
-### Additional Features
-- [ ] Specialization
 
 ### Basics Techncal Features
 - [ ] Security
 - [ ] Logging and Tracing
 
 # Advanced
+
+### Additional Features
+- [ ] Specialization
+
 ### Extended Features
 - [ ] Skills from Birth
 - [ ] B
