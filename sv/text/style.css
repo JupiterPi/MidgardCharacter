@@ -1,0 +1,16 @@
+:root {
+    --body-side: 200px;
+    --body-top: 100px;
+    --body-bottom: 50px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+div#body {
+    margin: var(--body-top) var(--body-side) var(--body-bottom);
+    padding: 20px;
+}
