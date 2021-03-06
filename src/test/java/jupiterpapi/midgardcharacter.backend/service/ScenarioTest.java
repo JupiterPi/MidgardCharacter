@@ -23,7 +23,7 @@ public class ScenarioTest extends TestFactory {
         character.getLearnings().add(l);
     }
 
-    CharacterDTO postCharacter(String name, String className, String initialLearnings) throws UserException {
+    CharacterDTO postCharacter(String name, String className, String initialLearnings) throws MidgardException {
         var character = new CharacterCreateDTO(name, name, "User", className, 0);
         addAttribute(character, "St", 50);
         addAttribute(character, "Gs", 50);
@@ -56,34 +56,34 @@ public class ScenarioTest extends TestFactory {
 
     int currentId = 0;
 
-    CharacterDTO postReward(CharacterDTO character, int ep, int gold) throws UserException {
+    CharacterDTO postReward(CharacterDTO character, int ep, int gold) throws MidgardException {
         currentId++;
         var r = new RewardCreateDTO(String.valueOf(currentId), character.getId(), ep, gold);
         return midgardService.postReward(r);
     }
 
-    CharacterDTO postLevelUp(CharacterDTO character, int level, String attr, int incr, int ap) throws UserException {
+    CharacterDTO postLevelUp(CharacterDTO character, int level, String attr, int incr, int ap) throws MidgardException {
         currentId++;
         var l = new LevelUpCreateDTO(String.valueOf(currentId), character.getId(), level, attr, incr, ap);
         return midgardService.postLevelUp(l);
     }
 
     CharacterDTO postLearning(CharacterDTO character, String skillName, boolean starting, int newBonus,
-            int percentageGold) throws UserException {
+            int percentageGold) throws MidgardException {
         currentId++;
         var l = new LearningCreateDTO(String.valueOf(currentId), character.getId(), skillName, starting,
                 percentageGold);
         return midgardService.postLearning(l);
     }
 
-    CharacterDTO postPPReward(CharacterDTO character, String skillName, int pp) throws UserException {
+    CharacterDTO postPPReward(CharacterDTO character, String skillName, int pp) throws MidgardException {
         currentId++;
         var r = new PPRewardCreateDTO(String.valueOf(currentId), character.getId(), skillName, pp);
         return midgardService.postRewardPP(r);
     }
 
     @Test
-    public void newCharacterNoSkills() throws UserException {
+    public void newCharacterNoSkills() throws MidgardException {
 
         var character = postCharacter("Name", "As", "");
         assertEquals("Name", character.getName());
@@ -92,7 +92,7 @@ public class ScenarioTest extends TestFactory {
     }
 
     @Test
-    public void newCharacterWithInitialSkills() throws UserException {
+    public void newCharacterWithInitialSkills() throws MidgardException {
 
         var character = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
@@ -103,7 +103,7 @@ public class ScenarioTest extends TestFactory {
     }
 
     @Test
-    public void RewardAndLevelUp() throws UserException {
+    public void RewardAndLevelUp() throws MidgardException {
 
         var c0 = postCharacter("Name", "As", "Akrobatik.Alchemie");
 
@@ -130,7 +130,7 @@ public class ScenarioTest extends TestFactory {
     }
 
     @Test
-    public void Learnings() throws UserException {
+    public void Learnings() throws MidgardException {
 
         final String C_Alchemie = "Alchemie";
         final String C_Akrobatik = "Akrobatik";

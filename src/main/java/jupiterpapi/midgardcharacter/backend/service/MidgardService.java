@@ -12,17 +12,17 @@ public interface MidgardService {
 
     Collection<CharacterMetaDTO> getCharacters(String userId);
 
-    CharacterDTO getCharacter(String characterId) throws UserException;
+    CharacterDTO getCharacter(String characterId) throws MidgardException;
 
     UserDTO postUser(UserCreateDTO user);
 
-    CharacterDTO postCharacter(CharacterCreateDTO character) throws UserException;
+    CharacterDTO postCharacter(CharacterCreateDTO character) throws MidgardException;
 
-    CharacterDTO postReward(RewardCreateDTO reward) throws UserException;
+    CharacterDTO postReward(RewardCreateDTO reward) throws MidgardException;
 
-    CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws UserException;
+    CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws MidgardException;
 
-    CharacterDTO postLearning(LearningCreateDTO learning) throws UserException;
+    CharacterDTO postLearning(LearningCreateDTO learning) throws MidgardException;
 
-    CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws UserException;
+    CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws MidgardException;
 }

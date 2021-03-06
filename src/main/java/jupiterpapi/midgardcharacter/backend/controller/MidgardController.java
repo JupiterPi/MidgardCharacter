@@ -4,8 +4,8 @@ import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterMetaDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.UserDTO;
+import jupiterpapi.midgardcharacter.backend.service.MidgardException;
 import jupiterpapi.midgardcharacter.backend.service.MidgardService;
-import jupiterpapi.midgardcharacter.backend.service.UserException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +33,7 @@ public class MidgardController implements MidgardService {
     }
 
     @GetMapping("/character/{characterId}")
-    public CharacterDTO getCharacter(@PathVariable("characterId") String characterId) throws UserException {
+    public CharacterDTO getCharacter(@PathVariable("characterId") String characterId) throws MidgardException {
         return service.getCharacter(characterId);
     }
 
@@ -45,34 +45,32 @@ public class MidgardController implements MidgardService {
 
     @Deprecated
     @PostMapping("/character")
-    public CharacterDTO postCharacter(@RequestBody CharacterCreateDTO character) throws UserException {
+    public CharacterDTO postCharacter(@RequestBody CharacterCreateDTO character) throws MidgardException {
         return service.postCharacter(character);
     }
 
     @PostMapping("/reward")
-    public CharacterDTO postReward(@RequestBody RewardCreateDTO reward) throws UserException {
+    public CharacterDTO postReward(@RequestBody RewardCreateDTO reward) throws MidgardException {
         return service.postReward(reward);
     }
 
     @PostMapping("/ppReward")
-    public CharacterDTO postRewardPP(@RequestBody PPRewardCreateDTO rewardPP) throws UserException {
+    public CharacterDTO postRewardPP(@RequestBody PPRewardCreateDTO rewardPP) throws MidgardException {
         return service.postRewardPP(rewardPP);
     }
 
     @PostMapping("/learning")
-    public CharacterDTO postLearning(@RequestBody LearningCreateDTO learn) throws UserException {
+    public CharacterDTO postLearning(@RequestBody LearningCreateDTO learn) throws MidgardException {
         return service.postLearning(learn);
     }
 
     @PostMapping("/levelUp")
-    public CharacterDTO postLevelUp(@RequestBody LevelUpCreateDTO levelUp) throws UserException {
+    public CharacterDTO postLevelUp(@RequestBody LevelUpCreateDTO levelUp) throws MidgardException {
         return service.postLevelUp(levelUp);
     }
 
-    @ExceptionHandler({UserException.class})
-    public ResponseEntity<String> handleUserException(UserException exception) {
-        return ResponseEntity
-                .status(HttpStatus.BAD_REQUEST)
-                .body(exception.getMessage());
+    @ExceptionHandler({MidgardException.class})
+    public ResponseEntity<String> handleUserException(MidgardException exception) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
     }
 }

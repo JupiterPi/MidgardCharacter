@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.GET_CHARACTER_NOT_EXISTS;
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_BASE_ATTRIBUTE_OF_SKILL;
+
 @Service
 public class EnrichService {
     @Autowired
@@ -18,24 +21,24 @@ public class EnrichService {
 
     boolean hideInitialSkills = false;
 
-    Character getCharacter(String characterId) throws UserException {
+    Character getCharacter(String characterId) throws MidgardException {
         Character c = read(characterId);
         Character c2 = applyRewardsAndLearnings(c);
         Character c3 = calculateCost(c2);
         return calculateBonus(c3);
     }
 
-    private Character read(String characterId) throws UserException {
+    private Character read(String characterId) throws MidgardException {
 
         Character character = db.getCharacter(characterId);
         if (character == null)
-            throw new UserException();
+            throw new MidgardException(GET_CHARACTER_NOT_EXISTS, characterId);
 
         List<Attribute> attributes = db.getAttributes(characterId);
         for (Attribute a : attributes) {
-            character.getAttributes().put(a.getName(),a);
+            character.getAttributes().put(a.getName(), a);
         }
-        character.setLevelUps( db.getLevelUps(characterId) );
+        character.setLevelUps(db.getLevelUps(characterId));
         character.setRewards( db.getRewards(characterId) );
         character.setRewardsPP( db.getRewardPPs(characterId) );
         character.setLearnings( db.getLearnings(characterId) );
@@ -114,21 +117,22 @@ public class EnrichService {
         return c;
     }
 
-    private Character calculateCost(Character c) throws UserException {
+    private Character calculateCost(Character c) throws MidgardException {
         for (Skill s : c.getSkills().values()) {
             skillService.calculateCost(s, c.getClassName());
         }
         return c;
     }
-    private Character calculateBonus(Character c) throws UserException {
+
+    private Character calculateBonus(Character c) throws MidgardException {
         for (Attribute a : c.getAttributes().values()) {
-            a.setBonus( getBonus( a.getValue()));
+            a.setBonus(getBonus(a.getValue()));
         }
 
         for (Skill s : c.getSkills().values()) {
             Attribute a = c.getAttributes().get(skillService.getBaseAttributeOfSkill(s.getName()));
             if (a == null)
-                throw new UserException();
+                throw new MidgardException(INTERNAL_NO_BASE_ATTRIBUTE_OF_SKILL, s.getName());
             s.setAttributeBonus(a.getBonus());
             s.setTotalBonus(s.getBonus() + s.getAttributeBonus());
         }
@@ -152,7 +156,7 @@ public class EnrichService {
         c.setCreatedAt(timeProvider.getDate());
     }
 
-    public void enrichLearningOnCreate(Learning learning) throws UserException {
+    public void enrichLearningOnCreate(Learning learning) throws MidgardException {
         learning.setPPSpent(0);
         learning.setEpSpent(0);
         learning.setGoldSpent(0);
@@ -161,7 +165,7 @@ public class EnrichService {
         learning.setNewBonus(skillService.getStartingBonusOfSkill(learning.getSkillName()));
     }
 
-    public void enrichLearning(Learning learning, Skill skill) throws UserException {
+    public void enrichLearning(Learning learning, Skill skill) throws MidgardException {
 
         int pp = Math.min(skill.getPP(), skill.getTECost());
         int te = skill.getTECost() - pp;
