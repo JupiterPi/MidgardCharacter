@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.service;
+package jupiterpapi.midgardcharacter.backend.controller;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -10,7 +10,7 @@ public class MessageProvider {
     final static Locale locale = new Locale(language, country);
     final static ResourceBundle messages = ResourceBundle.getBundle("messages", locale);
 
-    public static String get(String constant) {
-        return messages.getString(constant);
+    public static String get(String key) {
+        return messages.getString(key);
     }
 }

@@ -1,6 +1,4 @@
 # Basics
-### Basic Features
-- [ ] Meaningful Error Messages
 
 ### Basics Techncal Features
 - [ ] Security

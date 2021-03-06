@@ -12,6 +12,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_SKILL;
+
 @Component
 public class MidgardServiceImpl implements MidgardService {
 
@@ -36,7 +38,7 @@ public class MidgardServiceImpl implements MidgardService {
         return users.stream().map(character -> mapper.mapInfo(character)).collect(Collectors.toList());
     }
 
-    public CharacterDTO getCharacter(String characterId) throws UserException {
+    public CharacterDTO getCharacter(String characterId) throws MidgardException {
         Character newCharacter = enrichService.getCharacter(characterId);
         CharacterDTO newCharacterDTO = mapper.map(newCharacter);
 
@@ -62,7 +64,7 @@ public class MidgardServiceImpl implements MidgardService {
         return mapper.map(db.postUser(mapper.map(user)));
     }
 
-    public CharacterDTO postCharacter(CharacterCreateDTO character) throws UserException {
+    public CharacterDTO postCharacter(CharacterCreateDTO character) throws MidgardException {
         Character c = mapper.map(character);
         List<Attribute> list = mapper.mapAttributesCreate(character.getAttributes());
 
@@ -82,21 +84,21 @@ public class MidgardServiceImpl implements MidgardService {
         return getCharacter(character.getId());
     }
 
-    public CharacterDTO postReward(RewardCreateDTO reward) throws UserException {
+    public CharacterDTO postReward(RewardCreateDTO reward) throws MidgardException {
         Reward r = mapper.map(reward);
         checkService.checkReward(r);
         db.postReward(r);
         return getCharacter(reward.getCharacterId());
     }
 
-    public CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws UserException {
+    public CharacterDTO postRewardPP(PPRewardCreateDTO rewardPP) throws MidgardException {
         PPReward r = mapper.map(rewardPP);
         checkService.checkRewardPP(r);
         db.postRewardPP(r);
         return getCharacter(rewardPP.getCharacterId());
     }
 
-    public CharacterDTO postLearning(LearningCreateDTO learning) throws UserException {
+    public CharacterDTO postLearning(LearningCreateDTO learning) throws MidgardException {
         Character character = enrichService.getCharacter(learning.getCharacterId());
         Skill skill = getSkill(character, learning.getSkillName());
 
@@ -107,14 +109,14 @@ public class MidgardServiceImpl implements MidgardService {
         return getCharacter(learning.getCharacterId());
     }
 
-    private Skill getSkill(Character character, String skillName) throws UserException {
+    private Skill getSkill(Character character, String skillName) throws MidgardException {
         var opt = character.getSkills().values().stream().filter(s -> s.getName().equals(skillName)).findFirst();
         if (!opt.isPresent())
-            throw new UserException();
+            throw new MidgardException(INTERNAL_NO_SKILL, skillName);
         return opt.get();
     }
 
-    public CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws UserException {
+    public CharacterDTO postLevelUp(LevelUpCreateDTO levelUp) throws MidgardException {
         LevelUp l = mapper.map(levelUp);
         checkService.checkLevelUp(l);
         db.postLevelUp(l);

@@ -14,82 +14,82 @@ public class EnrichTest extends TestBase {
         enrichService.hideInitialSkills = true;
     }
 
-    @Test(expected = UserException.class)
-    public void getCharacterFail() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void getCharacterFail() throws MidgardException {
         var c = enrichService.getCharacter("XYZ");
     }
 
     @Test
-    public void InitialCharacter() throws UserException {
+    public void InitialCharacter() throws MidgardException {
         addCharacter();
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(c,initial);
+        assertEquals(c, initial);
     }
 
     @Test
-    public void InitialWithAttributes() throws UserException {
+    public void InitialWithAttributes() throws MidgardException {
         addCharacterWithAttributes();
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(c,initial);
+        assertEquals(c, initial);
     }
 
     @Test
-    public void withReward() throws UserException {
+    public void withReward() throws MidgardException {
         addCharacterWithAttributes();
-        addReward( 100,500 );
+        addReward(100, 500);
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(c,initial);
+        assertEquals(c, initial);
     }
 
     @Test
-    public void withMultipleReward() throws UserException {
+    public void withMultipleReward() throws MidgardException {
         addCharacterWithAttributes();
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(c,initial);
+        assertEquals(c, initial);
     }
 
     @Test
-    public void withLevelUpIncreasingAttribute() throws UserException {
+    public void withLevelUpIncreasingAttribute() throws MidgardException {
         addCharacterWithAttributes();
-        addLevelUp(2,"In",2,10);
+        addLevelUp(2, "In", 2, 10);
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
-    public void withLevelUpWithoutIncreasingAttribute() throws UserException {
+    public void withLevelUpWithoutIncreasingAttribute() throws MidgardException {
         addCharacterWithAttributes();
-        addLevelUp(2,"",0,10);
+        addLevelUp(2, "", 0, 10);
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
-    public void withMultipleLevelUp() throws UserException {
+    public void withMultipleLevelUp() throws MidgardException {
         addCharacterWithAttributes();
-        addLevelUp(2,"",0,10);
-        addLevelUp(3,"In",0,15);
+        addLevelUp(2, "", 0, 10);
+        addLevelUp(3, "In", 0, 15);
 
         initial.setAp(15);
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
-    public void withLowerApInSecondLevel() throws UserException {
+    public void withLowerApInSecondLevel() throws MidgardException {
         addCharacterWithAttributes();
         addLevelUp(2, "", 0, 10);
         addLevelUp(3, "In", 0, 5);
@@ -113,7 +113,7 @@ public class EnrichTest extends TestBase {
     }
 
     @Test
-    public void withRewardAndLearning() throws UserException {
+    public void withRewardAndLearning() throws MidgardException {
         addCharacterWithAttributes();
         addReward(100, 500);
         addAkrobatikLearning(8);
@@ -125,7 +125,7 @@ public class EnrichTest extends TestBase {
     }
 
     @Test
-    public void withMultipleLearning() throws UserException {
+    public void withMultipleLearning() throws MidgardException {
         addCharacterWithAttributes();
         addReward(500, 1000);
         addAkrobatikLearning(8);
@@ -138,7 +138,7 @@ public class EnrichTest extends TestBase {
     }
 
     @Test
-    public void withRewardAndLearningAndPP() throws UserException {
+    public void withRewardAndLearningAndPP() throws MidgardException {
         addCharacterWithAttributes();
         addReward(10, 400);
         addAkrobatikLearning(8);
@@ -147,11 +147,11 @@ public class EnrichTest extends TestBase {
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
-    public void withMultiplePPRewards() throws UserException {
+    public void withMultiplePPRewards() throws MidgardException {
         addCharacterWithAttributes();
         addReward(10, 400);
         addAkrobatikLearning(8);
@@ -161,16 +161,16 @@ public class EnrichTest extends TestBase {
 
         var c = enrichService.getCharacter("ID");
 
-        assertEquals(initial,c);
+        assertEquals(initial, c);
     }
 
     @Test
-    public void withMultipleLearningAndPPRewards() throws UserException {
+    public void withMultipleLearningAndPPRewards() throws MidgardException {
         addCharacterWithAttributes();
         addReward(10, 400);
         addAkrobatikLearning(8);
         addRewardPP("Akrobatik", 2);
-        addRewardPP( "Akrobatik",1 );
+        addRewardPP("Akrobatik", 1);
         addLearning("Akrobatik", true, false, 9, 0, 0, 2);
         putAkrobatikSkill(9, 1);
 

@@ -225,7 +225,7 @@ public class IntegrationTest {
 
     @Test
     public void getCharacterFail() throws Exception {
-        getAndExpectFail("/api/character/XYZ", "Charakter existiert nicht");
+        getAndExpectFail("/api/character/XYZ", "Charakter XYZ existiert nicht");
     }
 
 }

@@ -11,20 +11,23 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_CLASS_COST;
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_UNKNOWN_SKILL;
+
 @Service
 public class SkillService {
     @Autowired
     ConfigurationService configurationService;
 
-    public String getBaseAttributeOfSkill(String skillName) throws UserException {
+    public String getBaseAttributeOfSkill(String skillName) throws MidgardException {
         return getSkillCost(skillName).getAttribute();
     }
 
-    public int getStartingBonusOfSkill(String skillName) throws UserException {
+    public int getStartingBonusOfSkill(String skillName) throws MidgardException {
         return getSkillCost(skillName).getStartingBonus();
     }
 
-    public void checkSkillName(String skillName) throws UserException {
+    public void checkSkillName(String skillName) throws MidgardException {
         getSkillCost(skillName);
     }
 
@@ -38,7 +41,7 @@ public class SkillService {
         return skills;
     }
 
-    public Skill calculateCost(Skill skill, String className) throws UserException {
+    public Skill calculateCost(Skill skill, String className) throws MidgardException {
 
         // High Skill Levels
         if (skill.getBonus() > 17) {
@@ -58,10 +61,10 @@ public class SkillService {
         return skill;
     }
 
-    private SkillCost getSkillCost(String skillName) throws UserException {
+    private SkillCost getSkillCost(String skillName) throws MidgardException {
         SkillCost s = configurationService.skillCost.get(skillName);
         if (s == null)
-            throw new UserException();
+            throw new MidgardException(INTERNAL_UNKNOWN_SKILL, skillName);
         return s;
     }
 
@@ -75,14 +78,14 @@ public class SkillService {
         }
     }
 
-    private int getEPCost(Skill skill, SkillCost skillCost, String className) throws UserException {
+    private int getEPCost(Skill skill, SkillCost skillCost, String className) throws MidgardException {
         String groups = skillCost.getGroups();
         String[] groups2 = groups.split(",");
         int epCost = 9999999;
         for (String g : groups2) {
             ClassEPCost c = configurationService.classEPCost.get(className + "/" + g);
             if (c == null)
-                throw new UserException();
+                throw new MidgardException(INTERNAL_NO_CLASS_COST, className, g);
             if (c.getCost() < epCost)
                 epCost = c.getCost();
         }

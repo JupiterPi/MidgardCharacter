@@ -14,36 +14,36 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkNewCharacterSuccess() throws UserException {
+    public void checkNewCharacterSuccess() throws MidgardException {
         addCharacterWithAttributes();
         Character c = new Character("ID2", "Name", "User", "As", 0);
         checkService.checkNewCharacter(c, initial.getAttributes().values());
     }
 
-    @Test(expected = UserException.class)
-    public void checkNewCharacterFailExists() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkNewCharacterFailExists() throws MidgardException {
         addCharacterWithAttributes();
-        checkService.checkNewCharacter(initial,initial.getAttributes().values());
+        checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
-    @Test(expected = UserException.class)
-    public void checkNewCharacterFailAttributesHigh() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkNewCharacterFailAttributesHigh() throws MidgardException {
         addCharacter();
         initial.setId("XYZ");
         initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 200, 0));
         checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
-    @Test(expected = UserException.class)
-    public void checkNewCharacterFailAttributesLow() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkNewCharacterFailAttributesLow() throws MidgardException {
         addCharacter();
         initial.setId("XYZ");
         initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 0, 0));
         checkService.checkNewCharacter(initial, initial.getAttributes().values());
     }
 
-    @Test(expected = UserException.class)
-    public void checkNewCharacterFailNumberAttributes() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkNewCharacterFailNumberAttributes() throws MidgardException {
         addCharacter();
         initial.setId("XYZ");
         initial.getAttributes().put("Zt", new Attribute("ID/Zt", "Zt", "ID", 0, 0));
@@ -52,90 +52,89 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkRewardSuccess() throws UserException {
+    public void checkRewardSuccess() throws MidgardException {
         addCharacterWithAttributes();
         Reward r = new Reward("1", "ID", 10, 10);
         checkService.checkReward(r);
     }
 
-    @Test(expected = UserException.class)
-    public void checkRewardFailEP() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkRewardFailEP() throws MidgardException {
         addCharacterWithAttributes();
-        Reward r = new Reward("1","ID",-1,10);
+        Reward r = new Reward("1", "ID", -1, 10);
         checkService.checkReward(r);
     }
 
-    @Test(expected = UserException.class)
-    public void checkRewardFailGold() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkRewardFailGold() throws MidgardException {
         addCharacterWithAttributes();
-        Reward r = new Reward("1","ID",0,-1);
+        Reward r = new Reward("1", "ID", 0, -1);
         checkService.checkReward(r);
     }
 
+    @Test
+    public void checkRewardPPSuccess() throws MidgardException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        addRewardPP("Akrobatik", 2);
+
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
+    }
+
+    @Test(expected = MidgardException.class)
+    public void checkRewardPPFailPP() throws MidgardException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        addRewardPP("Akrobatik", -1);
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
+    }
+
+    @Test(expected = MidgardException.class)
+    public void checkRewardPPFailGold() throws MidgardException {
+        addCharacterWithAttributes();
+        addLearning("Akrobatik", true, true, 8, 0, 0, 0);
+        addRewardPP("XYZ", 2);
+        checkService.checkRewardPP(initial.getRewardsPP().get(0));
+    }
 
     @Test
-    public void checkRewardPPSuccess() throws UserException {
-        addCharacterWithAttributes();
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "Akrobatik",2 );
-
-        checkService.checkRewardPP(initial.getRewardsPP().get(0));
-    }
-
-    @Test(expected = UserException.class)
-    public void checkRewardPPFailPP() throws UserException {
-        addCharacterWithAttributes();
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "Akrobatik",-1 );
-        checkService.checkRewardPP(initial.getRewardsPP().get(0));
-    }
-
-    @Test(expected = UserException.class)
-    public void checkRewardPPFailGold() throws UserException {
-        addCharacterWithAttributes();
-        addLearning( "Akrobatik",true,true, 8,0,0,0);
-        addRewardPP( "XYZ",2 );
-        checkService.checkRewardPP(initial.getRewardsPP().get(0));
-    }
-
-    @Test
-    public void checkLevelUpSuccess() throws UserException {
+    public void checkLevelUpSuccess() throws MidgardException {
         addCharacterWithAttributes();
         addReward(1000, 0);
-        LevelUp l = new LevelUp("1","ID",2,"",0,10);
+        LevelUp l = new LevelUp("1", "ID", 2, "", 0, 10);
 
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailAttribute() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailAttribute() throws MidgardException {
         addCharacterWithAttributes();
         addReward(1000, 0);
-        LevelUp l = new LevelUp("1","ID",2,"ZZ",1,10);
+        LevelUp l = new LevelUp("1", "ID", 2, "ZZ", 1, 10);
 
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailIncrease() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailIncrease() throws MidgardException {
         addCharacterWithAttributes();
         addReward(1000, 0);
-        LevelUp l = new LevelUp("1","ID",2,"Gw",0,10);
+        LevelUp l = new LevelUp("1", "ID", 2, "Gw", 0, 10);
 
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailAp() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailAp() throws MidgardException {
         addCharacterWithAttributes();
         addReward(1000, 0);
-        LevelUp l = new LevelUp("1","ID",2,"Gw",1,0);
+        LevelUp l = new LevelUp("1", "ID", 2, "Gw", 1, 0);
 
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailLevel() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailLevel() throws MidgardException {
         addCharacterWithAttributes();
         addReward(1000, 0);
         addLevelUp(2, "", 0, 10);
@@ -145,8 +144,8 @@ public class CheckTest extends TestBase {
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailEs() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailEs() throws MidgardException {
         addCharacterWithAttributes();
         addReward(10, 0);
         LevelUp l = new LevelUp("2", "ID", 2, "", 0, 10);
@@ -154,8 +153,8 @@ public class CheckTest extends TestBase {
         checkService.checkLevelUp(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLevelUpFailEsHigh() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLevelUpFailEsHigh() throws MidgardException {
         addCharacterWithAttributes();
         addReward(10, 0);
         LevelUp l = new LevelUp("2", "ID", 20, "", 0, 10);
@@ -164,7 +163,7 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkLearningInitialSkill() throws UserException {
+    public void checkLearningInitialSkill() throws MidgardException {
         addCharacterWithAttributes();
         initial.setEp(100);
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
@@ -175,7 +174,7 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkLearningNewSkill() throws UserException {
+    public void checkLearningNewSkill() throws MidgardException {
         addCharacterWithAttributes();
         initial.setEp(100);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
@@ -185,9 +184,8 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
-
-    @Test(expected = UserException.class)
-    public void checkLearningWithTooLittleEP() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningWithTooLittleEP() throws MidgardException {
         addCharacterWithAttributes();
         initial.setEp(20);
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
@@ -197,8 +195,9 @@ public class CheckTest extends TestBase {
         enrichService.enrichLearning(l, s);
         checkService.checkLearning(l, s, initial);
     }
-    @Test(expected = UserException.class)
-    public void checkLearningWithTooLittleGold() throws UserException {
+
+    @Test(expected = MidgardException.class)
+    public void checkLearningWithTooLittleGold() throws MidgardException {
         addCharacterWithAttributes();
         initial.setEp(100);
         initial.setGold(0);
@@ -211,7 +210,7 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkLearningIncrSkill() throws UserException {
+    public void checkLearningIncrSkill() throws MidgardException {
         addCharacterWithAttributes();
         addLearning("Akrobatik", true, true, 8, 0, 0, 0);
         initial.setEp(100);
@@ -222,8 +221,8 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningFailPercentageHigh() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningFailPercentageHigh() throws MidgardException {
         addCharacterWithAttributes();
         addLearning("Akrobatik", true, true, 8, 0, 0, 0);
         initial.setEp(100);
@@ -234,8 +233,8 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningFailPercentageLow() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningFailPercentageLow() throws MidgardException {
         addCharacterWithAttributes();
         addLearning("Akrobatik", true, true, 8, 0, 0, 0);
         initial.setEp(100);
@@ -246,8 +245,8 @@ public class CheckTest extends TestBase {
         checkService.checkLearning(l, s, initial);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningFailNotNextBonus() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningFailNotNextBonus() throws MidgardException {
         addCharacterWithAttributes();
         addLearning("Akrobatik", true, true, 8, 0, 0, 0);
         initial.setEp(100);
@@ -260,37 +259,37 @@ public class CheckTest extends TestBase {
     }
 
     @Test
-    public void checkLearningOnCreate() throws UserException {
+    public void checkLearningOnCreate() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 0);
         checkService.checkLearningOnCreate(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningOnCreateFailEp() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningOnCreateFailEp() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 2, 0, 0);
         checkService.checkLearningOnCreate(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningOnCreateFailGold() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningOnCreateFailGold() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 2, 0);
         checkService.checkLearningOnCreate(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningOnCreateFailPP() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningOnCreateFailPP() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", true, true, 8, 0, 0, 0, 2);
         checkService.checkLearningOnCreate(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningOnCreateFailLearned() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningOnCreateFailLearned() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", true, false, 8, 0, 0, 0, 0);
         checkService.checkLearningOnCreate(l);
     }
 
-    @Test(expected = UserException.class)
-    public void checkLearningOnCreateFailStarting() throws UserException {
+    @Test(expected = MidgardException.class)
+    public void checkLearningOnCreateFailStarting() throws MidgardException {
         Learning l = new Learning("1", "ID", "Akrobatik", false, true, 8, 0, 0, 0, 0);
         checkService.checkLearningOnCreate(l);
     }
