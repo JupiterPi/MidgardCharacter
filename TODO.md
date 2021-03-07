@@ -1,10 +1,6 @@
 # Basics
 
 ### Basics Techncal Features
-- [ ] Logging and Tracing
-    - Inbound Request
-    - Outbound Response
-    - Read Character (getCharacter)
 - [ ] Security
     - Separation of User in different Controller
 

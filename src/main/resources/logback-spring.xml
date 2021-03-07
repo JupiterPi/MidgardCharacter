@@ -11,6 +11,8 @@
         </encoder>
     </appender>
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDOUT"/>
     </root>
+    <logger name="jupiterpapi" level="TRACE"/>
+
 </configuration>

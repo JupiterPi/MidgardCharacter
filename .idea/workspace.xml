@@ -29,7 +29,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/ControllerAOP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidgardCharacter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MidgardCharacter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/EnrichService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Yaml OpenAPI version 3" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,7 +119,7 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in MidgardCharacter">
+  <component name="RunManager" selected="JUnit.IntegrationTest.postStandardCheck">
     <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,21 +136,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EnrichTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend.service" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.service.EnrichTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IntegrationTest.getCharacterFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <extension name="coverage">
@@ -158,6 +147,22 @@
       <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
       <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
       <option name="METHOD_NAME" value="getCharacterFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.postStandardCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postStandardCheck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
         <item itemvalue="JUnit.All in MidgardCharacter" />
         <item itemvalue="JUnit.IntegrationTest.getCharacterFail" />
         <item itemvalue="JUnit.All in MidgardCharacter (1)" />
         <item itemvalue="JUnit.SkillTest" />
-        <item itemvalue="JUnit.EnrichTest" />
       </list>
     </recent_temporary>
   </component>
@@ -477,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614948006182</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Refine Logging and Trancing">
+      <created>1615038349988</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1615038349988</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -521,7 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start" />
     <MESSAGE value="Introduce TestFactory (and small renames)" />
     <MESSAGE value="Introduce Factory also for CheckService" />
     <MESSAGE value="Finalize EnrichTest" />
@@ -546,7 +557,8 @@
     <MESSAGE value="CleanCode finished" />
     <MESSAGE value="Reformat TODO" />
     <MESSAGE value="Introduce MessageProvider&#10;use it in Controller&#10;implement for one example and check IntegrationTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce MessageProvider&#10;use it in Controller&#10;implement for one example and check IntegrationTest" />
+    <MESSAGE value="Refine Logging and Trancing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine Logging and Trancing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -585,36 +597,36 @@
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027486664" />
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614931347724" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1615027513995">
+    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1615038348066">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027513995" />
+    <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615038348066" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614948001475" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843697154" />
-    <state width="2493" height="685" key="GridCell.Tab.0.bottom" timestamp="1615027475973">
+    <state width="2493" height="685" key="GridCell.Tab.0.bottom" timestamp="1615104674290">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="685" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027475973" />
+    <state width="2493" height="685" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1763" height="442" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
-    <state width="2493" height="685" key="GridCell.Tab.0.center" timestamp="1615027475973">
+    <state width="2493" height="685" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615104674290" />
+    <state width="2493" height="685" key="GridCell.Tab.0.center" timestamp="1615104674290">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="685" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027475973" />
+    <state width="2493" height="685" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1763" height="442" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="2493" height="685" key="GridCell.Tab.0.left" timestamp="1615027475973">
+    <state width="2493" height="685" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615104674290" />
+    <state width="2493" height="685" key="GridCell.Tab.0.left" timestamp="1615104674289">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="685" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027475973" />
+    <state width="2493" height="685" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089677" />
-    <state width="1763" height="442" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479388" />
-    <state width="2493" height="685" key="GridCell.Tab.0.right" timestamp="1615027475973">
+    <state width="2493" height="685" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615104674289" />
+    <state width="2493" height="685" key="GridCell.Tab.0.right" timestamp="1615104674290">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2493" height="685" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027475973" />
+    <state width="2493" height="685" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1763" height="442" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="2493" height="685" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615104674290" />
     <state width="1981" height="325" key="GridCell.Tab.1.bottom" timestamp="1614949089679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -647,12 +659,12 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="291" y="26" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1614878833425" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1615028010811">
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2" timestamp="1615104125069">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615028010811" />
     <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614948006891" />
-    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1614843702041" />
+    <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1615104125069" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
