@@ -3,23 +3,19 @@
 ### Basics Techncal Features
 - [ ] Security
     - Separation of User in different Controller
+- [ ] Actuator
 
 # Advanced
 
 ### Additional Features
-- [ ] Specialization
-
-### Extended Features
 - [ ] Skills from Birth
 - [ ] B
 - [ ] Bonus: AusB, AnB, AbB, SchB, ResB (Gei+K)
+
+### Extended Features
+- [ ] Specialization
 - [ ] Armor Modification
 - [ ] Weapons (incl. Damage)
 
 ### Advanced Technical Features
-- [ ] Actuator
-- [ ] ApplicationConfiguration: Port, ...
 - [ ] Swagger
-
-## Notes
-- Encrypt password by https://bcrypt-generator.com/ 

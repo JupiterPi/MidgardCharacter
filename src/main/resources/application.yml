@@ -5,7 +5,7 @@ application:
   adminPassword: password
 
 server:
-  port: 7999
+  port: 8080
   error:
     include-message: always
     include-binding-errors: always
@@ -13,7 +13,7 @@ server:
     include-exception: false
 
 management:
-  port: 7998
+  port: 9080
 
 endpoints:
   sensitive: false
