@@ -1,0 +1,136 @@
+﻿Class;Group    ;Cost
+As   ;Alltag   ;20
+Bb   ;Alltag   ;20
+Gl   ;Alltag   ;20
+H„   ;Alltag   ;10
+Kr   ;Alltag   ;20
+Sp   ;Alltag   ;20
+Wa   ;Alltag   ;20
+Ba   ;Alltag   ;20
+Or   ;Alltag   ;20
+Dr   ;Alltag   ;20
+Hx   ;Alltag   ;20
+Ma   ;Alltag   ;20
+PB   ;Alltag   ;20
+PS   ;Alltag   ;20
+Sc   ;Alltag   ;20
+As   ;Freiland ;20
+Bb   ;Freiland ;10
+Gl   ;Freiland ;30
+H„   ;Freiland ;20
+Kr   ;Freiland ;30
+Sp   ;Freiland ;30
+Wa   ;Freiland ;10
+Ba   ;Freiland ;20
+Or   ;Freiland ;20
+Dr   ;Freiland ;10
+Hx   ;Freiland ;20
+Ma   ;Freiland ;30
+PB   ;Freiland ;30
+PS   ;Freiland ;30
+Sc   ;Freiland ;10
+As   ;Halbwelt ;20
+Bb   ;Halbwelt ;30
+Gl   ;Halbwelt ;10
+H„   ;Halbwelt ;20
+Kr   ;Halbwelt ;30
+Sp   ;Halbwelt ;10
+Wa   ;Halbwelt ;20
+Ba   ;Halbwelt ;20
+Or   ;Halbwelt ;40
+Dr   ;Halbwelt ;40
+Hx   ;Halbwelt ;30
+Ma   ;Halbwelt ;40
+PB   ;Halbwelt ;30
+PS   ;Halbwelt ;40
+Sc   ;Halbwelt ;40
+As   ;Kampf    ;30
+Bb   ;Kampf    ;10
+Gl   ;Kampf    ;20
+H„   ;Kampf    ;20
+Kr   ;Kampf    ;10
+Sp   ;Kampf    ;40
+Wa   ;Kampf    ;20
+Ba   ;Kampf    ;30
+Or   ;Kampf    ;20
+Dr   ;Kampf    ;40
+Hx   ;Kampf    ;40
+Ma   ;Kampf    ;40
+PB   ;Kampf    ;40
+PS   ;Kampf    ;30
+Sc   ;Kampf    ;40
+As   ;Körper   ;10
+Bb   ;Körper   ;10
+Gl   ;Körper   ;30
+H„   ;Körper   ;20
+Kr   ;Körper   ;20
+Sp   ;Körper   ;10
+Wa   ;Körper   ;10
+Ba   ;Körper   ;20
+Or   ;Körper   ;10
+Dr   ;Körper   ;20
+Hx   ;Körper   ;30
+Ma   ;Körper   ;30
+PB   ;Körper   ;30
+PS   ;Körper   ;30
+Sc   ;Körper   ;20
+As   ;Sozial   ;20
+Bb   ;Sozial   ;30
+Gl   ;Sozial   ;10
+H„   ;Sozial   ;10
+Kr   ;Sozial   ;20
+Sp   ;Sozial   ;10
+Wa   ;Sozial   ;30
+Ba   ;Sozial   ;10
+Or   ;Sozial   ;20
+Dr   ;Sozial   ;30
+Hx   ;Sozial   ;20
+Ma   ;Sozial   ;30
+PB   ;Sozial   ;10
+PS   ;Sozial   ;30
+Sc   ;Sozial   ;20
+As   ;Unterwelt;10
+Bb   ;Unterwelt;30
+Gl   ;Unterwelt;30
+H„   ;Unterwelt;40
+Kr   ;Unterwelt;30
+Sp   ;Unterwelt;10
+Wa   ;Unterwelt;30
+Ba   ;Unterwelt;40
+Or   ;Unterwelt;40
+Dr   ;Unterwelt;40
+Hx   ;Unterwelt;30
+Ma   ;Unterwelt;40
+PB   ;Unterwelt;40
+PS   ;Unterwelt;40
+Sc   ;Unterwelt;40
+As   ;Waffen   ;20
+Bb   ;Waffen   ;20
+Gl   ;Waffen   ;20
+H„   ;Waffen   ;20
+Kr   ;Waffen   ;10
+Sp   ;Waffen   ;20
+Wa   ;Waffen   ;20
+Ba   ;Waffen   ;20
+Or   ;Waffen   ;20
+Dr   ;Waffen   ;40
+Hx   ;Waffen   ;40
+Ma   ;Waffen   ;40
+PB   ;Waffen   ;40
+PS   ;Waffen   ;30
+Sc   ;Waffen   ;40
+As   ;Wissen   ;20
+Bb   ;Wissen   ;40
+Gl   ;Wissen   ;20
+H„   ;Wissen   ;20
+Kr   ;Wissen   ;40
+Sp   ;Wissen   ;30
+Wa   ;Wissen   ;20
+Ba   ;Wissen   ;20
+Or   ;Wissen   ;30
+Dr   ;Wissen   ;10
+Hx   ;Wissen   ;20
+Ma   ;Wissen   ;10
+PB   ;Wissen   ;20
+PS   ;Wissen   ;20
+Sc   ;Wissen   ;20

@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data @AllArgsConstructor @NoArgsConstructor
-public class RewardCreate {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class PPRewardCreateDTO {
     String id;
     String characterId;
-    int ep;
-    int gold;
+    String skillName;
+    int pp;
 }

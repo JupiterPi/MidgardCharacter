@@ -22,7 +22,6 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-
         try {
             configuration.read();
         } catch (InternalException e) {

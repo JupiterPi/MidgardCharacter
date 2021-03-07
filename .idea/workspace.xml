@@ -40,9 +40,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Yaml OpenAPI version 3" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -69,6 +74,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="MidgardCharacter/invalid/Spring" />
+      <facet id="MidgardCharacter/invalid/Web" />
+    </ignored-facets>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -82,6 +93,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Json OpenAPI version 3" value="Yaml OpenAPI version 3" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -93,9 +106,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="jupiterpapi.midgardcharacter.backend.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jupiterpapi.midgardcharacter.backend.service" />
       <recent name="jupiterpapi.midgardcharacter.backend.model.dto" />
       <recent name="jupiterpapi.midgardcharacter" />
       <recent name="jupiterpapi.midgardcharacter.controller" />
@@ -109,29 +127,8 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.Application" />
-      <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in MidgardCharacter (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MidgardCharacter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in MidgardCharacter (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IntegrationTest.postStandardCheck">
+    <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -147,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest.postRewardPP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.getCharacterFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <extension name="coverage">
         <pattern>
@@ -157,7 +154,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
       <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
-      <option name="METHOD_NAME" value="postRewardPP" />
+      <option name="METHOD_NAME" value="getCharacterFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTest.postStandardCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MidgardCharacter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
+      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
+      <option name="METHOD_NAME" value="postStandardCheck" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
         <item itemvalue="JUnit.All in MidgardCharacter" />
-        <item itemvalue="JUnit.All in MidgardCharacter (3)" />
-        <item itemvalue="JUnit.All in MidgardCharacter (2)" />
-        <item itemvalue="JUnit.IntegrationTest.postRewardPP" />
+        <item itemvalue="JUnit.IntegrationTest.getCharacterFail" />
+        <item itemvalue="JUnit.All in MidgardCharacter (1)" />
+        <item itemvalue="JUnit.SkillTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,6 +314,7 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="BEK_SORT_TYPE" value="1" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -313,6 +327,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="BackendCleanup" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -335,11 +364,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="setup workspace" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="899" y="344" key="#Inspections" timestamp="1614528741154">
+    <state x="899" y="344" width="1367" height="762" key="#Inspections" timestamp="1614862834790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="899" y="344" width="1367" height="762" key="#Inspections/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614862834790" />
     <state x="899" y="344" key="#Inspections/0.0.2560.1400@0.0.2560.1400" timestamp="1614528741154" />
-    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614628812716">
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614930555794">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614628812716" />
@@ -351,18 +381,27 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="736" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112@0.0.2048.1112" timestamp="1614583646550" />
-    <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614625195272">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="920" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1614840704016" />
+    <state x="704" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614871160762">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="704" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614871160762" />
+    <state x="563" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614792847049" />
+    <state x="704" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614755752262" />
+    <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614841966614">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
     <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
-    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614627135465">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614841966614" />
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615027486664">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614627135465" />
-    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614528840740" />
-    <state x="573" y="0" key="CommitChangelistDialog2" timestamp="1614683462936">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027486664" />
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614931347724" />
+    <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
+    <state x="513" y="111" key="CommitChangelistDialog2" timestamp="1615038348066">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506435670" />
     <state x="573" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614683462936" />
@@ -402,23 +441,27 @@
     <state width="1981" height="326" key="GridCell.Tab.1.bottom" timestamp="1614629139411">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1981" height="326" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
-    <state width="2493" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
-    <state width="1981" height="326" key="GridCell.Tab.1.center" timestamp="1614629139411">
+    <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1763" height="442" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="1981" height="325" key="GridCell.Tab.1.center" timestamp="1614949089679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1981" height="326" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
-    <state width="2493" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
-    <state width="1981" height="326" key="GridCell.Tab.1.left" timestamp="1614629139410">
+    <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1763" height="442" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="1981" height="325" key="GridCell.Tab.1.left" timestamp="1614949089679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1981" height="326" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139410" />
-    <state width="2493" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
-    <state width="1981" height="326" key="GridCell.Tab.1.right" timestamp="1614629139411">
+    <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1763" height="442" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
+    <state width="1981" height="325" key="GridCell.Tab.1.right" timestamp="1614949089679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1981" height="326" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614629139411" />
-    <state width="2493" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614528403235" />
+    <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
+    <state width="1981" height="325" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1763" height="442" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1614848479389" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -433,13 +476,37 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614506358156" />
-    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614682590222">
+    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614946508294">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614682590222" />
+    <state x="756" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1614946508294" />
     <state x="699" y="402" key="git4idea.ui.GitResetDialog" timestamp="1614625414196">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="699" y="402" key="git4idea.ui.GitResetDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625414196" />
+    <state x="980" y="357" key="refactoring.ChangeSignatureDialog" timestamp="1614775754767">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="980" y="357" key="refactoring.ChangeSignatureDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614775754767" />
+    <state x="513" y="250" key="run.anything.popup" timestamp="1614879112812">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="513" y="250" key="run.anything.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1614879112812" />
+    <state x="774" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1614808069176">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="774" y="0" width="1009" height="1470" key="search.everywhere.popup/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614808069176" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MidgardCharacter$SkillTest_getStartingBonusOfSkillFail.ic" NAME="SkillTest.getStartingBonusOfSkillFail Coverage Results" MODIFIED="1614868770560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>jupiterpapi.midgardcharacter.backend.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter__1_.ic" NAME="All in MidgardCharacter (1) Coverage Results" MODIFIED="1614868703765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter__2_.ic" NAME="All in MidgardCharacter (2) Coverage Results" MODIFIED="1614868785796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MidgardCharacter$IntegrationTest.ic" NAME="IntegrationTest Coverage Results" MODIFIED="1614869761526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MidgardCharacter$CheckTest.ic" NAME="CheckTest Coverage Results" MODIFIED="1614928768976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>jupiterpapi.midgardcharacter.backend.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/MidgardCharacter$All_in_MidgardCharacter.ic" NAME="All in MidgardCharacter Coverage Results" MODIFIED="1614929265871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -9,5 +9,5 @@ public class PPRewardDTO {
     String id;
     String characterId;
     String skillName;
-    int PP;
+    int pp;
 }
