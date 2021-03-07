@@ -57,10 +57,21 @@ table {
     border-collapse: collapse;
 }
 
+tr {
+    transition: background-color, border-top 300ms;
+}
+
+td {
+    padding: 5px 15px;
+}
+td:not(:first-child) {
+    text-align: right;
+    width: 30px;
+}
+
 tr:first-child {
     border-top: white 1px solid;
 }
-
 tr:not(:first-child) {
     border-top: #d2d2d2 1px solid;
 }
@@ -68,16 +79,6 @@ tr:not(:first-child) {
 tr:hover {
     background-color: #f5f5f5;
 }
-
 tr:hover, tr:hover + tr {
     border-top: white 1px solid;
-}
-
-td {
-    padding: 5px 15px;
-}
-
-td:not(:first-child) {
-    text-align: right;
-    width: 30px;
 }
