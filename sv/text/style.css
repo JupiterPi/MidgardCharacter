@@ -65,7 +65,7 @@ input:focus {
 /* table-lists */
 
 table {
-    width: calc(100vw - var(--body-side)*2);
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -104,4 +104,20 @@ td a {
 
 td a:hover {
     text-decoration: black underline;
+}
+
+/* "show more" */
+
+div.right {
+    text-align: right;
+    padding: 3px 7px;
+}
+
+div.right a {
+    text-decoration: none;
+    color: var(--c-acc);
+}
+
+div.right a:hover {
+    text-decoration: var(--c-acc) underline;
 }
