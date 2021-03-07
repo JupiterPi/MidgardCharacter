@@ -32,7 +32,7 @@ public class ControllerAOP {
                 if (user != null) {
                     logger.info(TECHNICAL, " User {} ({})", user.getUsername(), user.getPassword());
 
-                    //HttpContext.setUser(user);
+                    HttpContext.setUser(user);
                     MDC.put("user", user.getUsername());
                 }
             } catch (ClassCastException exp) {
