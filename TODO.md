@@ -20,3 +20,6 @@
 - [ ] Actuator
 - [ ] ApplicationConfiguration: Port, ...
 - [ ] Swagger
+
+## Notes
+- Encrype password by https://bcrypt-generator.com/ 

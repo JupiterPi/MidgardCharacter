@@ -2,9 +2,6 @@ application:
   name: MidgardCharacterBuilder
   description: Midgard Character Builder
   version: 0.1.0
-  user1Password: password1
-  user2Password: password2
-  adminPassword: password
 
 server:
   port: 7999

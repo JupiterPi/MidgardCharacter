@@ -1,6 +1,5 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
@@ -9,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Service
-@Profile("prod")
+//@Profile("prod")
 public class TimeProviderImpl implements TimeProvider {
 
     public String getDate() {
