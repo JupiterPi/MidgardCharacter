@@ -2,6 +2,10 @@ package jupiterpapi.midgardcharacter.backend.service;
 
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +16,9 @@ import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.
 
 @Service
 public class EnrichService {
+    private static final Marker CONTENT = MarkerFactory.getMarker("CONTENT");
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     DBService db;
     @Autowired
@@ -22,10 +29,17 @@ public class EnrichService {
     boolean hideInitialSkills = false;
 
     Character getCharacter(String characterId) throws MidgardException {
+        logger.trace(CONTENT, "Reading Character {}", characterId);
         Character c = read(characterId);
+        logger.trace(CONTENT, "Character {} read: {}", characterId, c);
+
         Character c2 = applyRewardsAndLearnings(c);
         Character c3 = calculateCost(c2);
-        return calculateBonus(c3);
+        Character c4 = calculateBonus(c3);
+
+        logger.trace(CONTENT, "Character {} enriched: {}", characterId, c4);
+
+        return c4;
     }
 
     private Character read(String characterId) throws MidgardException {
