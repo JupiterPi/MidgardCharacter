@@ -7,12 +7,13 @@
 # Advanced
 
 ### Additional Features
-- [ ] Specialization
+- F4 Helps
 
 ### Extended Features
 - [ ] Skills from Birth
 - [ ] B
 - [ ] Bonus: AusB, AnB, AbB, SchB, ResB (Gei+K)
+- [ ] Specialization
 - [ ] Armor Modification
 - [ ] Weapons (incl. Damage)
 
