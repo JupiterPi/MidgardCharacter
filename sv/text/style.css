@@ -1,3 +1,123 @@
+:root {
+    --body-side: 200px;
+    --body-top: 100px;
+    --body-bottom: 50px;
+}
+
 body {
-    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, input.input {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+}
+
+#body {
+    margin: var(--body-top) var(--body-side) var(--body-bottom);
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* colors */
+
+:root {
+    --c-backgr: white;
+    --c-backgr-acc: #f5f5f5;
+    --c-text: black;
+    --c-line: grey;
+    --c-line-muted: #b1b1b1;
+    --c-acc: #0366d6;
+    --c-acc-second: #b3d1f3;
+}
+
+/* input fields */
+
+input, input:focus {
+    height: 30px;
+    padding: 3px 7px;
+
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+
+    font-size: 16px;
+
+    transition: background-color 400ms, border-color 200ms;
+}
+
+input:not(:focus) {
+    background-color: var(--c-backgr-acc);
+    border-color: var(--c-backgr);
+}
+
+input:hover {
+    background-color: var(--c-backgr);
+    border-color: var(--c-line);
+}
+
+input:focus {
+    border-color: var(--c-acc);
+    box-shadow: 0 0 0 3px var(--c-acc-second);
+    transition: box-shadow 100ms linear;
+}
+
+/* table-lists */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    transition: background-color, border-top 300ms;
+}
+
+td {
+    padding: 5px 15px;
+}
+td:not(:first-child) {
+    text-align: right;
+    width: 30px;
+}
+
+tr:first-child {
+    border-top: white 1px solid;
+}
+tr:not(:first-child) {
+    border-top: var(--c-line-muted) 1px solid;
+}
+
+tr:hover {
+    background-color: var(--c-backgr-acc);
+}
+tr:hover, tr:hover + tr {
+    border-top: white 1px solid;
+}
+
+/* table-lists: links */
+
+td a {
+    text-decoration: none;
+    color: var(--c-text);
+}
+
+td a:hover {
+    text-decoration: black underline;
+}
+
+/* "show more" */
+
+div.right {
+    text-align: right;
+    padding: 3px 7px;
+}
+
+div.right a {
+    text-decoration: none;
+    color: var(--c-acc);
+}
+
+div.right a:hover {
+    text-decoration: var(--c-acc) underline;
 }
