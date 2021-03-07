@@ -1,6 +1,25 @@
+application:
+  name: MidgardCharacterBuilder
+  description: Midgard Character Builder
+  version: 0.1.0
+  user1Password: password1
+  user2Password: password2
+  adminPassword: password
+
 server:
+  port: 7999
   error:
     include-message: always
     include-binding-errors: always
     include-stacktrace: on_trace_param
     include-exception: false
+
+management:
+  port: 7998
+
+endpoints:
+  sensitive: false
+  enabled: true
+  health:
+    sensitive: false
+management.security.enabled: false
