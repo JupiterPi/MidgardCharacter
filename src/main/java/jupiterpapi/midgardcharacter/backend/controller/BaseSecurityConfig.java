@@ -9,8 +9,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @EnableWebSecurity
@@ -21,15 +21,15 @@ public class BaseSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        List<String> users = new ArrayList<>();
-        users.add("User1");
-        users.add("User2");
+        Map<String, String> users = new HashMap<>();
+        users.put("User1", "password1");
+        users.put("User2", "password2");
 
         var builder = auth.inMemoryAuthentication().withUser("admin").password(config.getAdminPassword())
                 .roles("USER", "ADMIN");
         ;
-        for (String user : users) {
-            builder.and().withUser(user).password(config.getUser1Password()).roles("USER");
+        for (String user : users.keySet()) {
+            builder.and().withUser(user).password(users.get(user)).roles("USER");
         }
     }
 
