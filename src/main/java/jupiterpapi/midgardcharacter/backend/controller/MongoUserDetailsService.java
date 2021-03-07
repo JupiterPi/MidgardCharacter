@@ -24,7 +24,7 @@ public class MongoUserDetailsService implements UserDetailsService {
         var user = userRepo.findByName(userName);
 
         if (user == null) {
-            throw new UsernameNotFoundException("User not found");
+            throw new UsernameNotFoundException("User " + userName + " not found");
         }
 
         List<SimpleGrantedAuthority> authorityList;

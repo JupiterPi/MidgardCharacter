@@ -30,10 +30,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/BaseSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MongoUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MongoUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/TimeProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/TimeProviderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jupiterpapi/midgardcharacter.backend/IntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +121,7 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter (1)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.Application" />
       <module name="MidgardCharacter" />
@@ -133,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MidgardCharacter (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -141,18 +143,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest.getCharacterFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
-      <option name="METHOD_NAME" value="getCharacterFail" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in MidgardCharacter (1)" />
         <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.IntegrationTest.postUser" />
         <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
         <item itemvalue="JUnit.All in MidgardCharacter" />
-        <item itemvalue="JUnit.IntegrationTest.getCharacterFail" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615134433540</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Bcrypt">
+      <created>1615137971372</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1615137971372</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -553,7 +554,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finalize EnrichTest" />
     <MESSAGE value="DBMock stored ...DB instances" />
     <MESSAGE value="Rename Learn" />
     <MESSAGE value="Rename RewardPP" />
@@ -578,7 +578,8 @@
     <MESSAGE value="Refine Logging and Trancing" />
     <MESSAGE value="Base Security with fixed users (and non final routes)" />
     <MESSAGE value="Moved password to class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved password to class" />
+    <MESSAGE value="Bcrypt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bcrypt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -617,60 +618,60 @@
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027486664" />
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1614931347724" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1615134431114">
+    <state x="716" y="111" key="CommitChangelistDialog2" timestamp="1615137968741">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615038348066" />
     <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1614948001475" />
-    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1615134431114" />
-    <state width="1211" height="439" key="GridCell.Tab.0.bottom" timestamp="1615137848891">
+    <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1615137968741" />
+    <state width="2493" height="439" key="GridCell.Tab.0.bottom" timestamp="1615138906597">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1211" height="439" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
-    <state width="1211" height="439" key="GridCell.Tab.0.center" timestamp="1615137848890">
+    <state width="2493" height="439" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
+    <state width="2493" height="439" key="GridCell.Tab.0.center" timestamp="1615138906597">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1211" height="439" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848890" />
-    <state width="1211" height="439" key="GridCell.Tab.0.left" timestamp="1615137848890">
+    <state width="2493" height="439" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
+    <state width="2493" height="439" key="GridCell.Tab.0.left" timestamp="1615138906597">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089677" />
-    <state width="1211" height="439" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848890" />
-    <state width="1211" height="439" key="GridCell.Tab.0.right" timestamp="1615137848891">
+    <state width="2493" height="439" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
+    <state width="2493" height="439" key="GridCell.Tab.0.right" timestamp="1615138906597">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
     <state width="1981" height="325" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
-    <state width="1211" height="439" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
-    <state width="1211" height="439" key="GridCell.Tab.1.bottom" timestamp="1615137848891">
+    <state width="2493" height="439" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
+    <state width="2493" height="439" key="GridCell.Tab.1.bottom" timestamp="1615138906598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
     <state width="1981" height="325" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
-    <state width="1211" height="439" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
-    <state width="1211" height="439" key="GridCell.Tab.1.center" timestamp="1615137848891">
+    <state width="2493" height="439" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
+    <state width="2493" height="439" key="GridCell.Tab.1.center" timestamp="1615138906598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
     <state width="1981" height="325" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
-    <state width="1211" height="439" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
-    <state width="1211" height="439" key="GridCell.Tab.1.left" timestamp="1615137848891">
+    <state width="2493" height="439" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
+    <state width="2493" height="439" key="GridCell.Tab.1.left" timestamp="1615138906597">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
     <state width="1981" height="325" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
-    <state width="1211" height="439" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
-    <state width="1211" height="439" key="GridCell.Tab.1.right" timestamp="1615137848891">
+    <state width="2493" height="439" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
+    <state width="2493" height="439" key="GridCell.Tab.1.right" timestamp="1615138906598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
     <state width="1981" height="325" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
-    <state width="1211" height="439" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615137848891" />
+    <state width="2493" height="439" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

@@ -21,18 +21,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        /*
-        Map<String, String> users = new HashMap<>();
-        users.put("User1", "password1");
-        users.put("User2", "password2");
-
-        var builder = auth.inMemoryAuthentication().withUser("admin").password(config.getAdminPassword())
-                .roles("USER", "ADMIN");
-        ;
-        for (String user : users.keySet()) {
-            builder.and().withUser(user).password(users.get(user)).roles("USER");
-        }
-         */
         auth.userDetailsService(userDetailsService);
     }
 
