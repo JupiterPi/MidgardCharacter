@@ -16,6 +16,11 @@ public class PagesController {
         return loader.loadPage("home");
     }
 
+    @GetMapping("/my")
+    public String getWelcomePage() {
+        return loader.loadPage("my");
+    }
+
     // res
 
     @GetMapping("/res/{fileName}")
