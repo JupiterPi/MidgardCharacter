@@ -3,16 +3,16 @@ package jupiterpapi.midgardcharacter.backend.controller;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.codec.Base64;
 
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
-public class HttpContext {
+public class CorrelationContext {
 
     public final static String CORRELATION_ID = "CorrelationID";
     public final static String AUTHENTICATION = "Authentication";
 
-    private static ThreadLocal<String> id = new ThreadLocal<>();
-    private static ThreadLocal<User> user = new ThreadLocal<>();
+    private static final ThreadLocal<String> id = new ThreadLocal<>();
+    private static final ThreadLocal<User> user = new ThreadLocal<>();
 
     // ControllerFilter
     public static void setCorrelationID(String new_id) {
@@ -33,9 +33,9 @@ public class HttpContext {
         String userName = user.get().getUsername();
         String password = user.get().getPassword();
         String auth = userName + ":" + password;
-        byte[] encodedAuth = Base64.encode(auth.getBytes(Charset.forName("US-ASCII")));
-        String authHeader = "Basic " + new String(encodedAuth);
-        return authHeader;
+        //noinspection deprecation
+        byte[] encodedAuth = Base64.encode(auth.getBytes(StandardCharsets.US_ASCII));
+        return "Basic " + new String(encodedAuth);
     }
 
     // set By AOP

@@ -11,23 +11,23 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @Configuration
-public class ControllerFilter {
+public class CorrelationFilter {
 	@Bean
-	public FilterRegistrationBean registerFilter() {
-		FilterRegistrationBean reg = new FilterRegistrationBean();
+	public FilterRegistrationBean<Filter> registerFilter() {
+		FilterRegistrationBean<Filter> reg = new FilterRegistrationBean<>();
 		reg.setFilter(someFilter());
 		reg.addUrlPatterns("*");
-		reg.addInitParameter(HttpContext.CORRELATION_ID, "Anonymous");
+		reg.addInitParameter(CorrelationContext.CORRELATION_ID, "Anonymous");
 		reg.setName("CorrelationFilter");
 		reg.setOrder(1);
 		return reg;
 	}
 
 	private javax.servlet.Filter someFilter() {
-		return new CorrelationFilter();
+		return new IDFilter();
 	}
 
-	public class CorrelationFilter implements javax.servlet.Filter {
+	public static class IDFilter implements javax.servlet.Filter {
 		private final Marker TECHNICAL = MarkerFactory.getMarker("TECHNICAL");
 		private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -36,21 +36,21 @@ public class ControllerFilter {
 				throws IOException, ServletException {
 			HttpServletRequest request = (HttpServletRequest) req;
 
-			String id = request.getHeader(HttpContext.CORRELATION_ID);
-			if (id == "" || id == null) {
+			String id = request.getHeader(CorrelationContext.CORRELATION_ID);
+			if (id == null || id.equals("")) {
 				id = request.getRequestURI();
-				HttpContext.determineCorrelationID(id);
-				id = HttpContext.getCorrelationID();
+				CorrelationContext.determineCorrelationID(id);
+				id = CorrelationContext.getCorrelationID();
 			}
-			MDC.put(HttpContext.CORRELATION_ID, id);
-			HttpContext.setCorrelationID(id);
+			MDC.put(CorrelationContext.CORRELATION_ID, id);
+			CorrelationContext.setCorrelationID(id);
 			logger.info(TECHNICAL, "Correlation ID: {}", id);
 
 			chain.doFilter(request, res);
 		}
 
 		@Override
-		public void init(FilterConfig arg0) throws ServletException {
+		public void init(FilterConfig arg0) {
 		}
 
 		@Override

@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 @Aspect
 @Component
-public class ControllerAOP {
+public class LoggerAndCorrelationAOP {
 
     private static final Marker TECHNICAL = MarkerFactory.getMarker("TECHNICAL");
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -32,7 +32,7 @@ public class ControllerAOP {
                 if (user != null) {
                     logger.info(TECHNICAL, " User {} ({})", user.getUsername(), user.getPassword());
 
-                    HttpContext.setUser(user);
+                    CorrelationContext.setUser(user);
                     MDC.put("user", user.getUsername());
                 }
             } catch (ClassCastException exp) {

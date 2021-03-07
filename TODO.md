@@ -22,4 +22,4 @@
 - [ ] Swagger
 
 ## Notes
-- Encrype password by https://bcrypt-generator.com/ 
+- Encrypt password by https://bcrypt-generator.com/ 

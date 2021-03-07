@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http//.formLogin()//.loginPage("/login")
                 //    .and().logout()//.logoutSuccessUrl("/")
                 //    .and()
-                //			.rememberMe().tokenValiditySeconds(2419200).key("Tagesplaner").and()
+                //			.rememberMe().tokenValiditySeconds(2419200).key("ApplName").and()
                 .httpBasic()//.realmName(config.getName())
                 .and().csrf().disable().authorizeRequests()
                 //                .antMatchers(HttpMethod.GET, MidgardController.PATH + "/**").hasAnyRole("USER", "ADMIN")
