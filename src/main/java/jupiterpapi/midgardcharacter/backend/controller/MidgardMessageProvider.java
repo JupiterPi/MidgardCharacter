@@ -3,7 +3,7 @@ package jupiterpapi.midgardcharacter.backend.controller;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class MessageProvider {
+public class MidgardMessageProvider {
 
     final static String language = "de";
     final static String country = "DE";

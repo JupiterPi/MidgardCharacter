@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_SKILL;
 
 @Component
-public class MidgardServiceImpl implements MidgardService, UserService {
+public class MidgardServiceImpl implements MidgardService {
 
     @Autowired
     UIMapper mapper;
@@ -27,11 +27,6 @@ public class MidgardServiceImpl implements MidgardService, UserService {
     EnrichService enrichService;
     @Autowired
     CheckService checkService;
-
-    public List<UserDTO> getUsers() {
-        List<User> users = db.getUser();
-        return users.stream().map(user -> mapper.map(user)).collect(Collectors.toList());
-    }
 
     public List<CharacterMetaDTO> getCharacters(String userId) {
         List<Character> users = db.getCharacters(userId);
@@ -58,10 +53,6 @@ public class MidgardServiceImpl implements MidgardService, UserService {
                 mapper.mapLevelUps(newCharacter.getLevelUps()).stream().sorted(Comparator.comparing(LevelUpDTO::getId))
                         .collect(Collectors.toList()));
         return newCharacterDTO;
-    }
-
-    public UserDTO postUser(UserCreateDTO user) {
-        return mapper.map(db.postUser(mapper.map(user)));
     }
 
     public CharacterDTO postCharacter(CharacterCreateDTO character) throws MidgardException {

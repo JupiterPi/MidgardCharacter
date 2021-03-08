@@ -7,8 +7,6 @@ import java.util.List;
 
 public interface DBService {
 
-    List<User> getUser();
-
     List<Character> getCharacters(String userId);
 
     Character getCharacter(String characterId);
@@ -22,8 +20,6 @@ public interface DBService {
     List<PPReward> getRewardPPs(String characterId);
 
     List<Learning> getLearnings(String characterId);
-
-    User postUser(User user);
 
     void postCharacter(Character character);
 

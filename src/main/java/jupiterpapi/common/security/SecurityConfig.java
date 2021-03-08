@@ -1,5 +1,8 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common.security;
 
+import jupiterpapi.common.ApplicationConfig;
+import jupiterpapi.midgardcharacter.backend.controller.MidgardController;
+import jupiterpapi.user.backend.controller.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

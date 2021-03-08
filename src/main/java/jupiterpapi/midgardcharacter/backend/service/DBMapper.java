@@ -12,8 +12,6 @@ public interface DBMapper {
     @SuppressWarnings("WrongUsageOfMappersFactory")
     DBMapper INSTANCE = Mappers.getMapper(DBMapper.class);
 
-    User map(UserDB user);
-
     @Mapping(target = "skills", ignore = true)
     @Mapping(target = "rewardsPP", ignore = true)
     @Mapping(target = "rewards", ignore = true)
@@ -36,7 +34,6 @@ public interface DBMapper {
 
     Learning map(LearningDB learn);
 
-    UserDB map(User user);
     CharacterDB map(Character character);
 
     AttributeDB map(Attribute attribute);

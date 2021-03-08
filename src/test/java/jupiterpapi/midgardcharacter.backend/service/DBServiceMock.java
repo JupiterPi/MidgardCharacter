@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DBServiceMock implements DBService {
-    final List<UserDB> users = new ArrayList<>();
     final List<CharacterDB> characters = new ArrayList<>();
     final List<AttributeDB> attributes = new ArrayList<>();
     final List<LevelUpDB> levelUps = new ArrayList<>();
@@ -21,16 +20,12 @@ public class DBServiceMock implements DBService {
     DBMapper mapper;
 
     public void reset() {
-        users.clear();
         characters.clear();
         attributes.clear();
         levelUps.clear();
         rewards.clear();
         rewardsPP.clear();
         learnings.clear();
-    }
-    public List<User> getUser() {
-        return users.stream().map(e -> mapper.map(e)).collect(Collectors.toList());
     }
     public List<Character> getCharacters(String userId) {
         return characters.stream().filter(c -> c.getUserId().equals(userId)).map(c -> mapper.map(c))
@@ -70,11 +65,6 @@ public class DBServiceMock implements DBService {
         List<LearningDB> list = new ArrayList<>();
         return learnings.stream().filter(e -> e.getCharacterId().equals(characterId)).map(e -> mapper.map(e))
                 .collect(Collectors.toList());
-    }
-
-    public User postUser(User user) {
-        users.add(mapper.map(user));
-        return user;
     }
 
     public void postCharacter(Character character) {

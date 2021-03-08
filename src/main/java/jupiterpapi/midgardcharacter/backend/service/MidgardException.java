@@ -1,6 +1,6 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
-import jupiterpapi.midgardcharacter.backend.controller.MessageProvider;
+import jupiterpapi.midgardcharacter.backend.controller.MidgardMessageProvider;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,7 +24,7 @@ public class MidgardException extends Exception {
         String key = super.getMessage();
         if (key != null) {
             String msg;
-            msg = MessageProvider.get(key);
+            msg = MidgardMessageProvider.get(key);
             int index = 0;
             for (String s : parameters) {
                 index++;

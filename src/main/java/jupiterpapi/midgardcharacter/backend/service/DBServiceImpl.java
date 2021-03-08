@@ -13,9 +13,6 @@ import java.util.stream.Collectors;
 @Service
 public class DBServiceImpl implements DBService {
     @Autowired
-    UserRepo userRepo;
-
-    @Autowired
     CharacterRepo characterRepo;
 
     @Autowired
@@ -37,7 +34,6 @@ public class DBServiceImpl implements DBService {
     DBMapper mapper;
 
     public void reset() {
-        userRepo.deleteAll();
         characterRepo.deleteAll();
         attributeRepo.deleteAll();
         levelUpRepo.deleteAll();
@@ -46,10 +42,6 @@ public class DBServiceImpl implements DBService {
         learningRepo.deleteAll();
     }
 
-    public List<User> getUser() {
-        List<UserDB> dbs = userRepo.findAll();
-        return dbs.stream().map(db -> mapper.map(db)).collect(Collectors.toList());
-    }
     public List<Character> getCharacters(String userId) {
         List<CharacterDB> dbs = characterRepo.findByUserId(userId);
         return dbs.stream().map(db -> mapper.map(db)).collect(Collectors.toList());
@@ -80,10 +72,6 @@ public class DBServiceImpl implements DBService {
     public List<Learning> getLearnings(String characterId) {
         return learningRepo.findByCharacterId(characterId).stream().map(db -> mapper.map(db))
                 .collect(Collectors.toList());
-    }
-
-    public User postUser(User user) {
-        return mapper.map(userRepo.insert(mapper.map(user)));
     }
 
     public void postCharacter(Character character) {

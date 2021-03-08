@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.model;
+package jupiterpapi.user.backend.model;
 
 import lombok.Data;
 

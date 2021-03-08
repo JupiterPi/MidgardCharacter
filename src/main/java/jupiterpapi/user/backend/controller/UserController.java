@@ -1,8 +1,8 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.user.backend.controller;
 
-import jupiterpapi.midgardcharacter.backend.model.create.UserCreateDTO;
-import jupiterpapi.midgardcharacter.backend.model.dto.UserDTO;
-import jupiterpapi.midgardcharacter.backend.service.UserService;
+import jupiterpapi.user.backend.model.UserCreateDTO;
+import jupiterpapi.user.backend.model.UserDTO;
+import jupiterpapi.user.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.model.repo;
+package jupiterpapi.user.backend.model;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

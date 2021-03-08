@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

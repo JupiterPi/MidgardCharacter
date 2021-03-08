@@ -1,30 +1,20 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common.aop;
 
+import jupiterpapi.common.correlationid.CorrelationContext;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Aspect
-@Component
-public class LoggerAndCorrelationAOP {
+public class BaseAOP {
 
     private static final Marker TECHNICAL = MarkerFactory.getMarker("TECHNICAL");
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Around("execution(* jupiterpapi.midgardcharacter.backend.controller.MidgardController.*(..))")
-    public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
-
-        MDC.put("endpoint", joinPoint.getSignature().toString());
-        logger.info(TECHNICAL, " Service {} ({})", joinPoint.getSignature().toShortString(),
-                Arrays.toString(joinPoint.getArgs()));
-
+    protected void handleSecurity() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
             try {
@@ -39,6 +29,13 @@ public class LoggerAndCorrelationAOP {
                 //do nothing
             }
         }
+    }
+
+    protected Object log(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        MDC.put("endpoint", joinPoint.getSignature().toString());
+        logger.info(TECHNICAL, " Service {} ({})", joinPoint.getSignature().toShortString(),
+                Arrays.toString(joinPoint.getArgs()));
 
         try {
             Object result = joinPoint.proceed();

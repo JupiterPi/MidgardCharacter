@@ -1,10 +1,10 @@
-package jupiterpapi.midgardcharacter;
+package jupiterpapi;
 
+import jupiterpapi.common.ApplicationConfig;
 import jupiterpapi.midgardcharacter.backend.configuration.ConfigurationService;
 import jupiterpapi.midgardcharacter.backend.configuration.InternalException;
-import jupiterpapi.midgardcharacter.backend.controller.ApplicationConfig;
-import jupiterpapi.midgardcharacter.backend.model.repo.UserDB;
-import jupiterpapi.midgardcharacter.backend.model.repo.UserRepo;
+import jupiterpapi.user.backend.model.UserDB;
+import jupiterpapi.user.backend.model.UserRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

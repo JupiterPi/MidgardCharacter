@@ -1,8 +1,6 @@
 # Basics
 
 ### Basics Technical Features
-- [ ] Security
-    - Separate Service Layer for User
 - [ ] Actuator
 
 # Advanced

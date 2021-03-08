@@ -16,8 +16,6 @@ import java.util.List;
 public interface UIMapper {
     UIMapper INSTANCE = Mappers.getMapper(UIMapper.class);
 
-    User map(UserCreateDTO user);
-
     @Mapping(target = "attributes", ignore = true)
     @Mapping(target = "skills", ignore = true)
     @Mapping(target = "levelUps", ignore = true)
@@ -46,8 +44,6 @@ public interface UIMapper {
     Reward map(RewardCreateDTO reward);
 
     LevelUp map(LevelUpCreateDTO levelUp);
-
-    UserDTO map(User user);
 
     CharacterMetaDTO mapInfo(Character character);
 

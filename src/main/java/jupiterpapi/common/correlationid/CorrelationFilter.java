@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common.correlationid;
 
 import org.slf4j.*;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

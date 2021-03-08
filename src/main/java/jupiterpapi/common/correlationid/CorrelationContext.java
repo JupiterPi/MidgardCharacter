@@ -1,4 +1,4 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common.correlationid;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.codec.Base64;

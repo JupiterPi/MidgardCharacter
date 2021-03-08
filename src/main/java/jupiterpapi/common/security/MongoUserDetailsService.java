@@ -1,6 +1,6 @@
-package jupiterpapi.midgardcharacter.backend.controller;
+package jupiterpapi.common.security;
 
-import jupiterpapi.midgardcharacter.backend.model.repo.UserRepo;
+import jupiterpapi.user.backend.model.UserRepo;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,10 +1,16 @@
-package jupiterpapi.midgardcharacter.backend;
+package jupiterpapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
-import jupiterpapi.midgardcharacter.backend.model.dto.*;
+import jupiterpapi.midgardcharacter.backend.model.dto.AttributeDTO;
+import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
+import jupiterpapi.midgardcharacter.backend.model.dto.CharacterMetaDTO;
+import jupiterpapi.midgardcharacter.backend.model.dto.LearningDTO;
 import jupiterpapi.midgardcharacter.backend.service.DBService;
 import jupiterpapi.midgardcharacter.backend.service.TimeProvider;
+import jupiterpapi.user.backend.model.UserCreateDTO;
+import jupiterpapi.user.backend.model.UserDTO;
+import jupiterpapi.user.backend.service.UserDBService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,6 +44,9 @@ public class IntegrationTest {
     MockMvc mockMvc;
 
     @Autowired
+    UserDBService userDB;
+
+    @Autowired
     DBService db;
 
     @Autowired
@@ -45,6 +54,7 @@ public class IntegrationTest {
 
     @Before
     public void reset() {
+        userDB.reset();
         db.reset();
     }
 
