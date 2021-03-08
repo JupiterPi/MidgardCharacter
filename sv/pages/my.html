@@ -1,5 +1,117 @@
 <div id="body">
 
-<h1>Hello, Username!</h1>
+    <h1>Hello, Username!</h1>
+
+    <h2>Your Characters</h2>
+
+    <div id="characters-container">
+        <table id="characters">
+            <!-- ... -->
+        </table>
+        <div class="right" id="show-more"><a href="/characters">show more</a></div> <!-- /characters added later -->
+    </div>
 
 </div>
+
+
+<script>
+
+    loadCharacters();
+    function loadCharacters() {
+        let table = document.getElementById("characters");
+        table.innerHTML = "";
+
+        // aget -> actual response ; change to fget for faked contents
+        aget("/api/characters/user1", [
+            {
+                "id": "id1",
+                "name": "1",
+                "createdAt": "26.02.02"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "3",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "4",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "5",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "6",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "4",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "5",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "6",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "4",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "5",
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "6",
+                "createdAt": "83.23.45"
+            }
+        ], function (characters) {
+            if (characters.length === 0) {
+                document.getElementById("characters-container").innerHTML = "(nothing here)";
+            } else {
+                let cut = false;
+                for (let i in characters) {
+                    if (i > 7) {
+                        cut = true;
+                        break;
+                    }
+                    let character = characters[i];
+
+                    let td_name = document.createElement("td");
+                    let link = document.createElement("a");
+                    link.href = "/characters/" + character.id;
+                    link.innerText = character.name;
+                    td_name.appendChild(link);
+
+                    let td_createdAt = document.createElement("td");
+                    td_createdAt.innerText = character.createdAt;
+
+                    let tr = document.createElement("tr");
+                    tr.appendChild(td_name);
+                    tr.appendChild(td_createdAt);
+                    table.appendChild(tr);
+                }
+                document.getElementById("show-more").hidden = !cut;
+            }
+        });
+    }
+
+</script>

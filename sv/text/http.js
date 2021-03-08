@@ -22,8 +22,20 @@ function sync(method, url, body) {
 
 /* variations */
 
+function fget(url, response, handler) {
+    handler(response);
+}
+
+function aget(url, r, handler) {
+    async("GET", url, null, function(response) {
+        handler(JSON.parse(response));
+    });
+}
+
 function get(url, handler) {
-    async("GET", url, null, handler);
+    async("GET", url, null, function(response) {
+        handler(JSON.parse(response));
+    });
 }
 
 function sget(url) {
