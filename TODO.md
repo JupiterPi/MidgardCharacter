@@ -2,7 +2,8 @@
 
 ### Basics Technical Features
 - [ ] Security
-    - Separation of User in different Controller
+    - Separate Service Layer for User
+    - Complete settings for HTTPSecurity
 - [ ] Actuator
 
 # Advanced

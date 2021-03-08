@@ -29,8 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,34 +195,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614182660226</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added missing objects for basis version">
-      <created>1614182904304</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1614182904304</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added missing objects for basis version">
-      <created>1614183025064</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1614183025064</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Copy other branch">
-      <created>1614506090847</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1614506090847</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Copy other branch">
-      <created>1614506440295</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1614506440295</updated>
     </task>
     <task id="LOCAL-00005" summary="Separated into Create and DTO classes">
       <created>1614528959314</created>
@@ -540,7 +511,35 @@
       <option name="project" value="LOCAL" />
       <updated>1615188716060</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Adapted Authorities and set for Routes">
+      <created>1615193552923</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1615193552924</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Cleanup">
+      <created>1615193595291</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1615193595291</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Cleanup">
+      <created>1615193607564</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1615193607564</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Enable login and logout">
+      <created>1615193689025</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1615193689026</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -584,8 +583,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scenario: Rewards and LevelUps" />
-    <MESSAGE value="Scenario: Learning and PPReward" />
     <MESSAGE value="Rename Route PPReward" />
     <MESSAGE value="Tests finished" />
     <MESSAGE value="Cleanup Default Constructor" />
@@ -606,10 +603,12 @@
     <MESSAGE value="Bcrypt" />
     <MESSAGE value="Automatically Add Admin and print password" />
     <MESSAGE value="Set HTTPContext" />
-    <MESSAGE value="Cleanup" />
     <MESSAGE value="Update Todo, Set port to 8080" />
     <MESSAGE value="Separated User on Controller Level + RouteRename" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated User on Controller Level + RouteRename" />
+    <MESSAGE value="Adapted Authorities and set for Routes" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Enable login and logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enable login and logout" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -648,11 +647,11 @@
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027486664" />
     <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1615188624600" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1615188712426">
+    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1615193686409">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615038348066" />
-    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1615188712426" />
+    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1615193686409" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1615139871288" />
     <state width="1981" height="204" key="GridCell.Tab.0.bottom" timestamp="1615193395959">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -710,11 +709,11 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="291" y="26" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1614878833425" />
-    <state x="538" y="240" key="Vcs.Push.Dialog.v2" timestamp="1615188719586">
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2" timestamp="1615193691428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615028010811" />
-    <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1615188719586" />
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1615193691428" />
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1615138985076" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
       <screen x="0" y="0" width="2560" height="1400" />
