@@ -118,7 +118,7 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.Application" />
       <module name="MidgardCharacter" />
@@ -148,18 +148,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest.postStandardCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jupiterpapi.midgardcharacter.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jupiterpapi.midgardcharacter.backend" />
-      <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.backend.IntegrationTest" />
-      <option name="METHOD_NAME" value="postStandardCheck" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in MidgardCharacter" />
         <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.All in MidgardCharacter (2)" />
         <item itemvalue="JUnit.All in MidgardCharacter (1)" />
         <item itemvalue="JUnit.IntegrationTest.postUser" />
-        <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
       </list>
     </recent_temporary>
   </component>

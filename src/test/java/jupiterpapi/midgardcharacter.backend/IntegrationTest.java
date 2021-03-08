@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-@WithMockUser(username = "admin", roles = "ADMIN")
+@WithMockUser(username = "admin", authorities = "ADMIN")
 public class IntegrationTest {
 
     @Autowired
