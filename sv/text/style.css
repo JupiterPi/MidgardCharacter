@@ -78,7 +78,8 @@ td {
 }
 td:not(:first-child) {
     text-align: right;
-    width: 30px;
+    width: 100%;
+    white-space: nowrap;
 }
 
 tr:first-child {

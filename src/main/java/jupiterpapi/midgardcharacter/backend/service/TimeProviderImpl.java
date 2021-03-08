@@ -9,7 +9,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Service
-@Profile("prod")
+//@Profile("prod")
 public class TimeProviderImpl implements TimeProvider {
 
     public String getDate() {
