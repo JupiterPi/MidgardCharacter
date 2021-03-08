@@ -1,6 +1,6 @@
 # Basics
 
-### Basics Techncal Features
+### Basics Technical Features
 - [ ] Security
     - Separation of User in different Controller
 - [ ] Actuator

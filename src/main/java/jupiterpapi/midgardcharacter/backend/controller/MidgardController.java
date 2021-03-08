@@ -3,7 +3,6 @@ package jupiterpapi.midgardcharacter.backend.controller;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterMetaDTO;
-import jupiterpapi.midgardcharacter.backend.model.dto.UserDTO;
 import jupiterpapi.midgardcharacter.backend.service.MidgardException;
 import jupiterpapi.midgardcharacter.backend.service.MidgardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,35 +15,23 @@ import java.util.Collection;
 @RequestMapping(path = MidgardController.PATH)
 @RestController
 public class MidgardController implements MidgardService {
-    public static final String PATH = "/api";
+    public static final String PATH = "/api/character";
 
     @Autowired
     MidgardService service;
 
-    @Deprecated
-    @GetMapping("/users")
-    public Collection<UserDTO> getUsers() {
-        return service.getUsers();
-    }
-
-    @GetMapping("/characters/{userId}")
+    @GetMapping("/user/{userId}")
     public Collection<CharacterMetaDTO> getCharacters(@PathVariable("userId") String userId) {
         return service.getCharacters(userId);
     }
 
-    @GetMapping("/character/{characterId}")
+    @GetMapping("/{characterId}")
     public CharacterDTO getCharacter(@PathVariable("characterId") String characterId) throws MidgardException {
         return service.getCharacter(characterId);
     }
 
     @Deprecated
-    @PostMapping("/user")
-    public UserDTO postUser(@RequestBody UserCreateDTO user) {
-        return service.postUser(user);
-    }
-
-    @Deprecated
-    @PostMapping("/character")
+    @PostMapping("")
     public CharacterDTO postCharacter(@RequestBody CharacterCreateDTO character) throws MidgardException {
         return service.postCharacter(character);
     }

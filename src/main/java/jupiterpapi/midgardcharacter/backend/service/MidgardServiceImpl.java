@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_SKILL;
 
 @Component
-public class MidgardServiceImpl implements MidgardService {
+public class MidgardServiceImpl implements MidgardService, UserService {
 
     @Autowired
     UIMapper mapper;

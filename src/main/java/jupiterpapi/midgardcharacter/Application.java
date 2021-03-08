@@ -33,7 +33,7 @@ public class Application implements CommandLineRunner {
     @Override
     public void run(String... args) {
         readConfiguration();
-        insertAdmin();
+        insertAdmin(args);
     }
 
     void readConfiguration() {
@@ -46,7 +46,7 @@ public class Application implements CommandLineRunner {
         logger.info("Configuration read successfully");
     }
 
-    void insertAdmin() {
+    void insertAdmin(String... args) {
         UserDB admin = userRepo.findByName("admin");
         if (admin != null)
             userRepo.delete(admin);

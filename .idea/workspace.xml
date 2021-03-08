@@ -29,8 +29,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c036cc-e409-4d6f-bd3c-49d678645e80" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/MidgardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/controller/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jupiterpapi/midgardcharacter/backend/service/MidgardServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,8 +109,8 @@
       <recent name="jupiterpapi.midgardcharacter.backend.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="jupiterpapi.midgardcharacter.backend.controller" />
       <recent name="jupiterpapi.midgardcharacter.backend.service" />
+      <recent name="jupiterpapi.midgardcharacter.backend.controller" />
       <recent name="jupiterpapi.midgardcharacter.backend.model.dto" />
       <recent name="jupiterpapi.midgardcharacter" />
       <recent name="jupiterpapi.midgardcharacter.controller" />
@@ -116,7 +123,7 @@
       <recent name="C:\Users\D043312\IdeaProjects\MidgardCharacter\src\main\java\jupiterpapi\midgardcharacter\model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in MidgardCharacter (1)">
+  <component name="RunManager" selected="JUnit.All in MidgardCharacter (2)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jupiterpapi.midgardcharacter.Application" />
       <module name="MidgardCharacter" />
@@ -138,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in MidgardCharacter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in MidgardCharacter (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MidgardCharacter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -180,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in MidgardCharacter (1)" />
+        <item itemvalue="JUnit.All in MidgardCharacter (2)" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.All in MidgardCharacter (1)" />
         <item itemvalue="JUnit.IntegrationTest.postUser" />
         <item itemvalue="JUnit.IntegrationTest.postStandardCheck" />
-        <item itemvalue="JUnit.All in MidgardCharacter" />
       </list>
     </recent_temporary>
   </component>
@@ -526,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615143711751</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Update Todo, Set port to 8080">
+      <created>1615144135203</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1615144135203</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -570,7 +584,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Scenario: New Character with initial skill" />
     <MESSAGE value="Scenario: New Character with initial skill cleanup" />
     <MESSAGE value="Scenario: Rewards and LevelUps" />
     <MESSAGE value="Scenario: Learning and PPReward" />
@@ -595,7 +608,8 @@
     <MESSAGE value="Automatically Add Admin and print password" />
     <MESSAGE value="Set HTTPContext" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Update Todo, Set port to 8080" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Todo, Set port to 8080" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -628,65 +642,65 @@
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614505945573" />
     <state x="1215" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1614625195272" />
     <state x="1519" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1614841966614" />
-    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615143527284">
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615144272183">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615027486664" />
-    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1615143527284" />
+    <state x="763" y="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2048.1112@0.0.2048.1112" timestamp="1615144272183" />
     <state x="954" y="479" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1614755495844" />
-    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1615143708083">
+    <state x="34" y="0" key="CommitChangelistDialog2" timestamp="1615144131702">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="513" y="111" key="CommitChangelistDialog2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615038348066" />
-    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1615143708083" />
+    <state x="34" y="0" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1615144131702" />
     <state x="716" y="111" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1615139871288" />
-    <state width="2493" height="635" key="GridCell.Tab.0.bottom" timestamp="1615139014695">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.0.bottom" timestamp="1615187737423">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
-    <state width="1981" height="325" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
+    <state width="1981" height="324" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737423" />
     <state width="2493" height="635" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615139014695" />
-    <state width="2493" height="635" key="GridCell.Tab.0.center" timestamp="1615139014695">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.0.center" timestamp="1615187737422">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
-    <state width="1981" height="325" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
+    <state width="1981" height="324" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737422" />
     <state width="2493" height="635" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615139014695" />
-    <state width="2493" height="635" key="GridCell.Tab.0.left" timestamp="1615139014695">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.0.left" timestamp="1615187737422">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
-    <state width="1981" height="325" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089677" />
+    <state width="1981" height="324" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737422" />
     <state width="2493" height="635" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615139014695" />
-    <state width="2493" height="635" key="GridCell.Tab.0.right" timestamp="1615139014695">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.0.right" timestamp="1615187737422">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="685" key="GridCell.Tab.0.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615053979824" />
-    <state width="1981" height="325" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089678" />
+    <state width="1981" height="324" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737422" />
     <state width="2493" height="635" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615139014695" />
-    <state width="2493" height="439" key="GridCell.Tab.1.bottom" timestamp="1615138906598">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.1.bottom" timestamp="1615187737424">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.bottom/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="325" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1981" height="324" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737424" />
     <state width="2493" height="439" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
-    <state width="2493" height="439" key="GridCell.Tab.1.center" timestamp="1615138906598">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.1.center" timestamp="1615187737423">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.center/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="325" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1981" height="324" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737423" />
     <state width="2493" height="439" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
-    <state width="2493" height="439" key="GridCell.Tab.1.left" timestamp="1615138906597">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.1.left" timestamp="1615187737423">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.left/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="325" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1981" height="324" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737423" />
     <state width="2493" height="439" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906597" />
-    <state width="2493" height="439" key="GridCell.Tab.1.right" timestamp="1615138906598">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1981" height="324" key="GridCell.Tab.1.right" timestamp="1615187737423">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="2493" height="442" key="GridCell.Tab.1.right/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1614873452190" />
-    <state width="1981" height="325" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1614949089679" />
+    <state width="1981" height="324" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1615187737423" />
     <state width="2493" height="439" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1615138906598" />
     <state x="543" y="110" key="RollbackChangesDialog" timestamp="1614625364603">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -696,11 +710,11 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="291" y="26" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1614878833425" />
-    <state x="538" y="240" key="Vcs.Push.Dialog.v2" timestamp="1615143713236">
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2" timestamp="1615144138400">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/-2560.698.2048.1104/0.0.2560.1400@0.0.2560.1400" timestamp="1615028010811" />
-    <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1615143713236" />
+    <state x="538" y="240" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1615144138400" />
     <state x="673" y="302" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1615138985076" />
     <state x="93" y="93" width="2375" height="1215" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614506358156">
       <screen x="0" y="0" width="2560" height="1400" />
