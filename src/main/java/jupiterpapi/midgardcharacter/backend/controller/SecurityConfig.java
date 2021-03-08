@@ -25,8 +25,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()//.realmName(config.getName())
                 .and().sessionManagement().disable()
 
-                .authorizeRequests().antMatchers("/login").permitAll().antMatchers(UserController.PATH)
-                .hasAuthority("ADMIN")
+                .authorizeRequests()
+
+                .antMatchers("/login").permitAll().antMatchers(UserController.PATH).hasAuthority("ADMIN")
 
                 .antMatchers(HttpMethod.GET, MidgardController.PATH + "**").hasAnyAuthority("ADMIN", "USER")
                 .antMatchers(HttpMethod.POST, MidgardController.PATH + "/learning/**").hasAnyAuthority("ADMIN", "USER")
