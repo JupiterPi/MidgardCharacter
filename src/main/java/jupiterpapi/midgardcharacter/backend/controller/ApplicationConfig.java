@@ -12,4 +12,5 @@ public class ApplicationConfig {
     private String description;
     private String version;
     private String adminPassword;
+    private String securityKey;
 }

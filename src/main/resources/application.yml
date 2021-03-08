@@ -3,6 +3,7 @@ application:
   description: Midgard Character Builder
   version: 0.1.0
   adminPassword: password
+  securityKey: MySecurityKey
 
 server:
   port: 8080

@@ -3,7 +3,6 @@
 ### Basics Technical Features
 - [ ] Security
     - Separate Service Layer for User
-    - Complete settings for HTTPSecurity
 - [ ] Actuator
 
 # Advanced

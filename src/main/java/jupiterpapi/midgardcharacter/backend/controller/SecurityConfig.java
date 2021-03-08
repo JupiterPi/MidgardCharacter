@@ -15,15 +15,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    ApplicationConfig applicationConfig;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http//.formLogin()//.loginPage("/login")
-                //    .and().logout()//.logoutSuccessUrl("/")
-                //    .and()
-                //			.rememberMe().tokenValiditySeconds(2419200).key("ApplName").and()
+                .rememberMe().tokenValiditySeconds(2419200).key(applicationConfig.getSecurityKey())
 
-                .httpBasic()//.realmName(config.getName())
-                .and().sessionManagement().disable()
+                .and().logout().deleteCookies("JSESSIONID")//.logoutSuccessUrl("/")
+
+                .and().httpBasic().realmName(applicationConfig.getName()).and().sessionManagement().disable()
 
                 .authorizeRequests()
 
