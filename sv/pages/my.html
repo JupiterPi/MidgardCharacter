@@ -22,65 +22,152 @@
         table.innerHTML = "";
 
         // aget -> actual response ; change to fget for faked contents
-        aget("/api/characters/user1", [
+        fget("/api/characters/user1", [
             {
                 "id": "id1",
                 "name": "1",
+                "className": "Spitzbube",
+                "level": 2,
                 "createdAt": "26.02.02"
             },
             {
                 "id": "id2",
                 "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "3",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "4",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "5",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "6",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "4",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "5",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "6",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "4",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "5",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             },
             {
                 "id": "id2",
-                "name": "6",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
+                "createdAt": "83.23.45"
+            },
+            {
+                "id": "id2",
+                "name": "2",
+                "className": "Ordenskrieger",
+                "level": 5,
                 "createdAt": "83.23.45"
             }
         ], function (characters) {
@@ -89,7 +176,7 @@
             } else {
                 let cut = false;
                 for (let i in characters) {
-                    if (i > 7) {
+                    if (i > 8) {
                         cut = true;
                         break;
                     }
@@ -101,11 +188,19 @@
                     link.innerText = character.name;
                     td_name.appendChild(link);
 
+                    let td_className = document.createElement("td");
+                    td_className.innerText = character.className;
+
+                    let td_level = document.createElement("td");
+                    td_level.innerText = "lvl. " + character.level;
+
                     let td_createdAt = document.createElement("td");
                     td_createdAt.innerText = character.createdAt;
 
                     let tr = document.createElement("tr");
                     tr.appendChild(td_name);
+                    tr.appendChild(td_className);
+                    tr.appendChild(td_level);
                     tr.appendChild(td_createdAt);
                     table.appendChild(tr);
                 }
