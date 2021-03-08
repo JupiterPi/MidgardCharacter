@@ -21,6 +21,11 @@ public class PagesController {
         return loader.loadPage("my");
     }
 
+    @GetMapping("/characters")
+    public String getCharactersList() {
+        return loader.loadPage("characters");
+    }
+
     // res
 
     @GetMapping("/res/{fileName}")
