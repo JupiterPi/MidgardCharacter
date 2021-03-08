@@ -27,7 +27,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .authorizeRequests()
 
-                .antMatchers("/login").permitAll().antMatchers(UserController.PATH).hasAuthority("ADMIN")
+                .antMatchers("/login").permitAll()
+
+                .antMatchers(UserController.PATH).hasAuthority("ADMIN")
 
                 .antMatchers(HttpMethod.GET, MidgardController.PATH + "**").hasAnyAuthority("ADMIN", "USER")
                 .antMatchers(HttpMethod.POST, MidgardController.PATH + "/learning/**").hasAnyAuthority("ADMIN", "USER")
