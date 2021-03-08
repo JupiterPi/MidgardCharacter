@@ -21,14 +21,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //    .and().logout()//.logoutSuccessUrl("/")
                 //    .and()
                 //			.rememberMe().tokenValiditySeconds(2419200).key("ApplName").and()
+
                 .httpBasic()//.realmName(config.getName())
-                .and().csrf().disable().authorizeRequests().antMatchers(HttpMethod.GET, UserController.PATH + "**")
-                .hasRole("ADMIN").antMatchers(HttpMethod.POST, UserController.PATH + "**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, MidgardController.PATH + "**").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, MidgardController.PATH + "/learning/**").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, MidgardController.PATH + "/levelUp/**").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, MidgardController.PATH + "**").hasRole("ADMIN").anyRequest()
-                .authenticated().and().sessionManagement().disable();
+                .and().sessionManagement().disable()
+
+                .authorizeRequests().antMatchers("/login").permitAll().antMatchers(UserController.PATH)
+                .hasAuthority("ADMIN")
+
+                .antMatchers(HttpMethod.GET, MidgardController.PATH + "**").hasAnyAuthority("ADMIN", "USER")
+                .antMatchers(HttpMethod.POST, MidgardController.PATH + "/learning/**").hasAnyAuthority("ADMIN", "USER")
+                .antMatchers(HttpMethod.POST, MidgardController.PATH + "/levelUp/**").hasAnyAuthority("ADMIN", "USER")
+                .antMatchers(HttpMethod.POST, MidgardController.PATH + "**").hasAnyAuthority("ADMIN")
+
+                .anyRequest().authenticated().and().csrf().disable()
+
+        ;
 
     }
 
