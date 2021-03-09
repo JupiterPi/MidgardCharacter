@@ -26,6 +26,11 @@ public class PagesController {
         return loader.loadPage("characters");
     }
 
+    @GetMapping("/characters/{characterId}")
+    public String getCharacterPage(@PathVariable String characterId) {
+        return loader.loadPage("character");
+    }
+
     // res
 
     @GetMapping("/res/{fileName}")
