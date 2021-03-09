@@ -64,35 +64,35 @@ input:focus {
 
 /* table-lists */
 
-table {
+table.list {
     width: 100%;
     border-collapse: collapse;
 }
 
-tr {
+table.list tr {
     transition: background-color, border-top 300ms;
 }
 
-td {
+table.list td {
     padding: 5px 15px;
 }
-td:not(:first-child) {
+table.list td:not(:first-child) {
     text-align: right;
     width: 100%;
     white-space: nowrap;
 }
 
-tr:first-child {
+table.list tr:first-child {
     border-top: white 1px solid;
 }
-tr:not(:first-child) {
+table.list tr:not(:first-child) {
     border-top: var(--c-line-muted) 1px solid;
 }
 
-tr:hover {
+table.list tr:hover {
     background-color: var(--c-backgr-acc);
 }
-tr:hover, tr:hover + tr {
+table.list tr:hover, table.list tr:hover + tr {
     border-top: white 1px solid;
 }
 
