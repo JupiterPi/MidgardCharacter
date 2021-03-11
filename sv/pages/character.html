@@ -1,5 +1,165 @@
 <div id="body">
 
-    <h1>Character "Name"</h1>
+    <h1 style="margin-bottom: 5px">Tennisplatzensis</h1>
+    <span id="subtext">Spitzbube, lvl. 2</span>
+
+    <i>created: 23.34.2221</i>
+
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <label>Max. AP</label>
+                18
+            </td>
+            <td>
+                <label>EP</label>
+                60
+            </td>
+            <td>
+                <label>ES</label>
+                130
+            </td>
+            <td>
+                <label>Gold</label>
+                729
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+            <td>
+                <label>Wk</label>
+                <span data-bonus="2">99</span>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
 
 </div>
+
+<style>
+
+    span[data-bonus="2"]::after {
+        margin-left: 8px;
+        content: "++";
+        font-weight: 1000;
+        color: #026702;
+    }
+
+    span[data-bonus="1"]::after {
+        margin-left: 5px;
+        content: "+";
+        font-weight: 1000;
+        color: #026702;
+    }
+
+    span[data-bonus="-1"]::after {
+        margin-left: 5px;
+        content: "-";
+        font-weight: 1000;
+        color: #b50000;
+    }
+
+    span[data-bonus="-2"]::after {
+        margin-left: 8px;
+        content: "--";
+        font-weight: 1000;
+        color: #b50000;
+        letter-spacing: 2px;
+    }
+
+    /* ------------------------- */
+
+    #subtext {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table label {
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    table td {
+        padding: 5px 30px;
+        text-align: center;
+    }
+
+    table tr:not(:last-child)::after {
+        content: element("tr");
+    }
+
+    table tr:empty {
+        height: 10px;
+    }
+
+    table td:not(:first-child) {
+        border-left: var(--c-line) solid 1px;
+    }
+
+    hr {
+        border: none;
+        border-bottom: var(--c-line) solid 1px;
+        margin: 30px 20px;
+    }
+
+</style>
+
+<script>
+
+    loadCharacter();
+    function loadCharacter() {
+        // ...
+    }
+
+</script>
