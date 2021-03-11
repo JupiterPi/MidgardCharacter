@@ -20,9 +20,9 @@ public class MidgardController implements MidgardService {
     @Autowired
     MidgardService service;
 
-    @GetMapping("/user/{userId}")
-    public Collection<CharacterMetaDTO> getCharacters(@PathVariable("userId") String userId) {
-        return service.getCharacters(userId);
+    @GetMapping("")
+    public Collection<CharacterMetaDTO> getCharacters() {
+        return service.getCharacters();
     }
 
     @GetMapping("/{characterId}")

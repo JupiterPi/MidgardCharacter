@@ -3,6 +3,7 @@ package jupiterpapi.midgardcharacter.backend.service;
 enum MidgardErrorMessages {
     GET_CHARACTER_NOT_EXISTS,
     NEW_CHARACTER_EXISTS,
+    NOT_AUTHORIZED,
     NEW_WRONG_NUMBER_OF_ATTRIBUTES,
     NEW_ATTRIBUTE_TOO_LOW,
     NEW_ATTRIBUTE_TOO_HIGH,

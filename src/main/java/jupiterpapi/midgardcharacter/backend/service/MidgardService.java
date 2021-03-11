@@ -8,7 +8,7 @@ import java.util.Collection;
 
 public interface MidgardService {
 
-    Collection<CharacterMetaDTO> getCharacters(String userId);
+    Collection<CharacterMetaDTO> getCharacters();
 
     CharacterDTO getCharacter(String characterId) throws MidgardException;
 

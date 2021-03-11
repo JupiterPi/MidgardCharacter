@@ -122,6 +122,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\test\java\jupiterpapi\IntegrationTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\test\java\jupiterpapi\midgardcharacter.backend\IntegrationTest.java">
           <value>
             <Attribute>

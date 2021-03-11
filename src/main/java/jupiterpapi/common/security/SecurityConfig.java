@@ -34,12 +34,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .antMatchers("/login").permitAll().antMatchers("/logout").permitAll()
 
-                .antMatchers(UserController.PATH).hasAuthority("ADMIN")
+                .antMatchers(HttpMethod.GET, UserController.PATH).hasAuthority("ADMIN")
+                .antMatchers(HttpMethod.POST, UserController.PATH).permitAll()
 
                 .antMatchers(HttpMethod.GET, MidgardController.PATH + "**").hasAnyAuthority("ADMIN", "USER")
                 .antMatchers(HttpMethod.POST, MidgardController.PATH + "/learning/**").hasAnyAuthority("ADMIN", "USER")
                 .antMatchers(HttpMethod.POST, MidgardController.PATH + "/levelUp/**").hasAnyAuthority("ADMIN", "USER")
-                .antMatchers(HttpMethod.POST, MidgardController.PATH + "**").hasAnyAuthority("ADMIN")
+                .antMatchers(HttpMethod.POST, MidgardController.PATH + "**")
+                .hasAnyAuthority("ADMIN", "USER")  //Preliminary
 
                 .anyRequest().authenticated().and().csrf().disable()
 

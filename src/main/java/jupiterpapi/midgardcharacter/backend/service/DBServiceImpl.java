@@ -43,7 +43,12 @@ public class DBServiceImpl implements DBService {
     }
 
     public List<Character> getCharacters(String userId) {
-        List<CharacterDB> dbs = characterRepo.findByUserId(userId);
+        List<CharacterDB> dbs;
+        if (userId.equals("admin")) {
+            dbs = characterRepo.findAll();
+        } else {
+            dbs = characterRepo.findByUserId(userId);
+        }
         return dbs.stream().map(db -> mapper.map(db)).collect(Collectors.toList());
     }
     public Character getCharacter(String characterId) {

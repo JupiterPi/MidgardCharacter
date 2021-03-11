@@ -1,6 +1,7 @@
 package jupiterpapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jupiterpapi.common.correlationid.CorrelationContext;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
 import jupiterpapi.midgardcharacter.backend.model.dto.AttributeDTO;
 import jupiterpapi.midgardcharacter.backend.model.dto.CharacterDTO;
@@ -18,12 +19,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import static org.hamcrest.Matchers.containsString;
@@ -58,6 +61,14 @@ public class IntegrationTest {
         db.reset();
     }
 
+    @Before
+    public void setUser() {
+        Collection<GrantedAuthority> col = new ArrayList<>();
+        org.springframework.security.core.userdetails.User user = new org.springframework.security.core.userdetails.User(
+                "1", "", col);
+        CorrelationContext.setUser(user);
+    }
+
     String asJsonString(final Object obj) {
         try {
             return new ObjectMapper().writeValueAsString(obj);
@@ -67,7 +78,12 @@ public class IntegrationTest {
     }
 
     void getAndExpect(String url, Object exp) throws Exception {
-        String expect = asJsonString(exp);
+        String expect;
+        if (exp.equals("[]")) {
+            expect = (String) exp;
+        } else {
+            expect = asJsonString(exp);
+        }
         this.mockMvc.perform(get(url))
                 //.andDo(print())
                 .andExpect(status().isOk()).andExpect(content().string(containsString(expect)));
@@ -100,29 +116,30 @@ public class IntegrationTest {
     final UserCreateDTO userCreateDTO = new UserCreateDTO("1", "Name", "password");
     final UserDTO userDTO = new UserDTO("1", "Name", "password");
     final List<UserDTO> users = new ArrayList<>();
+
     @Before
     public void resetUsers() {
         users.clear();
     }
 
-    void getUsers(List<UserDTO> users) throws Exception {
-        getAndExpect("/api/user", users);
+    void getUsers(String exp) throws Exception {
+        getAndExpect("/api/user", exp);
     }
 
     void postUser(UserCreateDTO user) throws Exception {
-        postAndExpect("/api/user", user, user);
+        postAndExpect("/api/user", user, null);
     }
 
     @Test
     public void initiallyReturnsNoUser() throws Exception {
-        getUsers(users);
+        getUsers("[]");
     }
 
     @Test
     public void postUser() throws Exception {
         postUser(userCreateDTO);
         users.add(userDTO);
-        getUsers(users);
+        getUsers(userDTO.getName());
     }
 
     CharacterCreateDTO characterCreateDTO;
@@ -139,7 +156,7 @@ public class IntegrationTest {
     }
 
     void getCharacters(String userId, List<CharacterMetaDTO> characterMetas) throws Exception {
-        getAndExpect("/api/character/user/" + userId, characterMetas);
+        getAndExpect("/api/character", characterMetas);
     }
 
     void postCharacter(CharacterCreateDTO character) throws Exception {

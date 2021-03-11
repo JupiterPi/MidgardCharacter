@@ -43,4 +43,8 @@ public class CorrelationContext {
         user.set(new_user);
     }
 
+    public static String getUserName() {
+        return user.get().getUsername();
+    }
+
 }

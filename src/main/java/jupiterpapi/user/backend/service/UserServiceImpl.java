@@ -4,6 +4,7 @@ import jupiterpapi.user.backend.model.User;
 import jupiterpapi.user.backend.model.UserCreateDTO;
 import jupiterpapi.user.backend.model.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,13 +19,22 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDBService db;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     public List<UserDTO> getUsers() {
         List<User> users = db.getUser();
         return users.stream().map(user -> mapper.map(user)).collect(Collectors.toList());
     }
 
-    public UserDTO postUser(UserCreateDTO user) {
-        return mapper.map(db.postUser(mapper.map(user)));
+    public UserDTO postUser(UserCreateDTO userDTO) {
+        User user = mapper.map(userDTO);
+        encryptPassword(user);
+        return mapper.map(db.postUser(user));
+    }
+
+    private void encryptPassword(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
     }
 
 }

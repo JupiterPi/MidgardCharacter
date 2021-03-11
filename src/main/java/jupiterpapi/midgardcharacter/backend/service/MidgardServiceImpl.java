@@ -1,5 +1,6 @@
 package jupiterpapi.midgardcharacter.backend.service;
 
+import jupiterpapi.common.correlationid.CorrelationContext;
 import jupiterpapi.midgardcharacter.backend.model.Character;
 import jupiterpapi.midgardcharacter.backend.model.*;
 import jupiterpapi.midgardcharacter.backend.model.create.*;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.INTERNAL_NO_SKILL;
+import static jupiterpapi.midgardcharacter.backend.service.MidgardErrorMessages.NOT_AUTHORIZED;
 
 @Component
 public class MidgardServiceImpl implements MidgardService {
@@ -28,13 +30,19 @@ public class MidgardServiceImpl implements MidgardService {
     @Autowired
     CheckService checkService;
 
-    public List<CharacterMetaDTO> getCharacters(String userId) {
-        List<Character> users = db.getCharacters(userId);
-        return users.stream().map(character -> mapper.mapInfo(character)).collect(Collectors.toList());
+    public List<CharacterMetaDTO> getCharacters() {
+        String userId = CorrelationContext.getUserName();
+
+        List<Character> characters = db.getCharacters(userId);
+        return characters.stream().map(character -> mapper.mapInfo(character)).collect(Collectors.toList());
     }
 
     public CharacterDTO getCharacter(String characterId) throws MidgardException {
+        String userId = CorrelationContext.getUserName();
+
         Character newCharacter = enrichService.getCharacter(characterId);
+        if (!(newCharacter.getUserId().equals(userId) || userId.equals("admin")))
+            throw new MidgardException(NOT_AUTHORIZED, characterId);
         CharacterDTO newCharacterDTO = mapper.map(newCharacter);
 
         newCharacterDTO.setAttributes(mapper.mapAttributes(newCharacter.getAttributes().values()).stream()
