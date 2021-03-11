@@ -1,4 +1,5 @@
 # Basics
+- reorganize package structure
 
 ### Basics Technical Features
 - [ ] Actuator
