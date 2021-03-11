@@ -7,7 +7,7 @@
 
     <hr>
 
-    <table>
+    <table class="grid">
         <tr>
             <td>
                 <label>Max. AP</label>
@@ -30,7 +30,7 @@
 
     <hr>
 
-    <table>
+    <table class="grid">
         <tr>
             <td>
                 <label>Wk</label>
@@ -80,9 +80,36 @@
 
     <hr>
 
+    <button>reward</button>
+
 </div>
 
 <style>
+
+    button {
+        background-color: var(--c-backgr-acc);
+        border: 1px solid var(--c-line);
+        border-radius: 5px;
+        font-size: var(--l-text);
+        padding: 4px 8px 7px 8px;
+        text-transform: lowercase;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+    }
+
+    button:hover, button:focus {
+        background-color: var(--c-backgr);
+    }
+
+    button:focus {
+        border-color: var(--c-acc);
+        box-shadow: 0 0 0 3px var(--c-acc-second);
+        transition: box-shadow 100ms linear;
+    }
+
+    /* ---------------------------- */
 
     span[data-bonus="2"]::after {
         margin-left: 8px;
@@ -121,29 +148,29 @@
         margin-bottom: 50px;
     }
 
-    table {
+    table.grid {
         width: 100%;
     }
 
-    table label {
+    table.grid label {
         font-weight: bold;
         margin-right: 20px;
     }
 
-    table td {
+    table.grid td {
         padding: 5px 30px;
         text-align: center;
     }
 
-    table tr:not(:last-child)::after {
+    table.grid tr:not(:last-child)::after {
         content: element("tr");
     }
 
-    table tr:empty {
+    table.grid tr:empty {
         height: 10px;
     }
 
-    table td:not(:first-child) {
+    table.grid td:not(:first-child) {
         border-left: var(--c-line) solid 1px;
     }
 

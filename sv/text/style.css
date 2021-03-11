@@ -9,14 +9,14 @@ body {
     padding: 0px;
 }
 
-body, input.input {
+body, input.input, button {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 }
 
 #body {
     margin: var(--body-top) var(--body-side) var(--body-bottom);
     padding: 20px;
-    font-size: 16px;
+    font-size: var(--l-text);
 }
 
 /* colors */
@@ -31,6 +31,12 @@ body, input.input {
     --c-acc-second: #b3d1f3;
 }
 
+/* lengths */
+
+:root {
+    --l-text: 16px;
+}
+
 /* input fields */
 
 input, input:focus {
@@ -41,7 +47,7 @@ input, input:focus {
     border-radius: 5px;
     outline: none;
 
-    font-size: 16px;
+    font-size: var(--l-text);
 
     transition: background-color 400ms, border-color 200ms;
 }
